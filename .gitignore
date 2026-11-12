@@ -1,0 +1,5 @@
+.netlify/
+__pycache__/
+*.pyc
+capture_screens.py
+generate_tn_bus_assets.py
