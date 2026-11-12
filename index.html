@@ -766,6 +766,40 @@
     }
     .btn-submit-timing:hover { background: var(--green-hover); }
 
+  
+    /* Live Crowding Pill Styles */
+    .crowd-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.1s;
+    }
+    .crowd-indicator:hover { transform: scale(1.03); }
+    .crowd-green { background: #DCFCE7; color: #15803D; border: 1px solid #86EFAC; }
+    .crowd-yellow { background: #FEF9C3; color: #854D0E; border: 1px solid #FDE047; }
+    .crowd-red { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
+    .crowd-grey { background: #F1F5F9; color: #64748B; border: 1px solid #CBD5E1; }
+
+    /* Incident alert badge on bus card */
+    .alert-strip {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      color: #92400E;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
   </style>
 </head>
 <body>
@@ -1023,6 +1057,7 @@
     let boards = {};
     let savedRoutes = JSON.parse(localStorage.getItem('tnbus_saved') || '[]');
     let userVotes = JSON.parse(localStorage.getItem('tnbus_votes') || '{}');
+    let userCrowding = JSON.parse(localStorage.getItem('tnbus_crowding') || '{}');
     let userSubmissions = JSON.parse(localStorage.getItem('tnbus_submissions') || '[]');
 
     const pillPalette = ['#E11D48', '#EA580C', '#7C3AED', '#0D9488', '#2563EB', '#059669', '#B45309'];
@@ -1318,6 +1353,11 @@
         const isVerifiedCommunity = (voteData.up - voteData.down >= 3) || b.isUserAdded;
         const isFlaggedWrong = (voteData.down - voteData.up >= 2);
 
+        // Crowding status
+        const crowdLevel = userCrowding[busId] || 0; // 0: unset, 1: seats, 2: standing, 3: full
+        const crowdClass = crowdLevel === 1 ? 'crowd-green' : (crowdLevel === 2 ? 'crowd-yellow' : (crowdLevel === 3 ? 'crowd-red' : 'crowd-grey'));
+        const crowdText = crowdLevel === 1 ? '🟢 Seats Available' : (crowdLevel === 2 ? '🟡 Standing Room' : (crowdLevel === 3 ? '🔴 Packed / Full' : '👥 Tap Crowd Status');
+
         return `
         <article class="bus-card ${isFlaggedWrong ? 'flagged-card' : ''}" onclick="toggleTimeline(${i})">
           <div class="bus-top">
@@ -1350,6 +1390,9 @@
             ${standTag}
             <span class="tag ${b.gps && !offline ? 't-gps' : 't-sched'}">${b.gps && !offline ? '● AIS-140 PNR' : '🕒 ' + (b.source || 'Schedule')}</span>
             <span class="tag t-sched">${b.corp}</span>
+            <span class="crowd-indicator ${crowdClass}" onclick="cycleCrowding('${busId}', event)" title="Tap to update seat/crowd status">
+              ${crowdText}
+            </span>
           </div>
           <div class="card-footer">
             <span class="footer-left"><b>✓ ${b.source || 'Verified'}</b> · ${tr.tapStops}</span>
@@ -1371,6 +1414,18 @@
 
     
     /* Community Voting & Submission Handlers */
+    
+    function cycleCrowding(busId, ev) {
+      if (ev) ev.stopPropagation();
+      let cur = userCrowding[busId] || 0;
+      cur = (cur + 1) % 4; // cycles 0 -> 1 -> 2 -> 3 -> 0
+      userCrowding[busId] = cur;
+      localStorage.setItem('tnbus_crowding', JSON.stringify(userCrowding));
+      renderResults();
+      const msgs = ['Crowd reset', 'Marked: 🟢 Seats Available!', 'Marked: 🟡 Standing Room Only', 'Marked: 🔴 Bus is Packed / Full'];
+      showToast(msgs[cur]);
+    }
+
     function voteTiming(busId, dir) {
       if (!userVotes[busId]) {
         userVotes[busId] = { up: 0, down: 0, myVote: 0 };
