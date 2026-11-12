@@ -1,33 +1,47 @@
-# TN BusConnect
+# IndiaBus — All Over India Transit & TN BusConnect 🚌🇮🇳
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-0D6B4E.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-0D6E4E.svg)](./LICENSE)
 [![Live Demo](https://img.shields.io/badge/Live-Netlify-00C7B7.svg)](https://tn-bus-connect.netlify.app)
+[![GitHub Stars](https://img.shields.io/github/stars/maniraja5599/tn-bus-connect?style=social)](https://github.com/maniraja5599/tn-bus-connect)
 
-An open-source, daylight-readable civic-tech web app unifying **Tamil Nadu's 8 state transport corporations** (MTC, SETC, and 6 TNSTC divisions) into one commuter-first interface.
+> **RedBus is for the 5% who book AC sleepers. IndiaBus is for the 70 million everyday citizens who take Town Buses, TNSTC, and SETC every single morning.**
 
-- **Live App:** https://tn-bus-connect.netlify.app
-- **Repository:** https://github.com/maniraja5599/tn-bus-connect
+IndiaBus is a 100% open-source, daylight-readable, government-grade civic tech application built for daily commuters. It unifies town buses, ghat buses, mofussil schedules, and intercity corridors across Tamil Nadu and all of India with zero seat-booking overhead and zero commission fees.
 
-## Key Features
-- **District → From → To → Reverse (`⇅`):** Pick any district (Namakkal, Salem, Trichy, Chennai, Madurai, Coimbatore, Tirunelveli, Vellore) and search both within-district town buses and inter-district express/SETC routes with instant return direction (`⇅`).
-- **Vetri Payanam (`₹0`) Filter:** 1-tap filter to spot eligible ordinary town buses.
-- **QR-Ready Stand Departure Boards:** Deep-link directly to stand boards (e.g. `#stand=namakkal`).
-- **Open Community Data (`data/districts.json`):** Clean JSON dataset separated from UI so anyone can add routes or districts via Pull Request.
+---
 
-## Project Structure
-```text
-├── index.html                  # Light-first mobile PWA UI
-├── data/
-│   └── districts.json          # All district stops, 70+ routes & stand boards
-├── netlify.toml                # Netlify static publish config
-├── CONTRIBUTING.md             # How to add bus timings or districts
-├── LICENSE                     # MIT License
-└── .github/ISSUE_TEMPLATE/     # Non-coder bus timing submission forms
-```
+## 🌟 Key Features
 
-## Contributing
-Want to add your town's bus timings or fix a via-stop?
-- **No coding needed:** Open an Issue using the **[Add or Fix Bus Timing](../../issues/new?template=add-bus-timing.yml)** template.
-- **Developers:** Edit `data/districts.json` and open a Pull Request. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the exact JSON schema.
+- 🚌 **District-Scoped Real Routes:** Complete town and mofussil bus timetables across 8 pilot districts (Namakkal, Salem, Trichy, Chennai, Madurai, Coimbatore, Tirunelveli, Vellore) with 38 districts coming.
+- 🏛️ **Separation of Terminals:** Explicit, realistic separation between town stands and outstation hubs (e.g., **Namakkal Old Bus Stand** for Mohanur/Town buses vs. **Mudalaipatti New Bus Stand** for Chennai/Express buses).
+- 🩷 **Vetri Payanam (Women & TG ₹0):** Dedicated filter for Tamil Nadu Government's zero-fare ordinary town bus scheme.
+- 👥 **Live Commuter Crowding Meter:** 1-tap crowd density indicator (🟢 Seats Available · 🟡 Standing Room · 🔴 Jam-Packed / Full).
+- 🗳️ **Community Crowdsourcing & Accuracy Voting:** Commuters can add new timings via `+ Add Timing` and upvote/downvote accuracy (👍/👎). Inaccurate times get automatically flagged.
+- 📶 **Offline-First PWA:** Works without internet in rural areas, bus stands, and ghat sections (Kolli Hills, Valparai, Nilgiris).
+- ⚡ **Light-First Government/Infosys-Grade UI:** High-contrast transit signage aesthetic (#F4F6F8 background, #0D6E4E deep transit green, high-legibility Noto Sans Tamil & Inter typography).
 
-Initiated by **Mani Raja** ([@manirajannm](https://x.com/manirajannm)).
+---
+
+## 🚀 Live App & Architecture
+
+- **Live URL:** [https://tn-bus-connect.netlify.app](https://tn-bus-connect.netlify.app)
+- **Repository:** [https://github.com/maniraja5599/tn-bus-connect](https://github.com/maniraja5599/tn-bus-connect)
+- **Product Roadmap & Feature Blueprint:** [See Architecture Blueprint](./indiabus_product_blueprint.md)
+
+---
+
+## 🤝 Community Feedback & Next Features (Beta Poll)
+
+We are in **Public Beta**. What should we build next?
+1. **"Where Is My Bus" Crowdsourced GPS:** Passengers on board broadcast real-time location.
+2. **Mega-Terminal Bay Navigator:** Platform & Bay maps for Kilambakkam (KCBT), Salem Meyyanur, Panjappur.
+3. **Tamil & English Audio Voice Announcements:** Bilingual Text-to-Speech timetable reader.
+4. **Offline SMS Mode:** Text-based timetable query for deep rural zones.
+
+Open an issue or submit a pull request!
+
+---
+
+## 📄 License
+
+MIT License — Built with pride for public transit commuters.
