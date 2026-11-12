@@ -1,0 +1,26 @@
+name: Add New District
+description: Help add one of Tamil Nadu's remaining districts to TN BusConnect
+title: "[District] Add <District Name>"
+labels: ["new-district", "help wanted"]
+body:
+  - type: input
+    id: district
+    attributes:
+      label: District Name
+      placeholder: "e.g., Kanyakumari, Erode, Thanjavur, Dindigul"
+    validations:
+      required: true
+  - type: textarea
+    id: stands
+    attributes:
+      label: Major Bus Stands in this District
+      placeholder: "e.g., Erode Central Bus Stand (Thanthai Periyar), Gobichettipalayam, Perundurai"
+    validations:
+      required: true
+  - type: textarea
+    id: routes
+    attributes:
+      label: Key Town & Express Routes
+      placeholder: "List 3-5 major routes with timings/frequencies"
+    validations:
+      required: true

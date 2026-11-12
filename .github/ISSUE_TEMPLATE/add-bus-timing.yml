@@ -1,0 +1,41 @@
+name: Add or Fix Bus Timing
+description: Submit verified bus timings or correct a route/via-stop for any Tamil Nadu district
+title: "[Timing] <District>: <From> -> <To>"
+labels: ["bus-data", "good first issue"]
+body:
+  - type: input
+    id: district
+    attributes:
+      label: District Name
+      placeholder: "e.g., Namakkal, Erode, Thanjavur"
+    validations:
+      required: true
+  - type: input
+    id: route
+    attributes:
+      label: From -> To
+      placeholder: "e.g., Namakkal -> Mohanur"
+    validations:
+      required: true
+  - type: textarea
+    id: timings
+    attributes:
+      label: Departure Times / Frequency
+      placeholder: "e.g., 05:50, 06:25, 09:20, 12:50 OR Every 15-20 mins (05:30 AM - 09:30 PM)"
+    validations:
+      required: true
+  - type: textarea
+    id: via
+    attributes:
+      label: Via Stops & Bus Type
+      placeholder: "e.g., Aniyapuram -> Keerambur -> Parali | Ordinary Town Bus (Vetri Payanam ₹0)"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source / Proof
+      description: "Bus stand board photo, tnstc.in OTRS, or official timetable link"
+      placeholder: "e.g., Namakkal Stand Board / tnstc.in"
+    validations:
+      required: true
