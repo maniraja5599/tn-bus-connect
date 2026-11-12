@@ -587,6 +587,175 @@
       z-index: 20;
     }
     .toast.show { display: block; }
+  
+    /* Community Crowdsourcing & Voting Styles */
+    .crowd-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .vote-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: #F1F5F9;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2px 4px;
+    }
+    .vote-btn {
+      background: transparent;
+      border: none;
+      padding: 4px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      cursor: pointer;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .vote-btn:hover { background: #E2E8F0; }
+    .vote-btn.voted-up { background: var(--green-mint); color: var(--green); font-weight: 800; }
+    .vote-btn.voted-down { background: #FEE2E2; color: #DC2626; font-weight: 800; }
+    .btn-add-bus {
+      background: var(--green);
+      color: #FFFFFF;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 1px 4px rgba(13, 110, 78, 0.25);
+      white-space: nowrap;
+    }
+    .btn-add-bus:hover { background: var(--green-hover); }
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--green);
+      background: var(--green-mint);
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(13, 110, 78, 0.2);
+    }
+    .flagged-card {
+      background: #FFF1F2 !important;
+      border-color: #FECDD3 !important;
+      opacity: 0.85;
+    }
+    .flagged-warning {
+      font-size: 10px;
+      font-weight: 700;
+      color: #BE123C;
+      background: #FFE4E6;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 3px;
+    }
+
+    /* Modal Overlay */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    @media (min-width: 541px) {
+      .modal-backdrop { align-items: center; }
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-sheet {
+      background: var(--surface);
+      width: 100%;
+      max-width: 440px;
+      border-radius: 20px 20px 0 0;
+      padding: 18px 20px 24px;
+      box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
+      max-height: 85vh;
+      overflow-y: auto;
+      animation: slideUp 0.2s ease-out;
+    }
+    @media (min-width: 541px) {
+      .modal-sheet { border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .modal-title { font-size: 15px; font-weight: 800; color: var(--text); }
+    .modal-close {
+      background: transparent;
+      border: none;
+      font-size: 22px;
+      color: var(--muted);
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 11px;
+    }
+    .form-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+    }
+    .form-input, .form-select, .form-textarea {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--text);
+      outline: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--green);
+      background: #FFFFFF;
+    }
+    .btn-submit-timing {
+      background: var(--green);
+      color: #FFFFFF;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .btn-submit-timing:hover { background: var(--green-hover); }
+
   </style>
 </head>
 <body>
@@ -689,9 +858,12 @@
           </div>
         </div>
 
-        <!-- Info Banner -->
-        <div class="disclaimer-bar" id="lblDisclaimer">
-          ℹ️ Community-sourced · Verify at stand / tnstc.in · Verified: 12-11-2026
+        <!-- Info Banner & Community Add Button -->
+        <div class="crowd-bar">
+          <div class="disclaimer-bar" id="lblDisclaimer" style="flex:1;">
+            ℹ️ Community-sourced · Verify at stand / tnstc.in · Verified: 12-11-2026
+          </div>
+          <button class="btn-add-bus" onclick="openAddTimingModal()" id="btnAddTiming">+ Add Timing</button>
         </div>
 
         <!-- Bus Schedule Cards -->
@@ -762,6 +934,53 @@
           <a href="https://github.com/maniraja5599/tn-bus-connect/issues/new?template=add-bus-timing.yml" target="_blank" style="color:var(--green); font-weight:700; text-decoration:none;">Report / Add Timing</a>
         </div>
       </div>
+    
+    <!-- Community Modal: Add / Submit Bus Timing -->
+    <div class="modal-backdrop" id="addTimingModal" onclick="closeModalOnBackdrop(event)">
+      <div class="modal-sheet">
+        <div class="modal-header">
+          <div class="modal-title" id="lblModalTitle">🚌 Add New Bus Timing</div>
+          <button class="modal-close" onclick="closeAddTimingModal()">&times;</button>
+        </div>
+        <form onsubmit="submitNewTiming(event)">
+          <div class="form-group">
+            <label class="form-label" id="lblModalFrom">From (Origin Stop)</label>
+            <input type="text" class="form-input" id="mFrom" required placeholder="e.g. Namakkal Old Bus Stand or Mudalaipatti" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="lblModalTo">To (Destination)</label>
+            <input type="text" class="form-input" id="mTo" required placeholder="e.g. Mohanur or Chennai Kilambakkam" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="lblModalTimes">Departure Timings (comma or space separated)</label>
+            <input type="text" class="form-input" id="mTimes" required placeholder="e.g. 06:15, 08:30, 11:45, 17:20" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="lblModalVia">Via Route & Key Stops</label>
+            <input type="text" class="form-input" id="mVia" placeholder="e.g. Aniyapuram · Keerambur · Parali" />
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <div class="form-group">
+              <label class="form-label" id="lblModalType">Service Type</label>
+              <select class="form-select" id="mType">
+                <option value="town">Town Bus (உள்ளூர்)</option>
+                <option value="express" selected>Express / Mofussil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" id="lblModalFare">Approx Fare</label>
+              <input type="text" class="form-input" id="mFare" placeholder="e.g. ₹15 or ₹45" />
+            </div>
+          </div>
+          <div class="form-group" style="flex-direction:row; align-items:center; gap:8px; margin-top:4px;">
+            <input type="checkbox" id="mVetri" style="width:16px; height:16px; accent-color:var(--pink);" />
+            <label for="mVetri" class="form-label" style="font-size:12px; cursor:pointer;" id="lblModalVetri">🩷 Vetri Payanam Eligible (Women & TG · ₹0)</label>
+          </div>
+          <button type="submit" class="btn-submit-timing" id="btnSubmitModal">✓ Submit to Live App & Community</button>
+        </form>
+      </div>
+    </div>
+
     </main>
 
     <div class="toast" id="toastBox">Updated!</div>
@@ -793,6 +1012,8 @@
     let routeDB = {};
     let boards = {};
     let savedRoutes = JSON.parse(localStorage.getItem('tnbus_saved') || '[]');
+    let userVotes = JSON.parse(localStorage.getItem('tnbus_votes') || '{}');
+    let userSubmissions = JSON.parse(localStorage.getItem('tnbus_submissions') || '[]');
 
     const pillPalette = ['#E11D48', '#EA580C', '#7C3AED', '#0D9488', '#2563EB', '#059669', '#B45309'];
 
@@ -805,7 +1026,14 @@
         fAll: 'All', fVetri: '🩷 Vetri Payanam (Women & TG · ₹0)', fTown: 'Town Only', fExpress: 'Express',
         disclaimer: 'ℹ️ Community-sourced · Verify at stand / tnstc.in · Verified: 12-11-2026',
         reportBtn: '⚠️ Report Wrong Timing', popular: 'Quick Destinations in this District:',
-        savedTitle: '★ Saved Routes', tapStops: 'Tap to see stops timeline'
+        savedTitle: '★ Saved Routes', tapStops: 'Tap to see stops timeline',
+        addTiming: '+ Add Timing', modalTitle: '🚌 Add New Bus Timing',
+        modalFrom: 'From (Origin Stop)', modalTo: 'To (Destination)',
+        modalTimes: 'Departure Timings (comma or space separated)',
+        modalVia: 'Via Route & Key Stops', modalType: 'Service Type',
+        modalFare: 'Approx Fare', modalVetri: '🩷 Vetri Payanam Eligible (Women & TG · ₹0)',
+        submitTiming: '✓ Submit to Live App & Community',
+        votedCorrect: 'Thanks! Verified as Correct 👍', votedWrong: 'Thanks! Flagged as Wrong 👎'
       },
       ta: {
         appName: 'தமிழ்நாடு பேருந்து', appSub: '8 மாவட்டங்கள் · 38 விரைவில்',
@@ -815,7 +1043,14 @@
         fAll: 'அனைத்தும்', fVetri: '🩷 வெற்றிப் பயணம் (மகளிர் · ₹0)', fTown: 'டவுன் பஸ்', fExpress: 'எக்ஸ்பிரஸ்',
         disclaimer: 'ℹ️ சமூகத் தகவல் · பேருந்து நிலையம் / tnstc.in-ல் சரிபார்க்கவும் · 12-11-2026',
         reportBtn: '⚠️ தவறு / நேரம் பதிவிடு', popular: 'இந்த மாவட்டத்தின் முக்கிய ஊர்கள்:',
-        savedTitle: '★ சேமித்த வழிகள்', tapStops: 'நிறுத்தங்களைப் பார்க்க தட்டவும்'
+        savedTitle: '★ சேமித்த வழிகள்', tapStops: 'நிறுத்தங்களைப் பார்க்க தட்டவும்',
+        addTiming: '+ நேரம் சேர்க்க', modalTitle: '🚌 புதிய பேருந்து நேரம் சேர்க்க',
+        modalFrom: 'எங்கிருந்து (புறப்படும் இடம்)', modalTo: 'எங்கு (சேருமிடம்)',
+        modalTimes: 'புறப்படும் நேரங்கள் (எ.கா: 06:15, 08:30)',
+        modalVia: 'செல்லும் வழி & முக்கிய நிறுத்தங்கள்', modalType: 'சேவை வகை',
+        modalFare: 'கட்டணம்', modalVetri: '🩷 வெற்றிப் பயணம் (மகளிர் & திருநங்கைகள் · ₹0)',
+        submitTiming: '✓ செயலியில் சேர் (Submit)',
+        votedCorrect: 'நன்றி! சரியான நேரம் என வாக்களித்தீர்கள் 👍', votedWrong: 'நன்றி! தவறான நேரம் என கொடியிட்டீர்கள் 👎'
       }
     };
 
@@ -1016,9 +1251,16 @@
       const tKey = standAliases[tSel.value] || tSel.value;
       const key = `${fKey}->${tKey}`;
 
-      let list = routeDB[key] || [
-        { time: 'Check Stand / OTRS', eta: 'Corridor Service', title: `${fName} → ${tName}`, type: 'express', vetri: false, corp: 'TNSTC / SETC', bay: 'Main Terminus', via: 'Direct corridor — exact slot depends on division timetable', fare: 'Govt Tariff', dur: '—', gps: false, source: 'Verify on tnstc.in' }
-      ];
+      let rawList = routeDB[key] || [];
+      // Combine with user community submissions for this route key
+      const userList = userSubmissions.filter(s => s.routeKey === key);
+      let list = [...userList, ...rawList];
+
+      if (list.length === 0) {
+        list = [
+          { time: 'Check Stand / OTRS', eta: 'Corridor Service', title: `${fName} → ${tName}`, type: 'express', vetri: false, corp: 'TNSTC / SETC', bay: 'Main Terminus', via: 'Direct corridor — exact slot depends on division timetable', fare: 'Govt Tariff', dur: '—', gps: false, source: 'Verify on tnstc.in' }
+        ];
+      }
 
       // If Namakkal Old Stand is picked, only show buses that actually serve Old Stand
       let oldStandBlocked = false;
@@ -1059,8 +1301,15 @@
         const arrowVia = b.via.replace(/\s*·\s*/g, ' → ');
         const stops = [fName, ...b.via.split('·').map(s => s.trim().replace(/\s*\(.*?\)/g, '')).filter(Boolean)];
         const standTag = b.standScope ? `<span class="tag t-sched">${b.standScope === 'OLD+NEW' ? 'OLD + NEW STAND' : 'NEW STAND · MUDALAIPATTI'}</span>` : '';
+        
+        // Community Vote Data & Flag Status
+        const busId = b.id || (key + '|' + (b.time || '').replace(/\s+/g, '') + '|' + i);
+        const voteData = userVotes[busId] || { up: 0, down: 0, myVote: 0 };
+        const isVerifiedCommunity = (voteData.up - voteData.down >= 3) || b.isUserAdded;
+        const isFlaggedWrong = (voteData.down - voteData.up >= 2);
+
         return `
-        <article class="bus-card" onclick="toggleTimeline(${i})">
+        <article class="bus-card ${isFlaggedWrong ? 'flagged-card' : ''}" onclick="toggleTimeline(${i})">
           <div class="bus-top">
             <div>
               <div class="time-hero">${b.time}</div>
@@ -1074,7 +1323,9 @@
           <div class="bus-title">
             <span class="type-badge ${b.type === 'town' ? 'town' : ''}">${b.type === 'town' ? 'TOWN' : 'EXPRESS'}</span>
             <span>${b.title}</span>
+            ${isVerifiedCommunity ? '<span class="verified-badge">✓ Community Verified</span>' : ''}
           </div>
+          ${isFlaggedWrong ? '<div class="flagged-warning">⚠️ Reported inaccurate by commuters. Verify at terminus.</div>' : ''}
           <div class="bus-via"><strong>${b.bay}:</strong> ${arrowVia}</div>
           <div class="stop-timeline" id="tl-${i}">
             ${stops.map((st, idx) => `
@@ -1092,10 +1343,110 @@
           </div>
           <div class="card-footer">
             <span class="footer-left"><b>✓ ${b.source || 'Verified'}</b> · ${tr.tapStops}</span>
-            <a class="report-btn" href="https://github.com/maniraja5599/tn-bus-connect/issues/new?template=add-bus-timing.yml" target="_blank" onclick="event.stopPropagation()">${tr.reportBtn}</a>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <div class="vote-bar" onclick="event.stopPropagation()">
+                <button class="vote-btn ${voteData.myVote === 1 ? 'voted-up' : ''}" onclick="voteTiming('${busId}', 1)" title="Confirm timing is correct">
+                  👍 <span>${voteData.up || 0}</span>
+                </button>
+                <button class="vote-btn ${voteData.myVote === -1 ? 'voted-down' : ''}" onclick="voteTiming('${busId}', -1)" title="Report timing is wrong">
+                  👎 <span>${voteData.down || 0}</span>
+                </button>
+              </div>
+              <a class="report-btn" href="https://github.com/maniraja5599/tn-bus-connect/issues/new?template=add-bus-timing.yml" target="_blank" onclick="event.stopPropagation()">${tr.reportBtn}</a>
+            </div>
           </div>
         </article>
       `;}).join('');
+    }
+
+    
+    /* Community Voting & Submission Handlers */
+    function voteTiming(busId, dir) {
+      if (!userVotes[busId]) {
+        userVotes[busId] = { up: 0, down: 0, myVote: 0 };
+      }
+      const item = userVotes[busId];
+      if (item.myVote === dir) {
+        // Toggle off
+        if (dir === 1) item.up = Math.max(0, item.up - 1);
+        if (dir === -1) item.down = Math.max(0, item.down - 1);
+        item.myVote = 0;
+        showToast('Vote removed');
+      } else {
+        // Remove previous vote if any
+        if (item.myVote === 1) item.up = Math.max(0, item.up - 1);
+        if (item.myVote === -1) item.down = Math.max(0, item.down - 1);
+        // Add new vote
+        if (dir === 1) item.up += 1;
+        if (dir === -1) item.down += 1;
+        item.myVote = dir;
+        showToast(dir === 1 ? i18n[lang].votedCorrect : i18n[lang].votedWrong);
+      }
+      localStorage.setItem('tnbus_votes', JSON.stringify(userVotes));
+      renderResults();
+    }
+
+    function openAddTimingModal() {
+      const fSel = document.getElementById('fromSelect');
+      const tSel = document.getElementById('toSelect');
+      const fName = fSel.selectedOptions[0]?.text.split(' (')[0] || '';
+      const tName = tSel.selectedOptions[0]?.text.split(' (')[0] || '';
+      document.getElementById('mFrom').value = fName;
+      document.getElementById('mTo').value = tName;
+      document.getElementById('addTimingModal').classList.add('open');
+    }
+
+    function closeAddTimingModal() {
+      document.getElementById('addTimingModal').classList.remove('open');
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'addTimingModal') closeAddTimingModal();
+    }
+
+    function submitNewTiming(e) {
+      e.preventDefault();
+      const fSel = document.getElementById('fromSelect');
+      const tSel = document.getElementById('toSelect');
+      const fKey = standAliases[fSel.value] || fSel.value;
+      const tKey = standAliases[tSel.value] || tSel.value;
+      const routeKey = `${fKey}->${tKey}`;
+
+      const fromVal = document.getElementById('mFrom').value.trim();
+      const toVal = document.getElementById('mTo').value.trim();
+      const timesVal = document.getElementById('mTimes').value.trim().replace(/,/g, ' · ');
+      const viaVal = document.getElementById('mVia').value.trim() || `${fromVal} → ${toVal}`;
+      const typeVal = document.getElementById('mType').value;
+      const fareVal = document.getElementById('mFare').value.trim() || 'Govt Tariff';
+      const vetriVal = document.getElementById('mVetri').checked;
+
+      const newEntry = {
+        id: 'user_' + Date.now(),
+        routeKey: routeKey,
+        time: timesVal,
+        eta: 'Community Verified',
+        title: `${fromVal} → ${toVal}`,
+        type: typeVal,
+        vetri: vetriVal,
+        corp: 'TNSTC / Private (Community)',
+        bay: 'Reported Stand Bay',
+        via: viaVal,
+        fare: fareVal,
+        dur: '—',
+        gps: false,
+        source: 'Commuter Added',
+        isUserAdded: true
+      };
+
+      userSubmissions.unshift(newEntry);
+      localStorage.setItem('tnbus_submissions', JSON.stringify(userSubmissions));
+      // Automatically upvote user's own submission
+      userVotes[newEntry.id] = { up: 1, down: 0, myVote: 1 };
+      localStorage.setItem('tnbus_votes', JSON.stringify(userVotes));
+
+      closeAddTimingModal();
+      renderResults();
+      showToast(lang === 'ta' ? 'பேருந்து நேரம் வெற்றிகரமாக சேர்க்கப்பட்டது! ✓' : 'Bus timing added live to app! ✓');
     }
 
     function renderBoard() {
@@ -1149,6 +1500,26 @@
       document.getElementById('lblDisclaimer').textContent = t.disclaimer;
       document.getElementById('lblPopularDest').textContent = t.popular;
       document.getElementById('lblSavedTitle').textContent = t.savedTitle;
+      const btnAdd = document.getElementById('btnAddTiming');
+      if (btnAdd) btnAdd.textContent = t.addTiming;
+      const mTitle = document.getElementById('lblModalTitle');
+      if (mTitle) mTitle.textContent = t.modalTitle;
+      const mFrom = document.getElementById('lblModalFrom');
+      if (mFrom) mFrom.textContent = t.modalFrom;
+      const mTo = document.getElementById('lblModalTo');
+      if (mTo) mTo.textContent = t.modalTo;
+      const mTimes = document.getElementById('lblModalTimes');
+      if (mTimes) mTimes.textContent = t.modalTimes;
+      const mVia = document.getElementById('lblModalVia');
+      if (mVia) mVia.textContent = t.modalVia;
+      const mType = document.getElementById('lblModalType');
+      if (mType) mType.textContent = t.modalType;
+      const mFare = document.getElementById('lblModalFare');
+      if (mFare) mFare.textContent = t.modalFare;
+      const mVetri = document.getElementById('lblModalVetri');
+      if (mVetri) mVetri.textContent = t.modalVetri;
+      const btnSub = document.getElementById('btnSubmitModal');
+      if (btnSub) btnSub.textContent = t.submitTiming;
       renderResults();
     }
 

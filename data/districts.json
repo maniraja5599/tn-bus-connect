@@ -33,6 +33,10 @@
         {
           "id": "sendamangalam",
           "name": "Sendamangalam"
+        },
+        {
+          "id": "paramathi_velur",
+          "name": "Paramathi Velur Stand"
         }
       ],
       "outside": [
@@ -55,6 +59,14 @@
         {
           "id": "thuraiyur",
           "name": "Thuraiyur Bus Stand"
+        },
+        {
+          "id": "karur",
+          "name": "Karur Bus Stand"
+        },
+        {
+          "id": "erode",
+          "name": "Erode Central Stand"
         }
       ]
     },
@@ -1521,6 +1533,1050 @@
         "dur": "2h – 2h 15m",
         "gps": false,
         "source": "Corridor Frequency"
+      }
+    ],
+    "nkl->kallakurichi": [
+      {
+        "time": "04:45 · 09:50 · 12:30 · 18:30",
+        "all_exact_departures": [
+          "04:45",
+          "09:50",
+          "12:30",
+          "18:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Kallakurichi",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Belukurichi – Attur – Chinnasalem – Kallakurichi",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "kallakurichi->nkl": [
+      {
+        "time": "04:45 · 09:50 · 12:30 · 18:30",
+        "all_exact_departures": [
+          "04:45",
+          "09:50",
+          "12:30",
+          "18:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Kallakurichi → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Belukurichi – Attur – Chinnasalem – Kallakurichi",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->perambalur": [
+      {
+        "time": "05:45 · 08:45 · 13:00",
+        "all_exact_departures": [
+          "05:45",
+          "08:45",
+          "13:00"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Perambalur",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Erumapatti – Thuraiyur – Perambalur",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "perambalur->nkl": [
+      {
+        "time": "05:45 · 08:45 · 13:00",
+        "all_exact_departures": [
+          "05:45",
+          "08:45",
+          "13:00"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Perambalur → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Erumapatti – Thuraiyur – Perambalur",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->erode": [
+      {
+        "time": "00:00 · 00:20 · 01:30 · 05:00 · 05:30 · 20:15 · 21:30 · 21:50 (+4 more slots)",
+        "all_exact_departures": [
+          "00:00",
+          "00:20",
+          "01:30",
+          "05:00",
+          "05:30",
+          "20:15",
+          "21:30",
+          "21:50",
+          "22:10",
+          "22:45",
+          "23:15",
+          "23:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Erode",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Thiruchengode – Erode",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "erode->nkl": [
+      {
+        "time": "00:00 · 00:20 · 01:30 · 05:00 · 05:30 · 20:15 · 21:30 · 21:50 (+4 more slots)",
+        "all_exact_departures": [
+          "00:00",
+          "00:20",
+          "01:30",
+          "05:00",
+          "05:30",
+          "20:15",
+          "21:30",
+          "21:50",
+          "22:10",
+          "22:45",
+          "23:15",
+          "23:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Erode → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Thiruchengode – Erode",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->coimbatore": [
+      {
+        "time": "05:45 · 06:00 · 07:40 · 07:50 · 16:15",
+        "all_exact_departures": [
+          "05:45",
+          "06:00",
+          "07:40",
+          "07:50",
+          "16:15"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Coimbatore",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "coimbatore->nkl": [
+      {
+        "time": "05:45 · 06:00 · 07:40 · 07:50 · 16:15",
+        "all_exact_departures": [
+          "05:45",
+          "06:00",
+          "07:40",
+          "07:50",
+          "16:15"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Coimbatore → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->mettupalayam": [
+      {
+        "time": "00:20 · 01:00 · 07:20 · 09:15 · 10:20",
+        "all_exact_departures": [
+          "00:20",
+          "01:00",
+          "07:20",
+          "09:15",
+          "10:20"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Mettupalayam",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "mettupalayam->nkl": [
+      {
+        "time": "00:20 · 01:00 · 07:20 · 09:15 · 10:20",
+        "all_exact_departures": [
+          "00:20",
+          "01:00",
+          "07:20",
+          "09:15",
+          "10:20"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Mettupalayam → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->periyasamy_kovil": [
+      {
+        "time": "00:45 · 03:00",
+        "all_exact_departures": [
+          "00:45",
+          "03:00"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Periyasamy Kovil",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Periyasamy KovilBus Timings from Namakkal :00:45(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "periyasamy_kovil->nkl": [
+      {
+        "time": "00:45 · 03:00",
+        "all_exact_departures": [
+          "00:45",
+          "03:00"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Periyasamy Kovil → Namakkal",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Periyasamy KovilBus Timings from Namakkal :00:45(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->vendalapadi": [
+      {
+        "time": "03:00 · 05:50",
+        "all_exact_departures": [
+          "03:00",
+          "05:50"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Vendalapadi",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – VendalapadiBus Timings from Namakkal :05:50(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "vendalapadi->nkl": [
+      {
+        "time": "03:00 · 05:50",
+        "all_exact_departures": [
+          "03:00",
+          "05:50"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Vendalapadi → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – VendalapadiBus Timings from Namakkal :05:50(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->arapaleeswarar_temple": [
+      {
+        "time": "02:00 · 03:00 · 03:20 · 06:15 · 09:20 · 10:00 · 14:10 · 21:10",
+        "all_exact_departures": [
+          "02:00",
+          "03:00",
+          "03:20",
+          "06:15",
+          "09:20",
+          "10:00",
+          "14:10",
+          "21:10"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Arapaleeswarar Temple",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Arapaleeswarar TempleBus Timings from Namakkal : First Bus :02:00| Last Bus :21:10",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "arapaleeswarar_temple->nkl": [
+      {
+        "time": "02:00 · 03:00 · 03:20 · 06:15 · 09:20 · 10:00 · 14:10 · 21:10",
+        "all_exact_departures": [
+          "02:00",
+          "03:00",
+          "03:20",
+          "06:15",
+          "09:20",
+          "10:00",
+          "14:10",
+          "21:10"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Arapaleeswarar Temple → Namakkal",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Arapaleeswarar TempleBus Timings from Namakkal : First Bus :02:00| Last Bus :21:10",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->vilaram": [
+      {
+        "time": "03:00 · 07:50 · 12:50 · 17:40",
+        "all_exact_departures": [
+          "03:00",
+          "07:50",
+          "12:50",
+          "17:40"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Vilaram",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Senthamangalam, Karavalli, Semmedu, VasalurpattyBus Timings from Namakkal : First Bus :07:50| Last Bus :17:40",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "vilaram->nkl": [
+      {
+        "time": "03:00 · 07:50 · 12:50 · 17:40",
+        "all_exact_departures": [
+          "03:00",
+          "07:50",
+          "12:50",
+          "17:40"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Vilaram → Namakkal",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Senthamangalam, Karavalli, Semmedu, VasalurpattyBus Timings from Namakkal : First Bus :07:50| Last Bus :17:40",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->velikkad": [
+      {
+        "time": "03:30 · 14:30",
+        "all_exact_departures": [
+          "03:30",
+          "14:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Velikkad",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Kuzhivalavu – VelikkadBus Timings from Namakkal :14:30(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "velikkad->nkl": [
+      {
+        "time": "03:30 · 14:30",
+        "all_exact_departures": [
+          "03:30",
+          "14:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Velikkad → Namakkal",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Kuzhivalavu – VelikkadBus Timings from Namakkal :14:30(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->meganikadu": [
+      {
+        "time": "03:30 · 19:45",
+        "all_exact_departures": [
+          "03:30",
+          "19:45"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Meganikadu",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Kuzhivalavu – MeganikaduBus Timings from Namakkal :19:45(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "meganikadu->nkl": [
+      {
+        "time": "03:30 · 19:45",
+        "all_exact_departures": [
+          "03:30",
+          "19:45"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Meganikadu → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Namakkal – Senthamangalam – Karavalli – Semmedu – Kuzhivalavu – MeganikaduBus Timings from Namakkal :19:45(Single Service)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->paramathi_velur": [
+      {
+        "time": "04:30 · 05:00 · 05:30 · 06:00 · 06:15 · 06:45 · 07:10 · 07:30 (+31 more slots)",
+        "all_exact_departures": [
+          "04:30",
+          "05:00",
+          "05:30",
+          "06:00",
+          "06:15",
+          "06:45",
+          "07:10",
+          "07:30",
+          "08:00",
+          "08:20",
+          "08:45",
+          "09:00",
+          "09:30",
+          "10:00",
+          "10:30",
+          "11:00",
+          "11:30",
+          "12:00",
+          "12:30",
+          "13:00",
+          "13:30",
+          "14:00",
+          "14:30",
+          "15:00",
+          "15:30",
+          "16:00",
+          "16:30",
+          "17:00",
+          "17:30",
+          "18:00",
+          "18:30",
+          "19:00",
+          "19:30",
+          "20:00",
+          "20:30",
+          "21:00",
+          "21:30",
+          "22:00",
+          "22:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Paramathi Velur",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Kandampalayam · Paramathi · Velur (SH-86 / NH-44)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "paramathi_velur->nkl": [
+      {
+        "time": "04:30 · 05:00 · 05:30 · 06:00 · 06:15 · 06:45 · 07:10 · 07:30 (+31 more slots)",
+        "all_exact_departures": [
+          "04:30",
+          "05:00",
+          "05:30",
+          "06:00",
+          "06:15",
+          "06:45",
+          "07:10",
+          "07:30",
+          "08:00",
+          "08:20",
+          "08:45",
+          "09:00",
+          "09:30",
+          "10:00",
+          "10:30",
+          "11:00",
+          "11:30",
+          "12:00",
+          "12:30",
+          "13:00",
+          "13:30",
+          "14:00",
+          "14:30",
+          "15:00",
+          "15:30",
+          "16:00",
+          "16:30",
+          "17:00",
+          "17:30",
+          "18:00",
+          "18:30",
+          "19:00",
+          "19:30",
+          "20:00",
+          "20:30",
+          "21:00",
+          "21:30",
+          "22:00",
+          "22:30"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Paramathi Velur → Namakkal",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Kandampalayam · Paramathi · Velur (SH-86 / NH-44)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->karur": [
+      {
+        "time": "05:00 · 05:45 · 06:15 · 06:45 · 07:15 · 07:45 · 08:15 · 08:45 (+27 more slots)",
+        "all_exact_departures": [
+          "05:00",
+          "05:45",
+          "06:15",
+          "06:45",
+          "07:15",
+          "07:45",
+          "08:15",
+          "08:45",
+          "09:15",
+          "09:45",
+          "10:15",
+          "10:45",
+          "11:15",
+          "11:45",
+          "12:15",
+          "12:45",
+          "13:15",
+          "13:45",
+          "14:15",
+          "14:45",
+          "15:15",
+          "15:45",
+          "16:15",
+          "16:45",
+          "17:15",
+          "17:45",
+          "18:15",
+          "18:45",
+          "19:15",
+          "19:45",
+          "20:15",
+          "20:45",
+          "21:15",
+          "22:00",
+          "22:45"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Karur",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Paramathi Velur · Manmangalam · Vangal · Karur (NH-44)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "karur->nkl": [
+      {
+        "time": "05:00 · 05:45 · 06:15 · 06:45 · 07:15 · 07:45 · 08:15 · 08:45 (+27 more slots)",
+        "all_exact_departures": [
+          "05:00",
+          "05:45",
+          "06:15",
+          "06:45",
+          "07:15",
+          "07:45",
+          "08:15",
+          "08:45",
+          "09:15",
+          "09:45",
+          "10:15",
+          "10:45",
+          "11:15",
+          "11:45",
+          "12:15",
+          "12:45",
+          "13:15",
+          "13:45",
+          "14:15",
+          "14:45",
+          "15:15",
+          "15:45",
+          "16:15",
+          "16:45",
+          "17:15",
+          "17:45",
+          "18:15",
+          "18:45",
+          "19:15",
+          "19:45",
+          "20:15",
+          "20:45",
+          "21:15",
+          "22:00",
+          "22:45"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Karur → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Paramathi Velur · Manmangalam · Vangal · Karur (NH-44)",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl->madurai": [
+      {
+        "time": "00:30 · 01:45 · 03:00 · 04:15 · 05:30 · 06:45 · 08:00 · 09:15 (+11 more slots)",
+        "all_exact_departures": [
+          "00:30",
+          "01:45",
+          "03:00",
+          "04:15",
+          "05:30",
+          "06:45",
+          "08:00",
+          "09:15",
+          "10:30",
+          "11:45",
+          "13:00",
+          "14:15",
+          "15:30",
+          "16:45",
+          "18:00",
+          "19:15",
+          "20:30",
+          "21:45",
+          "23:00"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Namakkal → Madurai",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Paramathi Velur · Karur Bypass · Dindigul Bypass · Madurai MIBT",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "madurai->nkl": [
+      {
+        "time": "00:30 · 01:45 · 03:00 · 04:15 · 05:30 · 06:45 · 08:00 · 09:15 (+11 more slots)",
+        "all_exact_departures": [
+          "00:30",
+          "01:45",
+          "03:00",
+          "04:15",
+          "05:30",
+          "06:45",
+          "08:00",
+          "09:15",
+          "10:30",
+          "11:45",
+          "13:00",
+          "14:15",
+          "15:30",
+          "16:45",
+          "18:00",
+          "19:15",
+          "20:30",
+          "21:45",
+          "23:00"
+        ],
+        "eta": "Scheduled Official",
+        "title": "Madurai → Namakkal",
+        "type": "express",
+        "vetri": true,
+        "corp": "TNSTC Salem",
+        "bay": "Namakkal Old / New Stand",
+        "via": "Paramathi Velur · Karur Bypass · Dindigul Bypass · Madurai MIBT",
+        "fare": "₹15 – ₹55",
+        "dur": "30m – 2h",
+        "gps": true,
+        "source": "TicketToGetLost / TNSTC Timetable"
+      }
+    ],
+    "nkl_old->nkl_new": [
+      {
+        "time": "05:30 – 22:30 · Every 10 mins",
+        "eta": "Frequent Shuttle",
+        "title": "Namakkal Old Stand ↔ Mudalaipatti New Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem (Namakkal)",
+        "bay": "Town Bay 1",
+        "via": "Old Stand → Mohanur Road Corner → Collectorate Road → Mudalaipatti New Stand (~4.2 km)",
+        "fare": "₹10",
+        "dur": "12m",
+        "gps": true,
+        "source": "TNSTC Town Shuttle"
+      }
+    ],
+    "nkl_new->nkl_old": [
+      {
+        "time": "05:30 – 22:30 · Every 10 mins",
+        "eta": "Frequent Shuttle",
+        "title": "Mudalaipatti New Stand ↔ Namakkal Old Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Salem (Namakkal)",
+        "bay": "Town Bus Bay",
+        "via": "Mudalaipatti New Stand → Collectorate Road → Mohanur Road Corner → Old Stand (~4.2 km)",
+        "fare": "₹10",
+        "dur": "12m",
+        "gps": true,
+        "source": "TNSTC Town Shuttle"
+      }
+    ],
+    "nkl->trichy": [
+      {
+        "time": "05:15 · 06:45 · 08:30 · 11:20 · 14:10 · 17:00 · 19:30",
+        "eta": "Corridor Express",
+        "title": "Namakkal → Trichy Panjappur IBT",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Kumbakonam / Salem",
+        "bay": "Mudalaipatti Bay 4",
+        "via": "Mudalaipatti → Thathiengarpet → Musiri → Gunaseelam → Srirangam By-pass → Trichy Panjappur (~88 km)",
+        "fare": "₹75 – ₹95",
+        "dur": "2h 15m",
+        "gps": true,
+        "source": "TNSTC Timetable"
+      }
+    ],
+    "trichy->nkl": [
+      {
+        "time": "06:00 · 07:30 · 09:15 · 12:00 · 14:45 · 17:30 · 20:15",
+        "eta": "Corridor Express",
+        "title": "Trichy Panjappur IBT → Namakkal",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Kumbakonam / Salem",
+        "bay": "Panjappur IBT Bay 6",
+        "via": "Trichy Panjappur → Musiri → Thathiengarpet → Mudalaipatti New Stand (~88 km)",
+        "fare": "₹75 – ₹95",
+        "dur": "2h 15m",
+        "gps": true,
+        "source": "TNSTC Timetable"
+      }
+    ],
+    "trichy->chathiram": [
+      {
+        "time": "05:00 – 23:00 · Every 5 mins (Rt 1, 1A, 1B, 1C)",
+        "eta": "City Shuttle",
+        "title": "Panjappur IBT ↔ Chathiram Bus Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Kumbakonam (Trichy)",
+        "bay": "City Bus Terminal",
+        "via": "Panjappur IBT → Mannarpuram → Central Stand → Palakkarai → Main Guard Gate → Chathiram",
+        "fare": "₹12 – ₹16",
+        "dur": "25m",
+        "gps": true,
+        "source": "Trichy City Timetable"
+      }
+    ],
+    "chathiram->trichy": [
+      {
+        "time": "05:00 – 23:00 · Every 5 mins (Rt 1, 1A, 1B, 1C)",
+        "eta": "City Shuttle",
+        "title": "Chathiram Bus Stand ↔ Panjappur IBT",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Kumbakonam (Trichy)",
+        "bay": "Town Platform 1",
+        "via": "Chathiram → Main Guard Gate → Palakkarai → Central Stand → Mannarpuram → Panjappur IBT",
+        "fare": "₹12 – ₹16",
+        "dur": "25m",
+        "gps": true,
+        "source": "Trichy City Timetable"
+      }
+    ],
+    "trichy->madurai": [
+      {
+        "time": "24 Hours · Every 10–15 mins",
+        "eta": "NH-44 Superfast",
+        "title": "Trichy Panjappur IBT → Madurai Mattuthavani",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai / Kumbakonam",
+        "bay": "Panjappur Bay 3",
+        "via": "Panjappur IBT → Viralimalai → Thuvarankurichi → Melur → Madurai MIBT (~130 km)",
+        "fare": "₹115 – ₹160",
+        "dur": "2h 30m",
+        "gps": true,
+        "source": "NH-44 Express Schedule"
+      }
+    ],
+    "madurai->trichy": [
+      {
+        "time": "24 Hours · Every 10–15 mins",
+        "eta": "NH-44 Superfast",
+        "title": "Madurai Mattuthavani → Trichy Panjappur IBT",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai / Kumbakonam",
+        "bay": "MIBT Bay 8",
+        "via": "Madurai MIBT → Melur → Thuvarankurichi → Viralimalai → Panjappur IBT (~130 km)",
+        "fare": "₹115 – ₹160",
+        "dur": "2h 30m",
+        "gps": true,
+        "source": "NH-44 Express Schedule"
+      }
+    ],
+    "chennai->tambaram": [
+      {
+        "time": "04:30 – 23:30 · Every 5 mins",
+        "eta": "MTC Corridor",
+        "title": "Kilambakkam (KCBT) ↔ Tambaram",
+        "type": "town",
+        "vetri": true,
+        "corp": "MTC Chennai",
+        "bay": "KCBT City Bus Bays",
+        "via": "KCBT → Vandalur Zoo → Perungalathur → Tambaram West / East (~11 km)",
+        "fare": "₹10 – ₹15",
+        "dur": "18m",
+        "gps": true,
+        "source": "MTC GTFS"
+      }
+    ],
+    "tambaram->chennai": [
+      {
+        "time": "04:30 – 23:30 · Every 5 mins",
+        "eta": "MTC Corridor",
+        "title": "Tambaram ↔ Kilambakkam (KCBT)",
+        "type": "town",
+        "vetri": true,
+        "corp": "MTC Chennai",
+        "bay": "Tambaram Stand Platform 2",
+        "via": "Tambaram → Perungalathur → Vandalur Zoo → KCBT (~11 km)",
+        "fare": "₹10 – ₹15",
+        "dur": "18m",
+        "gps": true,
+        "source": "MTC GTFS"
+      }
+    ],
+    "kovai->pollachi": [
+      {
+        "time": "05:00 – 22:30 · Every 10 mins",
+        "eta": "Express Shuttle",
+        "title": "Gandhipuram / Ukkadam → Pollachi",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Ukkadam / Gandhipuram Bay 2",
+        "via": "Gandhipuram → Ukkadam → Kinathukadavu → Pollachi (~42 km)",
+        "fare": "₹35 – ₹45",
+        "dur": "55m",
+        "gps": true,
+        "source": "TNSTC Coimbatore"
+      }
+    ],
+    "pollachi->kovai": [
+      {
+        "time": "05:00 – 22:30 · Every 10 mins",
+        "eta": "Express Shuttle",
+        "title": "Pollachi → Ukkadam / Gandhipuram",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Pollachi Stand Bay 1",
+        "via": "Pollachi → Kinathukadavu → Ukkadam → Gandhipuram (~42 km)",
+        "fare": "₹35 – ₹45",
+        "dur": "55m",
+        "gps": true,
+        "source": "TNSTC Coimbatore"
+      }
+    ],
+    "kovai->marudhamalai": [
+      {
+        "time": "05:30 – 22:00 · Every 8 mins (Rt 1C, 70, 70A)",
+        "eta": "Town Service",
+        "title": "Gandhipuram → Marudhamalai Temple",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Town Bus Platform",
+        "via": "Gandhipuram → RS Puram → Lawley Road → Vadavalli → Marudhamalai Foot (~14 km)",
+        "fare": "₹13 – ₹18",
+        "dur": "35m",
+        "gps": true,
+        "source": "TNSTC Town Bus"
+      }
+    ],
+    "marudhamalai->kovai": [
+      {
+        "time": "05:30 – 22:00 · Every 8 mins (Rt 1C, 70, 70A)",
+        "eta": "Town Service",
+        "title": "Marudhamalai Temple → Gandhipuram",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Marudhamalai Stand",
+        "via": "Marudhamalai Foot → Vadavalli → Lawley Road → RS Puram → Gandhipuram (~14 km)",
+        "fare": "₹13 – ₹18",
+        "dur": "35m",
+        "gps": true,
+        "source": "TNSTC Town Bus"
+      }
+    ],
+    "nellai->thoothukudi": [
+      {
+        "time": "05:00 – 22:30 · Every 10 mins",
+        "eta": "Express 1-to-1",
+        "title": "Tirunelveli New Stand → Thoothukudi Old / New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli",
+        "bay": "Venthankulam Bay 2",
+        "via": "Venthankulam → Palayamkottai → Vagaikulam → Pudukkottai → Thoothukudi (~48 km)",
+        "fare": "₹40 – ₹55",
+        "dur": "1h 05m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli"
+      }
+    ],
+    "thoothukudi->nellai": [
+      {
+        "time": "05:00 – 22:30 · Every 10 mins",
+        "eta": "Express 1-to-1",
+        "title": "Thoothukudi → Tirunelveli New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli",
+        "bay": "Thoothukudi Bay 3",
+        "via": "Thoothukudi → Pudukkottai → Vagaikulam → Palayamkottai → Venthankulam (~48 km)",
+        "fare": "₹40 – ₹55",
+        "dur": "1h 05m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli"
       }
     ]
   },
