@@ -11,13 +11,14 @@
   <title>TN BusConnect — Tamil Nadu Bus Timings</title>
   <style>
     :root {
-      --bg: #F3F5F4;
+      --bg: #F2F5F4;
       --surface: #FFFFFF;
-      --surface-2: #F8FAF9;
-      --border: #E2E8E5;
+      --surface-2: #F7FAF8;
+      --border: #E1E7E4;
       --text: #111827;
-      --muted: #5B6676;
+      --muted: #5A6577;
       --green: #0D6B4E;
+      --green-dark: #09523B;
       --green-soft: #E6F4EE;
       --amber: #D97706;
       --amber-soft: #FEF3C7;
@@ -25,31 +26,31 @@
       --pink-soft: #FCE7F3;
       --blue: #0284C7;
       --blue-soft: #E0F2FE;
-      --shadow: 0 2px 10px rgba(17, 24, 39, 0.05);
+      --shadow: 0 2px 12px rgba(17, 24, 39, 0.05);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: #E7ECEA;
+      background: linear-gradient(145deg, #E3EBE7 0%, #EDF1EF 100%);
       color: var(--text);
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 12px;
+      padding: 14px;
       -webkit-font-smoothing: antialiased;
     }
 
     .app-shell {
       width: 100%;
-      max-width: 410px;
-      height: 780px;
+      max-width: 416px;
+      height: 790px;
       background: var(--bg);
-      border-radius: 32px;
+      border-radius: 34px;
       border: 6px solid #1F2937;
-      box-shadow: 0 24px 60px rgba(17, 24, 39, 0.22);
+      box-shadow: 0 28px 65px rgba(17, 24, 39, 0.22);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -76,95 +77,68 @@
       flex-direction: column;
       gap: 9px;
     }
-    .header-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
     .brand { display: flex; align-items: center; gap: 9px; }
     .brand-badge {
-      width: 32px; height: 32px;
+      width: 34px; height: 34px;
       border-radius: 10px;
-      background: var(--green);
+      background: linear-gradient(135deg, var(--green), #128C66);
       color: #fff;
       display: grid; place-items: center;
+      box-shadow: 0 3px 10px rgba(13, 107, 78, 0.24);
     }
-    .brand-name { font-size: 15px; font-weight: 800; letter-spacing: -0.3px; color: var(--text); }
-    .brand-sub { font-size: 10.5px; color: var(--muted); font-weight: 500; }
+    .brand-name { font-size: 15px; font-weight: 800; letter-spacing: -0.3px; color: var(--text); display: flex; align-items: center; gap: 5px; }
+    .beta-pill {
+      font-size: 9.5px; font-weight: 800; color: var(--green);
+      background: var(--green-soft); padding: 1.5px 6px; border-radius: 999px;
+    }
+    .brand-sub { font-size: 10.5px; color: var(--muted); font-weight: 500; margin-top: 1px; }
 
     .header-pills { display: flex; align-items: center; gap: 6px; }
     .pill-btn {
       background: var(--surface-2);
       border: 1px solid var(--border);
       color: var(--text);
-      padding: 5px 9px;
+      padding: 5px 10px;
       border-radius: 999px;
       font-size: 11px;
       font-weight: 700;
       cursor: pointer;
       display: inline-flex; align-items: center; gap: 4px;
+      transition: 0.15s ease;
     }
-    .pill-btn.offline-on {
-      background: var(--amber-soft);
-      border-color: #F59E0B;
-      color: #92400E;
-    }
+    .pill-btn:hover { border-color: var(--green); color: var(--green); }
+    .pill-btn.offline-on { background: var(--amber-soft); border-color: #F59E0B; color: #92400E; }
 
     /* District Bar */
     .district-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
       background: var(--green-soft);
       border: 1px solid rgba(13, 107, 78, 0.22);
-      border-radius: 11px;
-      padding: 6px 10px;
+      border-radius: 12px;
+      padding: 7px 11px;
     }
     .district-left { display: flex; align-items: center; gap: 6px; flex: 1; }
     .district-select {
-      background: transparent;
-      border: none;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--green);
-      width: 100%;
-      outline: none;
-      cursor: pointer;
+      background: transparent; border: none; font-size: 13px; font-weight: 800;
+      color: var(--green); width: 100%; outline: none; cursor: pointer;
     }
     .district-tag {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--green);
-      background: #FFFFFF;
-      padding: 2px 7px;
-      border-radius: 999px;
-      white-space: nowrap;
+      font-size: 10px; font-weight: 700; color: var(--green);
+      background: #FFFFFF; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
     }
 
-    /* Offline Alert */
     .offline-strip {
-      display: none;
-      background: var(--amber-soft);
-      border-bottom: 1px solid #FDE68A;
-      color: #92400E;
-      padding: 6px 14px;
-      font-size: 11px;
-      font-weight: 600;
-      align-items: center;
-      gap: 6px;
+      display: none; background: var(--amber-soft); border-bottom: 1px solid #FDE68A;
+      color: #92400E; padding: 6px 14px; font-size: 11px; font-weight: 600;
+      align-items: center; gap: 6px;
     }
     .offline-strip.show { display: flex; }
 
     /* Scroll Body */
     .content {
-      flex: 1;
-      overflow-y: auto;
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      flex: 1; overflow-y: auto; padding: 11px 12px;
+      display: flex; flex-direction: column; gap: 10px;
     }
     .content::-webkit-scrollbar { width: 4px; }
     .content::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
@@ -174,292 +148,191 @@
 
     /* Search Card */
     .search-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 11px;
-      box-shadow: var(--shadow);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 11px; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 8px;
     }
+    .inputs-wrap { position: relative; display: flex; flex-direction: column; gap: 7px; }
     .stop-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-radius: 11px;
-      padding: 8px 38px 8px 10px;
+      display: flex; align-items: center; gap: 8px;
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 11px; padding: 8px 40px 8px 10px;
+      transition: border-color 0.15s ease;
     }
+    .stop-row:focus-within { border-color: var(--green); background: #FFFFFF; }
+    .stop-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot-from { background: var(--green); }
+    .dot-to { background: var(--amber); }
     .stop-label {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--muted);
-      text-transform: uppercase;
-      width: 34px;
-      flex-shrink: 0;
+      font-size: 9.5px; font-weight: 800; color: var(--muted);
+      text-transform: uppercase; width: 32px; flex-shrink: 0;
     }
     .stop-select {
-      background: transparent;
-      border: none;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      width: 100%;
-      outline: none;
-      cursor: pointer;
+      background: transparent; border: none; font-size: 13px; font-weight: 700;
+      color: var(--text); width: 100%; outline: none; cursor: pointer;
     }
     .reverse-btn {
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 34px; height: 34px;
-      border-radius: 50%;
-      background: var(--surface);
-      border: 1.5px solid var(--green);
-      color: var(--green);
-      display: grid; place-items: center;
-      cursor: pointer;
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--surface); border: 1.5px solid var(--green); color: var(--green);
+      display: grid; place-items: center; cursor: pointer;
       box-shadow: 0 3px 10px rgba(13, 107, 78, 0.16);
-      transition: transform 0.18s ease, background 0.15s ease;
-      z-index: 3;
+      transition: transform 0.2s ease, background 0.15s ease; z-index: 3;
     }
     .reverse-btn:hover { background: var(--green-soft); }
     .reverse-btn:active { transform: translateY(-50%) rotate(180deg); }
 
-    /* Quick Popular Chips */
-    .quick-row {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      padding-bottom: 2px;
-    }
+    /* Quick Destination Strip inside Search Card */
+    .quick-dest-label { font-size: 10px; font-weight: 700; color: var(--muted); margin-top: 2px; }
+    .quick-row { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
     .quick-row::-webkit-scrollbar { display: none; }
-    .chip {
-      white-space: nowrap;
-      padding: 6px 11px;
-      border-radius: 999px;
-      font-size: 11.5px;
-      font-weight: 700;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+    .dest-chip {
+      white-space: nowrap; padding: 4px 9px; border-radius: 8px;
+      font-size: 11px; font-weight: 700; background: var(--surface-2);
+      border: 1px solid var(--border); color: var(--text); cursor: pointer;
+      transition: 0.15s ease;
     }
-    .chip.active {
-      background: var(--green);
-      border-color: var(--green);
-      color: #FFFFFF;
-    }
-    .chip.pink-active {
-      background: var(--pink);
-      border-color: var(--pink);
-      color: #FFFFFF;
+    .dest-chip:hover, .dest-chip.active {
+      background: var(--green-soft); border-color: rgba(13, 107, 78, 0.35); color: var(--green);
     }
 
-    /* Route Header */
-    .results-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2px;
+    /* Filter Chips */
+    .chip {
+      white-space: nowrap; padding: 6px 11px; border-radius: 999px;
+      font-size: 11.5px; font-weight: 700; background: var(--surface);
+      border: 1px solid var(--border); color: var(--muted); cursor: pointer;
+      display: inline-flex; align-items: center; gap: 4px;
     }
+    .chip.active { background: var(--green); border-color: var(--green); color: #FFFFFF; }
+    .chip.pink-active { background: var(--pink); border-color: var(--pink); color: #FFFFFF; }
+
+    /* Route Header & Actions */
+    .results-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 0 2px; }
     .route-heading { font-size: 13px; font-weight: 800; color: var(--text); }
+    .meta-actions { display: flex; align-items: center; gap: 6px; }
     .dir-pill {
-      font-size: 10.5px;
-      font-weight: 700;
-      color: var(--green);
-      background: var(--green-soft);
-      padding: 3px 8px;
-      border-radius: 999px;
+      font-size: 10px; font-weight: 700; color: var(--green);
+      background: var(--green-soft); padding: 3px 8px; border-radius: 999px;
+    }
+    .star-btn {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
+      padding: 3px 8px; font-size: 11px; font-weight: 700; color: var(--muted); cursor: pointer;
+    }
+    .star-btn.saved { background: var(--amber-soft); border-color: #F59E0B; color: #92400E; }
+
+    .disclaimer-bar {
+      font-size: 10px; color: var(--muted); background: var(--surface);
+      border: 1px solid var(--border); border-radius: 9px; padding: 5px 9px;
+      display: flex; align-items: center; gap: 5px;
     }
 
     /* Time-First Bus Card */
     .bus-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 12px 13px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      cursor: pointer;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 15px; padding: 12px 13px; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 7px; cursor: pointer;
+      transition: border-color 0.15s ease, transform 0.12s ease;
     }
-    .bus-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .time-hero {
-      font-size: 23px;
-      font-weight: 900;
-      letter-spacing: -0.6px;
-      color: var(--text);
-      line-height: 1.05;
-    }
+    .bus-card:hover { border-color: rgba(13, 107, 78, 0.35); }
+    .bus-card.primary-card { border-left: 4px solid var(--green); }
+    .bus-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .time-hero { font-size: 21px; font-weight: 900; letter-spacing: -0.5px; color: var(--text); line-height: 1.1; }
     .eta-pill {
-      display: inline-block;
-      margin-top: 3px;
-      font-size: 10.5px;
-      font-weight: 800;
-      padding: 2px 7px;
-      border-radius: 6px;
-      background: var(--green-soft);
-      color: var(--green);
+      display: inline-block; margin-top: 3px; font-size: 10.5px; font-weight: 800;
+      padding: 2px 7px; border-radius: 6px; background: var(--green-soft); color: var(--green);
     }
     .eta-pill.amber { background: var(--amber-soft); color: #B45309; }
 
-    .fare-box { text-align: right; }
-    .fare-val { font-size: 15px; font-weight: 800; color: var(--text); }
+    .fare-box { text-align: right; flex-shrink: 0; }
+    .fare-val { font-size: 14.5px; font-weight: 800; color: var(--text); }
     .dur-val { font-size: 10.5px; color: var(--muted); font-weight: 600; margin-top: 2px; }
 
-    .bus-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-    .rt-tag {
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 5px;
-      background: var(--blue-soft);
-      color: #0369A1;
-    }
+    .bus-title { font-size: 13px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .rt-tag { font-size: 9.5px; font-weight: 800; padding: 2px 6px; border-radius: 5px; background: var(--blue-soft); color: #0369A1; }
     .rt-tag.pink { background: var(--pink-soft); color: #BE185D; }
     .bus-via { font-size: 11px; color: var(--muted); line-height: 1.35; }
 
-    .badge-row { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
-    .tag {
-      font-size: 10px;
-      font-weight: 700;
-      padding: 3px 7px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+    /* Visual Route Stopper Timeline (Expandable) */
+    .stop-timeline {
+      display: none;
+      margin-top: 4px;
+      padding: 8px 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      flex-direction: column;
+      gap: 6px;
     }
+    .stop-timeline.open { display: flex; }
+    .tl-item {
+      display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; color: var(--text);
+    }
+    .tl-dot {
+      width: 8px; height: 8px; border-radius: 50%; border: 2px solid var(--green);
+      background: #fff; flex-shrink: 0;
+    }
+    .tl-dot.end { background: var(--green); }
+
+    .badge-row { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+    .tag { font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; }
     .t-vetri { background: var(--pink-soft); color: #BE185D; }
     .t-gps { background: var(--green-soft); color: var(--green); }
     .t-sched { background: #F1F5F9; color: #475569; }
-    .t-crowd { background: #ECFDF5; color: #047857; }
 
     .crowd-verify {
-      margin-top: 2px;
-      padding-top: 7px;
-      border-top: 1px dashed var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 10.5px;
-      color: var(--muted);
+      margin-top: 2px; padding-top: 7px; border-top: 1px dashed var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 10.5px; color: var(--muted);
     }
     .report-btn {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 10px;
-      font-weight: 700;
-      cursor: pointer;
+      background: var(--surface-2); border: 1px solid var(--border); color: var(--text);
+      padding: 3px 8px; border-radius: 6px; font-size: 10px; font-weight: 700;
+      cursor: pointer; text-decoration: none;
     }
     .report-btn:hover { border-color: var(--green); color: var(--green); }
 
-    /* Stand Board Tab */
+    /* Stand Board */
     .board-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 15px; overflow: hidden; box-shadow: var(--shadow);
     }
     .board-head {
-      background: var(--green);
-      color: #FFFFFF;
-      padding: 10px 13px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: var(--green); color: #FFFFFF; padding: 10px 13px;
+      display: flex; justify-content: space-between; align-items: center;
     }
     .board-row {
-      display: grid;
-      grid-template-columns: 44px 1fr 78px;
-      gap: 9px;
-      align-items: center;
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: 44px 1fr 82px; gap: 9px;
+      align-items: center; padding: 10px 12px; border-bottom: 1px solid var(--border);
     }
     .board-row:last-child { border-bottom: none; }
     .bay-pill {
-      background: var(--amber-soft);
-      color: #92400E;
-      font-weight: 800;
-      font-size: 11px;
-      text-align: center;
-      padding: 5px 0;
-      border-radius: 7px;
+      background: var(--amber-soft); color: #92400E; font-weight: 800;
+      font-size: 10.5px; text-align: center; padding: 5px 0; border-radius: 7px;
     }
 
-    /* Info / Offline Tab */
     .info-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px;
-      box-shadow: var(--shadow);
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 12px; box-shadow: var(--shadow);
     }
     .info-card h3 { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
     .info-card p { font-size: 11.5px; color: var(--muted); line-height: 1.45; }
 
     /* Bottom Nav */
     .bottom-nav {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 6px 4px 10px;
+      background: var(--surface); border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(3, 1fr); padding: 6px 4px 10px;
     }
     .nav-btn {
-      background: none;
-      border: none;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3px;
-      font-size: 10.5px;
-      font-weight: 700;
-      cursor: pointer;
+      background: none; border: none; color: var(--muted);
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      font-size: 10.5px; font-weight: 700; cursor: pointer;
     }
     .nav-btn.active { color: var(--green); }
 
     .toast {
-      position: absolute;
-      bottom: 66px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #111827;
-      color: #FFFFFF;
-      padding: 7px 14px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 700;
-      display: none;
-      white-space: nowrap;
-      z-index: 20;
+      position: absolute; bottom: 66px; left: 50%; transform: translateX(-50%);
+      background: #111827; color: #FFFFFF; padding: 7px 14px; border-radius: 999px;
+      font-size: 11px; font-weight: 700; display: none; white-space: nowrap; z-index: 20;
     }
     .toast.show { display: block; }
   </style>
@@ -472,10 +345,10 @@
       <div class="header-row">
         <div class="brand">
           <div class="brand-badge">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="16" cy="18" r="2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="16" cy="18" r="2"/></svg>
           </div>
           <div>
-            <div class="brand-name" id="lblAppName">TN BusConnect <span style="font-size:10px; font-weight:700; color:var(--green); background:var(--green-soft); padding:1px 6px; border-radius:999px;">Beta</span></div>
+            <div class="brand-name" id="lblAppName">TN BusConnect <span class="beta-pill">Beta</span></div>
             <div class="brand-sub" id="lblAppSub">8 Districts Live · 38 Coming</div>
           </div>
         </div>
@@ -509,27 +382,39 @@
 
     <div class="offline-strip" id="offlineStrip">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 2l20 20"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.859a10 10 0 0 1 5.17-2.69"/></svg>
-      <span id="lblOfflineBanner">Offline Mode: Showing 2.4 MB cached district timetable</span>
+      <span id="lblOfflineBanner">Offline Mode: Showing cached district timetable</span>
     </div>
 
     <div class="content">
       <!-- TAB 1: SEARCH & REVERSE -->
       <div class="tab-pane active" id="pane-routes">
-        <div class="search-card">
-          <div class="stop-row">
-            <span class="stop-label" id="lblFrom">From</span>
-            <select class="stop-select" id="fromSelect" onchange="renderResults()"></select>
-          </div>
-          <button class="reverse-btn" onclick="swapDirection()" title="Reverse Direction">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
-          </button>
-          <div class="stop-row">
-            <span class="stop-label" id="lblTo">To</span>
-            <select class="stop-select" id="toSelect" onchange="renderResults()"></select>
-          </div>
+        <!-- Saved Routes Bar (auto-appears if user stars routes) -->
+        <div id="savedBar" style="display:none; flex-direction:column; gap:5px;">
+          <div class="quick-dest-label" id="lblSavedTitle">★ Saved Routes</div>
+          <div class="quick-row" id="savedChips"></div>
         </div>
 
-        <!-- Post-Search Filter Chips (All · Vetri Payanam · Town · Express) -->
+        <div class="search-card">
+          <div class="inputs-wrap">
+            <div class="stop-row">
+              <span class="stop-dot dot-from"></span>
+              <span class="stop-label" id="lblFrom">From</span>
+              <select class="stop-select" id="fromSelect" onchange="renderResults()"></select>
+            </div>
+            <button class="reverse-btn" onclick="swapDirection()" title="Reverse Direction">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
+            </button>
+            <div class="stop-row">
+              <span class="stop-dot dot-to"></span>
+              <span class="stop-label" id="lblTo">To</span>
+              <select class="stop-select" id="toSelect" onchange="renderResults()"></select>
+            </div>
+          </div>
+          <div class="quick-dest-label" id="lblPopularDest">Quick Destinations in this District:</div>
+          <div class="quick-row" id="quickDestChips"></div>
+        </div>
+
+        <!-- Post-Search Filter Chips -->
         <div class="quick-row">
           <button class="chip active" id="f-all" onclick="setFilter('all', this)">All</button>
           <button class="chip" id="f-vetri" onclick="setFilter('vetri', this)">🩷 Vetri Payanam (Women & TG · ₹0)</button>
@@ -539,10 +424,13 @@
 
         <div class="results-meta">
           <div class="route-heading" id="routeHeading">Namakkal → Chennai KCBT</div>
-          <span class="dir-pill" id="dirBadge">Forward</span>
+          <div class="meta-actions">
+            <button class="star-btn" id="btnStarRoute" onclick="toggleSaveRoute()">☆ Save</button>
+            <span class="dir-pill" id="dirBadge">Forward</span>
+          </div>
         </div>
 
-        <div id="lblDisclaimer" style="font-size:10px; color:var(--muted); background:var(--surface); border:1px solid var(--border); border-radius:9px; padding:5px 9px;">
+        <div class="disclaimer-bar" id="lblDisclaimer">
           ℹ️ Community-sourced · Verify at stand / tnstc.in · Verified: 12-11-2026
         </div>
 
@@ -562,16 +450,20 @@
               <option value="tirunelveli">Tirunelveli Venthankulam</option>
             </select>
           </div>
+          <div class="stop-row" style="padding-right:10px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A6577" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="boardFilterInput" placeholder="Search destination, Rt 9, SETC..." oninput="renderBoard()" style="background:transparent; border:none; outline:none; width:100%; font-size:12.5px; font-weight:600; color:var(--text);" />
+          </div>
           <div style="display:flex; justify-content:space-between; align-items:center; font-size:10.5px; color:var(--muted); padding:0 2px;">
             <span>Scan Stand QR opens this board directly</span>
-            <button class="report-btn" onclick="showToast('QR Link: #stand=' + document.getElementById('boardStandSelect').value)">Copy Stand QR</button>
+            <button class="report-btn" onclick="copyStandQR()">Copy Stand QR</button>
           </div>
         </div>
 
         <div class="board-card">
           <div class="board-head">
             <span style="font-size:12.5px; font-weight:800;" id="boardTitle">NAMAKKAL DEPARTURES</span>
-            <span style="font-size:10.5px; font-weight:700; opacity:0.9;">52 Bays</span>
+            <span style="font-size:10.5px; font-weight:700; opacity:0.9;">Live Stand View</span>
           </div>
           <div id="boardRows"></div>
         </div>
@@ -582,15 +474,15 @@
         <div class="info-card">
           <h3>8 Corporations · Open GTFS Blueprint</h3>
           <p style="margin-top:4px;">
-            MTC Chennai runs Chalo GPS & CUMTA GTFS (`mdb-3360`). 10,000+ TNSTC/SETC buses have AIS-140 GPS behind PNR lookup. Unifying all 8 corporations into one GTFS-RT feed + 2.4 MB offline district packs makes rural & town bus timings instant.
+            MTC Chennai runs Chalo GPS & CUMTA GTFS (`mdb-3360`). 10,000+ TNSTC/SETC buses carry AIS-140 GPS behind PNR lookup. Unifying all 8 corporations into one GTFS-RT feed + offline district packs makes rural & town bus timings instant.
           </p>
         </div>
         <div class="info-card">
-          <h3>Real Sources Seeded in Prototype</h3>
+          <h3>Real Sources Seeded in Beta</h3>
           <p style="margin-top:4px;">
             • <b>TNSTC / SETC:</b> `tnstc.in/OTRSOnline` schedules & fares<br/>
             • <b>Chennai MTC:</b> `mtcbus.tn.gov.in` & CUMTA GTFS<br/>
-            • <b>Town & Ghat Timings:</b> Stand master boards (`tamilvandi.com`, `tickettogetlost.com`, `townbusapp.com`) + commuter crowd verification.
+            • <b>Town & Ghat Timings:</b> Stand master boards (`tamilvandi.com`, `tickettogetlost.com`, `townbusapp.com`).
           </p>
         </div>
         <div class="info-card" style="border-color:rgba(13,107,78,0.3); background:var(--green-soft);">
@@ -635,6 +527,7 @@
     let districtStops = {};
     let routeDB = {};
     let boards = {};
+    let savedRoutes = JSON.parse(localStorage.getItem('tnbus_saved') || '[]');
 
     const i18n = {
       en: {
@@ -644,7 +537,8 @@
         vetri: 'Vetri Payanam (Women & TG · ₹0)', forward: 'Forward', rev: 'Return Direction',
         fAll: 'All', fVetri: '🩷 Vetri Payanam (Women & TG · ₹0)', fTown: 'Town Only', fExpress: 'Express / SETC',
         disclaimer: 'ℹ️ Community-sourced · Verify at stand / tnstc.in · Verified: 12-11-2026',
-        reportBtn: 'Report Wrong Timing'
+        reportBtn: 'Report Wrong Timing', popular: 'Quick Destinations in this District:',
+        savedTitle: '★ Saved Routes', tapStops: 'Tap card for stop timeline'
       },
       ta: {
         appName: 'தமிழ்நாடு பேருந்து', appSub: '8 மாவட்டங்கள் · 38 விரைவில்',
@@ -653,12 +547,14 @@
         vetri: 'வெற்றிப் பயணம் (மகளிர் & திருநங்கைகள் · ₹0)', forward: 'செல்லும் வழி', rev: 'திரும்பும் வழி',
         fAll: 'அனைத்தும்', fVetri: '🩷 வெற்றிப் பயணம் (மகளிர் · ₹0)', fTown: 'டவுன் பஸ்', fExpress: 'எக்ஸ்பிரஸ் / SETC',
         disclaimer: 'ℹ️ சமூகத் தகவல் · பேருந்து நிலையம் / tnstc.in-ல் சரிபார்க்கவும் · 12-11-2026',
-        reportBtn: 'தவறு / நேரம் பதிவிடு'
+        reportBtn: 'தவறு / நேரம் பதிவிடு', popular: 'இந்த மாவட்டத்தின் முக்கிய ஊர்கள்:',
+        savedTitle: '★ சேமித்த வழிகள்', tapStops: 'நிறுத்தங்களை பார்க்க கிளிக் செய்க'
       }
     };
 
     function populateStops(district) {
       const data = districtStops[district];
+      if (!data) return;
       const fromSel = document.getElementById('fromSelect');
       const toSel = document.getElementById('toSelect');
 
@@ -671,20 +567,43 @@
             ${data.outside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
           </optgroup>
         `;
-        if (defaultIdx === 1 && data.outside.length) {
-          sel.value = data.outside[0].id;
-        }
+        if (defaultIdx === 1 && data.outside.length) sel.value = data.outside[0].id;
       };
 
       buildOptions(fromSel, 0);
       buildOptions(toSel, 1);
       isReversed = false;
+      renderQuickDestinations(district);
+      renderResults();
+    }
+
+    function renderQuickDestinations(district) {
+      const data = districtStops[district];
+      if (!data) return;
+      const chips = [...data.inside.slice(1, 5), ...data.outside.slice(0, 3)];
+      const curTo = document.getElementById('toSelect').value;
+      document.getElementById('quickDestChips').innerHTML = chips.map(s => `
+        <button class="dest-chip ${s.id === curTo ? 'active' : ''}" onclick="pickQuickDest('${s.id}')">
+          ${s.name.split(' (')[0].replace(' Bus Stand', '').replace(' Stand', '')}
+        </button>
+      `).join('');
+    }
+
+    function pickQuickDest(stopId) {
+      const fromSel = document.getElementById('fromSelect');
+      const toSel = document.getElementById('toSelect');
+      if (fromSel.value === stopId) {
+        swapDirection();
+        return;
+      }
+      toSel.value = stopId;
+      isReversed = false;
+      renderQuickDestinations(document.getElementById('districtSelect').value);
       renderResults();
     }
 
     function onDistrictChange() {
-      const d = document.getElementById('districtSelect').value;
-      populateStops(d);
+      populateStops(document.getElementById('districtSelect').value);
     }
 
     function swapDirection() {
@@ -694,17 +613,75 @@
       f.value = t.value;
       t.value = tmp;
       isReversed = !isReversed;
+      renderQuickDestinations(document.getElementById('districtSelect').value);
       renderResults();
       showToast(lang === 'ta' ? 'வழி மாற்றப்பட்டது (Reverse)' : 'Reversed route direction!');
     }
 
     function setFilter(f, btn) {
       activeFilter = f;
-      document.querySelectorAll('.quick-row .chip').forEach(c => {
-        c.classList.remove('active', 'pink-active');
-      });
+      document.querySelectorAll('.quick-row .chip').forEach(c => c.classList.remove('active', 'pink-active'));
       btn.classList.add(f === 'vetri' ? 'pink-active' : 'active');
       renderResults();
+    }
+
+    function toggleTimeline(idx) {
+      const el = document.getElementById('tl-' + idx);
+      if (el) el.classList.toggle('open');
+    }
+
+    function toggleSaveRoute() {
+      const d = document.getElementById('districtSelect').value;
+      const fSel = document.getElementById('fromSelect');
+      const tSel = document.getElementById('toSelect');
+      const key = `${d}|${fSel.value}|${tSel.value}`;
+      const label = `${fSel.selectedOptions[0].text.split(' (')[0]} → ${tSel.selectedOptions[0].text.split(' (')[0]}`;
+      const idx = savedRoutes.findIndex(r => r.key === key);
+      if (idx >= 0) {
+        savedRoutes.splice(idx, 1);
+        showToast('Removed from Saved');
+      } else {
+        savedRoutes.unshift({ key, label });
+        if (savedRoutes.length > 5) savedRoutes.pop();
+        showToast('Route saved! ★');
+      }
+      localStorage.setItem('tnbus_saved', JSON.stringify(savedRoutes));
+      renderSavedBar();
+      updateStarButton();
+    }
+
+    function renderSavedBar() {
+      const bar = document.getElementById('savedBar');
+      const box = document.getElementById('savedChips');
+      if (!savedRoutes.length) {
+        bar.style.display = 'none';
+        return;
+      }
+      bar.style.display = 'flex';
+      box.innerHTML = savedRoutes.map(r => `
+        <button class="dest-chip" onclick="loadSaved('${r.key}')">★ ${r.label}</button>
+      `).join('');
+    }
+
+    function loadSaved(key) {
+      const [d, f, t] = key.split('|');
+      document.getElementById('districtSelect').value = d;
+      populateStops(d);
+      document.getElementById('fromSelect').value = f;
+      document.getElementById('toSelect').value = t;
+      renderQuickDestinations(d);
+      renderResults();
+    }
+
+    function updateStarButton() {
+      const d = document.getElementById('districtSelect').value;
+      const f = document.getElementById('fromSelect').value;
+      const t = document.getElementById('toSelect').value;
+      const key = `${d}|${f}|${t}`;
+      const isSaved = savedRoutes.some(r => r.key === key);
+      const btn = document.getElementById('btnStarRoute');
+      btn.textContent = isSaved ? '★ Saved' : '☆ Save';
+      btn.classList.toggle('saved', isSaved);
     }
 
     function renderResults() {
@@ -715,8 +692,8 @@
       const tr = i18n[lang];
 
       document.getElementById('routeHeading').textContent = `${fName} → ${tName}`;
-      const dirEl = document.getElementById('dirBadge');
-      dirEl.textContent = isReversed ? tr.rev : tr.forward;
+      document.getElementById('dirBadge').textContent = isReversed ? tr.rev : tr.forward;
+      updateStarButton();
 
       const key = `${fSel.value}->${tSel.value}`;
       let list = routeDB[key] || [
@@ -733,11 +710,13 @@
         return;
       }
 
-      container.innerHTML = list.map((b) => `
-        <div class="bus-card">
+      container.innerHTML = list.map((b, i) => {
+        const stops = [fName, ...b.via.split('·').map(s => s.trim().replace(/\s*\(.*?\)/g, '')).filter(Boolean)];
+        return `
+        <div class="bus-card ${i === 0 ? 'primary-card' : ''}" onclick="toggleTimeline(${i})">
           <div class="bus-top">
             <div>
-              <div class="time-hero" style="font-size:${b.time.length > 10 ? '17px' : '22px'};">${b.time}</div>
+              <div class="time-hero" style="font-size:${b.time.length > 10 ? '16.5px' : '22px'};">${b.time}</div>
               <span class="eta-pill ${offline ? 'amber' : ''}">${offline ? 'Offline Schedule' : b.eta}</span>
             </div>
             <div class="fare-box">
@@ -750,30 +729,34 @@
             <span>${b.title}</span>
           </div>
           <div class="bus-via"><b>${b.bay}:</b> ${b.via}</div>
+          <div class="stop-timeline" id="tl-${i}">
+            ${stops.map((st, idx) => `
+              <div class="tl-item">
+                <span class="tl-dot ${idx === 0 || idx === stops.length - 1 ? 'end' : ''}"></span>
+                <span>${st}</span>
+              </div>
+            `).join('')}
+          </div>
           <div class="badge-row">
             ${b.vetri ? `<span class="tag t-vetri">🩷 ${tr.vetri}</span>` : ''}
             <span class="tag ${b.gps && !offline ? 't-gps' : 't-sched'}">${b.gps && !offline ? '● AIS-140 PNR' : '🕒 ' + (b.source || 'Schedule')}</span>
             <span class="tag t-sched">${b.corp}</span>
           </div>
           <div class="crowd-verify">
-            <span style="color:#047857; font-weight:700;">✓ ${b.source || 'Verified Route'}</span>
-            <a class="report-btn" href="https://github.com/maniraja5599/tn-bus-connect/issues/new?template=add-bus-timing.yml" target="_blank" onclick="event.stopPropagation()" style="text-decoration:none;">${tr.reportBtn}</a>
+            <span style="color:#047857; font-weight:700;">✓ ${b.source || 'Verified'} · <span style="color:var(--muted); font-weight:500;">${tr.tapStops}</span></span>
+            <a class="report-btn" href="https://github.com/maniraja5599/tn-bus-connect/issues/new?template=add-bus-timing.yml" target="_blank" onclick="event.stopPropagation()">${tr.reportBtn}</a>
           </div>
         </div>
-      `).join('');
-    }
-
-    function confirmBus(btn) {
-      btn.textContent = 'Confirmed ✓';
-      btn.style.borderColor = '#0D6B4E';
-      btn.style.color = '#0D6B4E';
-      showToast('Thanks! Crowd timing updated.');
+      `;}).join('');
     }
 
     function renderBoard() {
       const stand = document.getElementById('boardStandSelect').value;
+      const q = (document.getElementById('boardFilterInput')?.value || '').toLowerCase();
       document.getElementById('boardTitle').textContent = `${stand.toUpperCase()} DEPARTURES`;
-      const rows = boards[stand] || [];
+      const rows = (boards[stand] || []).filter(r =>
+        r.dest.toLowerCase().includes(q) || r.meta.toLowerCase().includes(q)
+      );
       document.getElementById('boardRows').innerHTML = rows.map(r => `
         <div class="board-row">
           <div class="bay-pill">${r.bay}</div>
@@ -781,9 +764,16 @@
             <div style="font-size:12.5px; font-weight:700; color:var(--text);">${r.dest}</div>
             <div style="font-size:10.5px; color:var(--muted); margin-top:2px;">${r.meta}</div>
           </div>
-          <div style="text-align:right; font-size:12px; font-weight:800; color:${r.color};">${r.status}</div>
+          <div style="text-align:right; font-size:11.5px; font-weight:800; color:${r.color};">${r.status}</div>
         </div>
-      `).join('');
+      `).join('') || '<div style="padding:14px; font-size:12px; color:var(--muted);">No matching departures.</div>';
+    }
+
+    function copyStandQR() {
+      const stand = document.getElementById('boardStandSelect').value;
+      const url = `${window.location.origin}/#stand=${stand}`;
+      if (navigator.clipboard) navigator.clipboard.writeText(url).catch(() => {});
+      showToast(`Copied QR URL: #stand=${stand}`);
     }
 
     function switchPane(name, btn) {
@@ -796,7 +786,7 @@
     function toggleLang() {
       lang = lang === 'en' ? 'ta' : 'en';
       const t = i18n[lang];
-      document.getElementById('lblAppName').innerHTML = `${t.appName} <span style="font-size:10px; font-weight:700; color:var(--green); background:var(--green-soft); padding:1px 6px; border-radius:999px;">Beta</span>`;
+      document.getElementById('lblAppName').innerHTML = `${t.appName} <span class="beta-pill">Beta</span>`;
       document.getElementById('lblAppSub').textContent = t.appSub;
       document.getElementById('btnLang').textContent = t.btnLang;
       document.getElementById('lblFrom').textContent = t.from;
@@ -809,6 +799,8 @@
       document.getElementById('f-town').textContent = t.fTown;
       document.getElementById('f-express').textContent = t.fExpress;
       document.getElementById('lblDisclaimer').textContent = t.disclaimer;
+      document.getElementById('lblPopularDest').textContent = t.popular;
+      document.getElementById('lblSavedTitle').textContent = t.savedTitle;
       renderResults();
     }
 
@@ -840,6 +832,7 @@
             switchPane('board', document.querySelectorAll('.nav-btn')[1]);
           }
         }
+        renderSavedBar();
         populateStops('namakkal');
         renderBoard();
       } catch (err) {
