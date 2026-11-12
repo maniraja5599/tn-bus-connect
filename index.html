@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0D6B4E" />
-  <meta property="og:title" content="TN BusConnect — Unified 38-District Tamil Nadu Bus Timings" />
-  <meta property="og:description" content="Daylight-readable Tamil Nadu bus timings: District -> From -> To + Reverse, Vetri Payanam ₹0 filter, Stand Boards & 2.4 MB Offline Rural Schedules." />
+  <meta property="og:title" content="TN BusConnect — Tamil Nadu Bus Timings (Beta)" />
+  <meta property="og:description" content="8 Districts Live (38 Coming): District -> From -> To + Reverse, Vetri Payanam (Women & TG ₹0) filter, Stand Boards & Offline Schedules." />
   <meta property="og:image" content="/og-preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <title>TN BusConnect — Tamil Nadu Bus Timings</title>
@@ -475,8 +475,8 @@
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="16" cy="18" r="2"/></svg>
           </div>
           <div>
-            <div class="brand-name" id="lblAppName">TN BusConnect</div>
-            <div class="brand-sub" id="lblAppSub">All 38 Districts · Vetri Payanam & SETC</div>
+            <div class="brand-name" id="lblAppName">TN BusConnect <span style="font-size:10px; font-weight:700; color:var(--green); background:var(--green-soft); padding:1px 6px; border-radius:999px;">Beta</span></div>
+            <div class="brand-sub" id="lblAppSub">8 Districts Live · 38 Coming</div>
           </div>
         </div>
         <div class="header-pills">
@@ -532,7 +532,7 @@
         <!-- Post-Search Filter Chips (All · Vetri Payanam · Town · Express) -->
         <div class="quick-row">
           <button class="chip active" id="f-all" onclick="setFilter('all', this)">All</button>
-          <button class="chip" id="f-vetri" onclick="setFilter('vetri', this)">🩷 Vetri Payanam ₹0</button>
+          <button class="chip" id="f-vetri" onclick="setFilter('vetri', this)">🩷 Vetri Payanam (Women & TG · ₹0)</button>
           <button class="chip" id="f-town" onclick="setFilter('town', this)">Town Only</button>
           <button class="chip" id="f-express" onclick="setFilter('express', this)">Express / SETC</button>
         </div>
@@ -540,6 +540,10 @@
         <div class="results-meta">
           <div class="route-heading" id="routeHeading">Namakkal → Chennai KCBT</div>
           <span class="dir-pill" id="dirBadge">Forward</span>
+        </div>
+
+        <div id="lblDisclaimer" style="font-size:10px; color:var(--muted); background:var(--surface); border:1px solid var(--border); border-radius:9px; padding:5px 9px;">
+          ℹ️ Community-sourced · Verify at stand / tnstc.in · Verified: 12-11-2026
         </div>
 
         <div id="busList" style="display:flex; flex-direction:column; gap:9px;"></div>
@@ -590,10 +594,15 @@
           </p>
         </div>
         <div class="info-card" style="border-color:rgba(13,107,78,0.3); background:var(--green-soft);">
-          <h3 style="color:var(--green);">Vetri Payanam (₹0 Women's Bus)</h3>
+          <h3 style="color:var(--green);">Vetri Payanam (Women & TG · ₹0)</h3>
           <p style="color:#065F46; margin-top:4px;">
-            Filter any district route with <b>🩷 Vetri Payanam ₹0</b> to instantly spot eligible ordinary town buses.
+            Free zero-fare travel applies to <b>women and transgender persons</b> on eligible ordinary town/city & ghat services. Filter any route with <b>🩷 Vetri Payanam (Women & TG · ₹0)</b>.
           </p>
+        </div>
+        <div class="info-card" style="text-align:center; font-size:10.5px; color:var(--muted);">
+          Not affiliated with TNSTC / Govt of Tamil Nadu · MIT Open Source<br/>
+          <a href="https://github.com/maniraja5599/tn-bus-connect" target="_blank" style="color:var(--green); font-weight:700; text-decoration:none;">GitHub Repo</a> ·
+          <a href="https://github.com/maniraja5599/tn-bus-connect/issues/new?template=add-bus-timing.yml" target="_blank" style="color:var(--green); font-weight:700; text-decoration:none;">Report / Add Timing</a>
         </div>
       </div>
     </div>
@@ -612,7 +621,7 @@
       </button>
       <button class="nav-btn" onclick="switchPane('info', this)">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        <span id="navInfo">Blueprint</span>
+        <span id="navInfo">Data & Info</span>
       </button>
     </div>
   </div>
@@ -629,16 +638,22 @@
 
     const i18n = {
       en: {
-        appName: 'TN BusConnect', appSub: 'All 38 Districts · Vetri Payanam & SETC',
+        appName: 'TN BusConnect', appSub: '8 Districts Live · 38 Coming',
         btnLang: 'தமிழ்', from: 'From', to: 'To',
-        navRoutes: 'Find Bus', navBoard: 'Stand Board', navInfo: 'Blueprint',
-        vetri: 'Vetri Payanam ₹0', forward: 'Forward', rev: 'Return Direction'
+        navRoutes: 'Find Bus', navBoard: 'Stand Board', navInfo: 'Data & Info',
+        vetri: 'Vetri Payanam (Women & TG · ₹0)', forward: 'Forward', rev: 'Return Direction',
+        fAll: 'All', fVetri: '🩷 Vetri Payanam (Women & TG · ₹0)', fTown: 'Town Only', fExpress: 'Express / SETC',
+        disclaimer: 'ℹ️ Community-sourced · Verify at stand / tnstc.in · Verified: 12-11-2026',
+        reportBtn: 'Report Wrong Timing'
       },
       ta: {
-        appName: 'தமிழ்நாடு பேருந்து', appSub: '38 மாவட்டங்கள் · வெற்றிப் பயணம் & SETC',
+        appName: 'தமிழ்நாடு பேருந்து', appSub: '8 மாவட்டங்கள் · 38 விரைவில்',
         btnLang: 'EN', from: 'எங்கிருந்து', to: 'எங்கு',
-        navRoutes: 'பேருந்து தேடு', navBoard: 'நிலைய போர்டு', navInfo: 'கட்டமைப்பு',
-        vetri: 'வெற்றிப் பயணம் ₹0', forward: 'செல்லும் வழி', rev: 'திரும்பும் வழி'
+        navRoutes: 'பேருந்து தேடு', navBoard: 'நிலைய போர்டு', navInfo: 'தகவல்',
+        vetri: 'வெற்றிப் பயணம் (மகளிர் & திருநங்கைகள் · ₹0)', forward: 'செல்லும் வழி', rev: 'திரும்பும் வழி',
+        fAll: 'அனைத்தும்', fVetri: '🩷 வெற்றிப் பயணம் (மகளிர் · ₹0)', fTown: 'டவுன் பஸ்', fExpress: 'எக்ஸ்பிரஸ் / SETC',
+        disclaimer: 'ℹ️ சமூகத் தகவல் · பேருந்து நிலையம் / tnstc.in-ல் சரிபார்க்கவும் · 12-11-2026',
+        reportBtn: 'தவறு / நேரம் பதிவிடு'
       }
     };
 
@@ -742,7 +757,7 @@
           </div>
           <div class="crowd-verify">
             <span style="color:#047857; font-weight:700;">✓ ${b.source || 'Verified Route'}</span>
-            <button class="report-btn" onclick="event.stopPropagation(); confirmBus(this)">Report / Confirm</button>
+            <a class="report-btn" href="https://github.com/maniraja5599/tn-bus-connect/issues/new?template=add-bus-timing.yml" target="_blank" onclick="event.stopPropagation()" style="text-decoration:none;">${tr.reportBtn}</a>
           </div>
         </div>
       `).join('');
@@ -781,7 +796,7 @@
     function toggleLang() {
       lang = lang === 'en' ? 'ta' : 'en';
       const t = i18n[lang];
-      document.getElementById('lblAppName').textContent = t.appName;
+      document.getElementById('lblAppName').innerHTML = `${t.appName} <span style="font-size:10px; font-weight:700; color:var(--green); background:var(--green-soft); padding:1px 6px; border-radius:999px;">Beta</span>`;
       document.getElementById('lblAppSub').textContent = t.appSub;
       document.getElementById('btnLang').textContent = t.btnLang;
       document.getElementById('lblFrom').textContent = t.from;
@@ -789,6 +804,11 @@
       document.getElementById('navRoutes').textContent = t.navRoutes;
       document.getElementById('navBoard').textContent = t.navBoard;
       document.getElementById('navInfo').textContent = t.navInfo;
+      document.getElementById('f-all').textContent = t.fAll;
+      document.getElementById('f-vetri').textContent = t.fVetri;
+      document.getElementById('f-town').textContent = t.fTown;
+      document.getElementById('f-express').textContent = t.fExpress;
+      document.getElementById('lblDisclaimer').textContent = t.disclaimer;
       renderResults();
     }
 
