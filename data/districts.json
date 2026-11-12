@@ -3,8 +3,12 @@
     "namakkal": {
       "inside": [
         {
-          "id": "nkl",
-          "name": "Namakkal (Old / Mudalaipatti New Stand)"
+          "id": "nkl_old",
+          "name": "Namakkal Old Bus Stand (Town)"
+        },
+        {
+          "id": "nkl_new",
+          "name": "Namakkal New Bus Stand (Mudalaipatti)"
         },
         {
           "id": "mohanur",
@@ -79,8 +83,8 @@
       ],
       "outside": [
         {
-          "id": "nkl",
-          "name": "Namakkal New Stand"
+          "id": "nkl_new",
+          "name": "Namakkal New Stand (Mudalaipatti)"
         },
         {
           "id": "chennai",
@@ -147,8 +151,8 @@
       ],
       "outside": [
         {
-          "id": "nkl",
-          "name": "Namakkal New Stand"
+          "id": "nkl_new",
+          "name": "Namakkal New Stand (Mudalaipatti)"
         },
         {
           "id": "salem",
@@ -189,8 +193,8 @@
           "name": "Chennai Kilambakkam (KCBT)"
         },
         {
-          "id": "nkl",
-          "name": "Namakkal New Stand"
+          "id": "nkl_new",
+          "name": "Namakkal New Stand (Mudalaipatti)"
         }
       ]
     },
@@ -291,7 +295,8 @@
         "fare": "₹12 – ₹15",
         "dur": "30–40 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       },
       {
         "time": "Frequent",
@@ -305,7 +310,8 @@
         "fare": "₹18 – ₹20",
         "dur": "30 min",
         "gps": false,
-        "source": "Corridor Frequency"
+        "source": "Corridor Frequency",
+        "standScope": "NEW"
       }
     ],
     "mohanur->nkl": [
@@ -321,7 +327,8 @@
         "fare": "₹12 – ₹15",
         "dur": "30–40 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       }
     ],
     "nkl->erumapatti": [
@@ -337,7 +344,8 @@
         "fare": "₹15 – ₹25",
         "dur": "30–45 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       }
     ],
     "erumapatti->nkl": [
@@ -353,7 +361,8 @@
         "fare": "₹15 – ₹25",
         "dur": "30–45 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       }
     ],
     "nkl->thuraiyur": [
@@ -369,7 +378,8 @@
         "fare": "₹35 – ₹45",
         "dur": "1h 15m",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "NEW"
       }
     ],
     "thuraiyur->nkl": [
@@ -385,7 +395,8 @@
         "fare": "₹35 – ₹45",
         "dur": "1h 15m",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "NEW"
       }
     ],
     "nkl->kolli": [
@@ -401,7 +412,8 @@
         "fare": "₹60 – ₹80",
         "dur": "2h 30m – 3h",
         "gps": false,
-        "source": "Official Timetable"
+        "source": "Official Timetable",
+        "standScope": "OLD+NEW"
       },
       {
         "time": "09:20 · 10:00 · 12:50 · 14:10",
@@ -415,7 +427,8 @@
         "fare": "₹60 – ₹80",
         "dur": "2h 30m – 3h",
         "gps": false,
-        "source": "Official Timetable"
+        "source": "Official Timetable",
+        "standScope": "OLD+NEW"
       },
       {
         "time": "17:40 · 19:45 · 21:10",
@@ -429,7 +442,8 @@
         "fare": "₹60 – ₹80",
         "dur": "2h 30m – 3h",
         "gps": false,
-        "source": "Official Timetable"
+        "source": "Official Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "kolli->nkl": [
@@ -445,7 +459,8 @@
         "fare": "₹60 – ₹80",
         "dur": "2h 30m",
         "gps": false,
-        "source": "Ghat Corridor"
+        "source": "Ghat Corridor",
+        "standScope": "OLD+NEW"
       }
     ],
     "nkl->chennai": [
@@ -461,7 +476,8 @@
         "fare": "₹310 – ₹430",
         "dur": "7h 30m – 8h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "standScope": "NEW"
       },
       {
         "time": "20:00 · 20:45 · 21:30",
@@ -475,7 +491,8 @@
         "fare": "₹380 – ₹430",
         "dur": "7h 30m – 8h",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "standScope": "NEW"
       },
       {
         "time": "22:15 · 23:00",
@@ -489,7 +506,8 @@
         "fare": "₹515 – ₹860",
         "dur": "7h 30m – 8h",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "standScope": "NEW"
       }
     ],
     "chennai->nkl": [
@@ -505,7 +523,8 @@
         "fare": "₹380 – ₹860",
         "dur": "7h 30m – 8h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "standScope": "NEW"
       }
     ],
     "nkl->salem": [
@@ -521,7 +540,8 @@
         "fare": "₹45 – ₹60",
         "dur": "1h – 1h 15m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "standScope": "NEW"
       }
     ],
     "salem->nkl": [
@@ -537,7 +557,8 @@
         "fare": "₹45 – ₹60",
         "dur": "1h – 1h 15m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "standScope": "NEW"
       }
     ],
     "nkl->rasipuram": [
@@ -553,7 +574,8 @@
         "fare": "₹25 – ₹35",
         "dur": "40–50 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       }
     ],
     "rasipuram->nkl": [
@@ -569,7 +591,8 @@
         "fare": "₹25 – ₹35",
         "dur": "40–50 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       }
     ],
     "nkl->tiruchengode": [
@@ -585,7 +608,8 @@
         "fare": "₹30 – ₹40",
         "dur": "45–60 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "NEW"
       }
     ],
     "tiruchengode->nkl": [
@@ -601,7 +625,8 @@
         "fare": "₹30 – ₹40",
         "dur": "45–60 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "NEW"
       }
     ],
     "nkl->sendamangalam": [
@@ -617,7 +642,8 @@
         "fare": "₹10 – ₹15",
         "dur": "15–25 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       }
     ],
     "sendamangalam->nkl": [
@@ -633,7 +659,8 @@
         "fare": "₹10 – ₹15",
         "dur": "15–25 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "standScope": "OLD+NEW"
       }
     ],
     "salem->salem_old": [
@@ -1498,20 +1525,20 @@
     ]
   },
   "boards": {
-    "namakkal": [
+    "namakkal_new": [
       {
-        "bay": "OLD",
-        "dest": "Mohanur via Aniyapuram, Keerambur, Parali (Rt 9)",
-        "meta": "TNSTC Salem · Vetri Payanam ₹0",
-        "status": "Every 15–20m",
-        "color": "#0D6B4E"
+        "bay": "NEW",
+        "dest": "Chennai Kilambakkam (KCBT)",
+        "meta": "SETC / TNSTC: 09:00 · 09:30 · 20:00 · 21:30",
+        "status": "₹310+",
+        "color": "#0D6E4E"
       },
       {
-        "bay": "OLD",
-        "dest": "Erumapatti / Thuraiyur via Pottireddipatti",
-        "meta": "TNSTC · Every 20–30m",
-        "status": "₹15–₹45",
-        "color": "#0D6B4E"
+        "bay": "NEW",
+        "dest": "Salem MGR Central (NH 44 / 1-to-1)",
+        "meta": "TNSTC Salem · 24/7 Corridor",
+        "status": "Every 5–15m",
+        "color": "#0D6E4E"
       },
       {
         "bay": "NEW",
@@ -1522,17 +1549,47 @@
       },
       {
         "bay": "NEW",
-        "dest": "Chennai Kilambakkam (KCBT)",
-        "meta": "SETC / TNSTC: 09:00 · 09:30 · 20:00 · 21:30",
-        "status": "₹310+",
-        "color": "#0D6B4E"
+        "dest": "Tiruchengode (SH-86) / Rasipuram",
+        "meta": "TNSTC Salem · Every 10–20m",
+        "status": "₹25–₹40",
+        "color": "#0D6E4E"
       },
       {
         "bay": "NEW",
-        "dest": "Salem MGR Central (NH 44)",
-        "meta": "TNSTC Salem · 24/7 Corridor",
-        "status": "Every 5–15m",
-        "color": "#0D6B4E"
+        "dest": "Mohanur / Karur via SH-95",
+        "meta": "Town Rt 9 + Passing Mofussil",
+        "status": "Every 15–20m",
+        "color": "#0D6E4E"
+      }
+    ],
+    "namakkal_old": [
+      {
+        "bay": "OLD",
+        "dest": "Mohanur via Aniyapuram, Keerambur (Rt 9)",
+        "meta": "TNSTC Salem · Vetri Payanam (Women & TG · ₹0)",
+        "status": "Every 15–20m",
+        "color": "#0D6E4E"
+      },
+      {
+        "bay": "OLD",
+        "dest": "Erumapatti / Thuraiyur via Pottireddipatti",
+        "meta": "TNSTC · Vetri Payanam eligible",
+        "status": "Every 20–30m",
+        "color": "#0D6E4E"
+      },
+      {
+        "bay": "OLD",
+        "dest": "Sendamangalam / Muthugapatti",
+        "meta": "TNSTC Town Bus · Vetri Payanam ₹0",
+        "status": "Every 10–15m",
+        "color": "#0D6E4E"
+      },
+      {
+        "bay": "OLD",
+        "dest": "Mudalaipatti New Bus Stand Shuttle",
+        "meta": "City Shuttle (4 km link for SETC / Express)",
+        "status": "Every 10m",
+        "color": "#D97706"
       }
     ],
     "salem": [

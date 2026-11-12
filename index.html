@@ -50,8 +50,9 @@
       max-width: 480px;
       height: 820px;
       background: var(--bg);
-      border-radius: 30px;
+      border-radius: 28px;
       border: 1px solid #CBD5E1;
+      border-top: 4px solid var(--green);
       box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
       display: flex;
       flex-direction: column;
@@ -651,6 +652,7 @@
             </div>
             <div class="inputs-stack">
               <div class="stop-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D6E4E" stroke-width="2.3" style="flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                 <span class="stop-label" id="lblFrom">From</span>
                 <select class="stop-select" id="fromSelect" onchange="renderResults()"></select>
               </div>
@@ -659,6 +661,7 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
               </button>
               <div class="stop-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2.3" style="flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                 <span class="stop-label" id="lblTo">To</span>
                 <select class="stop-select" id="toSelect" onchange="renderResults()"></select>
               </div>
@@ -702,7 +705,8 @@
             <div class="stop-row" style="padding-right:12px;">
               <span class="stop-label" style="width:44px;">Stand</span>
               <select class="stop-select" id="boardStandSelect" onchange="renderBoard()">
-                <option value="namakkal">Namakkal New Stand (Mudalaipatti)</option>
+                <option value="namakkal_new">Namakkal New Stand (Mudalaipatti)</option>
+                <option value="namakkal_old">Namakkal Old Bus Stand (Town)</option>
                 <option value="salem">Salem MGR Central Stand</option>
                 <option value="trichy">Trichy Panjappur IBT</option>
                 <option value="chennai">Chennai Kilambakkam (KCBT)</option>
@@ -815,26 +819,35 @@
       }
     };
 
+    const standAliases = { nkl_old: 'nkl', nkl_new: 'nkl' };
+
     function populateStops(district) {
       const data = districtStops[district];
       if (!data) return;
       const fromSel = document.getElementById('fromSelect');
       const toSel = document.getElementById('toSelect');
+      const dLabel = district.charAt(0).toUpperCase() + district.slice(1);
 
-      const buildOptions = (sel, defaultIdx) => {
-        sel.innerHTML = `
-          <optgroup label="Inside ${district.charAt(0).toUpperCase() + district.slice(1)}">
-            ${data.inside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
-          </optgroup>
-          <optgroup label="Other Districts & Hubs">
-            ${data.outside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
-          </optgroup>
-        `;
-        if (defaultIdx === 1 && data.outside.length) sel.value = data.outside[0].id;
-      };
+      // Strictly scope From to inside-district stops in forward mode
+      fromSel.innerHTML = `
+        <optgroup label="Inside ${dLabel}">
+          ${data.inside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
+        </optgroup>
+      `;
 
-      buildOptions(fromSel, 0);
-      buildOptions(toSel, 1);
+      // Default From to New Stand if present, else first inside stop
+      if (data.inside.some(s => s.id === 'nkl_new')) fromSel.value = 'nkl_new';
+
+      toSel.innerHTML = `
+        <optgroup label="Inside ${dLabel}">
+          ${data.inside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
+        </optgroup>
+        <optgroup label="Outstation from ${dLabel}">
+          ${data.outside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
+        </optgroup>
+      `;
+      if (data.outside.length) toSel.value = data.outside[0].id;
+
       isReversed = false;
       renderQuickDestinations(district);
       renderResults();
@@ -853,6 +866,8 @@
     }
 
     function pickQuickDest(stopId) {
+      const district = document.getElementById('districtSelect').value;
+      if (isReversed) populateStops(district);
       const fromSel = document.getElementById('fromSelect');
       const toSel = document.getElementById('toSelect');
       if (fromSel.value === stopId) {
@@ -861,7 +876,7 @@
       }
       toSel.value = stopId;
       isReversed = false;
-      renderQuickDestinations(document.getElementById('districtSelect').value);
+      renderQuickDestinations(district);
       renderResults();
     }
 
@@ -870,15 +885,48 @@
     }
 
     function swapDirection() {
+      const district = document.getElementById('districtSelect').value;
+      const data = districtStops[district];
       const f = document.getElementById('fromSelect');
       const t = document.getElementById('toSelect');
-      const tmp = f.value;
-      f.value = t.value;
-      t.value = tmp;
-      isReversed = !isReversed;
-      renderQuickDestinations(document.getElementById('districtSelect').value);
+      const fVal = f.value;
+      const tVal = t.value;
+      const dLabel = district.charAt(0).toUpperCase() + district.slice(1);
+
+      const isFromInside = data.inside.some(s => s.id === fVal);
+      const isToInside = data.inside.some(s => s.id === tVal);
+
+      if (isFromInside && isToInside) {
+        // Both inside district: swap directly within inside-district list
+        f.value = tVal;
+        t.value = fVal;
+        isReversed = !isReversed;
+      } else if (!isReversed) {
+        // Flip to Return Mode: outstation hub -> inside district
+        f.innerHTML = `
+          <optgroup label="Return from Outstation">
+            ${data.outside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
+          </optgroup>
+        `;
+        t.innerHTML = `
+          <optgroup label="Return to ${dLabel}">
+            ${data.inside.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
+          </optgroup>
+        `;
+        f.value = tVal;
+        t.value = fVal;
+        isReversed = true;
+      } else {
+        // Flip back to Forward Mode: inside district -> inside + outstation
+        populateStops(district);
+        f.value = tVal;
+        t.value = fVal;
+        isReversed = false;
+      }
+
+      renderQuickDestinations(district);
       renderResults();
-      showToast(lang === 'ta' ? 'வழி மாற்றப்பட்டது (Reverse)' : 'Reversed route direction!');
+      showToast(lang === 'ta' ? 'வழி மாற்றப்பட்டது (Reverse)' : (isReversed ? 'Return direction' : 'Forward direction'));
     }
 
     function setFilter(f, btn) {
@@ -944,6 +992,15 @@
       btn.classList.toggle('saved', isSaved);
     }
 
+    function switchToNewStand() {
+      const fSel = document.getElementById('fromSelect');
+      const tSel = document.getElementById('toSelect');
+      if (fSel.value === 'nkl_old') fSel.value = 'nkl_new';
+      if (tSel.value === 'nkl_old') tSel.value = 'nkl_new';
+      renderResults();
+      showToast('Switched to Mudalaipatti New Stand');
+    }
+
     function renderResults() {
       const fSel = document.getElementById('fromSelect');
       const tSel = document.getElementById('toSelect');
@@ -955,16 +1012,43 @@
       document.getElementById('dirBadge').textContent = isReversed ? tr.rev : tr.forward;
       updateStarButton();
 
-      const key = `${fSel.value}->${tSel.value}`;
+      const fKey = standAliases[fSel.value] || fSel.value;
+      const tKey = standAliases[tSel.value] || tSel.value;
+      const key = `${fKey}->${tKey}`;
+
       let list = routeDB[key] || [
         { time: 'Check Stand / OTRS', eta: 'Corridor Service', title: `${fName} → ${tName}`, type: 'express', vetri: false, corp: 'TNSTC / SETC', bay: 'Main Terminus', via: 'Direct corridor — exact slot depends on division timetable', fare: 'Govt Tariff', dur: '—', gps: false, source: 'Verify on tnstc.in' }
       ];
+
+      // If Namakkal Old Stand is picked, only show buses that actually serve Old Stand
+      let oldStandBlocked = false;
+      if (fSel.value === 'nkl_old' || tSel.value === 'nkl_old') {
+        const filteredByStand = list.filter(b => !b.standScope || b.standScope.includes('OLD'));
+        if (filteredByStand.length === 0 && list.length > 0) {
+          oldStandBlocked = true;
+        }
+        list = filteredByStand;
+      }
 
       if (activeFilter === 'vetri') list = list.filter(b => b.vetri);
       if (activeFilter === 'town') list = list.filter(b => b.type === 'town');
       if (activeFilter === 'express') list = list.filter(b => b.type === 'express');
 
       const container = document.getElementById('busList');
+      if (oldStandBlocked) {
+        container.innerHTML = `
+          <div class="info-card" style="background:var(--amber-soft); border-color:#F59E0B;">
+            <h3 style="color:#92400E;">⚠️ Departs from Mudalaipatti New Bus Stand</h3>
+            <p style="color:#78350F; margin-top:4px;">
+              Direct SETC / Express buses on this route depart from <b>Namakkal New Stand (Mudalaipatti)</b>, ~4 km from Old Stand. Take a Town Shuttle (₹10, every 10m) from Old Stand.
+            </p>
+            <button onclick="switchToNewStand()" style="margin-top:9px; background:#0D6E4E; color:#fff; border:none; padding:8px 12px; border-radius:9px; font-size:11.5px; font-weight:700; cursor:pointer;">
+              Switch to Mudalaipatti New Stand →
+            </button>
+          </div>`;
+        return;
+      }
+
       if (!list.length) {
         container.innerHTML = `<div class="info-card"><p>No buses match this filter. Try tapping <b>All</b> above.</p></div>`;
         return;
@@ -974,6 +1058,7 @@
         const isNight = /night/i.test(b.eta);
         const arrowVia = b.via.replace(/\s*·\s*/g, ' → ');
         const stops = [fName, ...b.via.split('·').map(s => s.trim().replace(/\s*\(.*?\)/g, '')).filter(Boolean)];
+        const standTag = b.standScope ? `<span class="tag t-sched">${b.standScope === 'OLD+NEW' ? 'OLD + NEW STAND' : 'NEW STAND · MUDALAIPATTI'}</span>` : '';
         return `
         <article class="bus-card" onclick="toggleTimeline(${i})">
           <div class="bus-top">
@@ -1001,6 +1086,7 @@
           </div>
           <div class="badge-row">
             ${b.vetri ? `<span class="tag t-vetri">🩷 ${tr.vetri}</span>` : ''}
+            ${standTag}
             <span class="tag ${b.gps && !offline ? 't-gps' : 't-sched'}">${b.gps && !offline ? '● AIS-140 PNR' : '🕒 ' + (b.source || 'Schedule')}</span>
             <span class="tag t-sched">${b.corp}</span>
           </div>
@@ -1088,7 +1174,8 @@
         routeDB = data.routeDB || {};
         boards = data.boards || {};
         if (window.location.hash.startsWith('#stand=')) {
-          const s = window.location.hash.replace('#stand=', '');
+          let s = window.location.hash.replace('#stand=', '');
+          if (s === 'namakkal') s = 'namakkal_new';
           if (boards[s]) {
             document.getElementById('boardStandSelect').value = s;
             switchPane('board', document.querySelectorAll('.nav-btn')[1]);
