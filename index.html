@@ -8,6 +8,9 @@
   <meta property="og:description" content="8 Districts Live · 38 Coming: District -> From -> To + Reverse, Vetri Payanam (Women & TG ₹0) filter, Stand Boards & Offline Schedules." />
   <meta property="og:image" content="/og-preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="manifest" href="/manifest.json" />
   <title>TN BusConnect — Tamil Nadu Bus Timings</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -88,13 +91,20 @@
     }
     .brand { display: flex; align-items: center; gap: 10px; }
     .brand-badge {
-      width: 38px; height: 38px;
-      border-radius: 11px;
-      background: var(--green);
-      color: #FFFFFF;
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: #FFFFFF;
+      border: 1px solid rgba(13, 110, 78, 0.18);
+      overflow: hidden;
       display: grid; place-items: center;
       flex-shrink: 0;
-      box-shadow: 0 3px 10px rgba(13, 110, 78, 0.25);
+      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
+    }
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .brand-name {
       font-size: 16px;
@@ -765,12 +775,12 @@
     <header class="top-header">
       <div class="header-row">
         <div class="brand">
-          <div class="brand-badge">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="16" cy="18" r="2"/></svg>
+          <div class="brand-badge" title="IndiaBus · TN BusConnect">
+            <img src="/app-logo.png" alt="IndiaBus Logo" class="brand-logo-img" />
           </div>
           <div>
-            <div class="brand-name" id="lblAppName">TN BusConnect <span class="beta-pill">Beta</span></div>
-            <div class="brand-sub" id="lblAppSub">8 Districts Live · 38 Coming</div>
+            <div class="brand-name" id="lblAppName">IndiaBus <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span> <span class="beta-pill">Beta</span></div>
+            <div class="brand-sub" id="lblAppSub">8 Districts Live · All Over India Transit</div>
           </div>
         </div>
         <div class="header-pills">
@@ -1019,7 +1029,7 @@
 
     const i18n = {
       en: {
-        appName: 'TN BusConnect', appSub: '8 Districts Live · 38 Coming',
+        appName: 'IndiaBus <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>', appSub: '8 Districts Live · All Over India Transit',
         btnLang: 'தமிழ்', from: 'From', to: 'To',
         navRoutes: 'Find Bus', navBoard: 'Stand Board', navInfo: 'Data & Info',
         vetri: 'Vetri Payanam (Women & TG · ₹0)', forward: 'Forward', rev: 'Return Direction',
@@ -1036,7 +1046,7 @@
         votedCorrect: 'Thanks! Verified as Correct 👍', votedWrong: 'Thanks! Flagged as Wrong 👎'
       },
       ta: {
-        appName: 'தமிழ்நாடு பேருந்து', appSub: '8 மாவட்டங்கள் · 38 விரைவில்',
+        appName: 'இந்தியா பஸ் <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>', appSub: '8 மாவட்டங்கள் · அகில இந்திய பேருந்து தளம்',
         btnLang: 'EN', from: 'எங்கிருந்து', to: 'எங்கு',
         navRoutes: 'பேருந்து தேடு', navBoard: 'நிலைய போர்டு', navInfo: 'தகவல்',
         vetri: 'வெற்றிப் பயணம் (மகளிர் & திருநங்கைகள் · ₹0)', forward: 'செல்லும் வழி', rev: 'திரும்பும் வழி',
