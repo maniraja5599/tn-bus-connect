@@ -800,6 +800,107 @@
       gap: 6px;
     }
 
+  
+    /* Language / Settings Modal Styles */
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin-top: 12px;
+    }
+    .lang-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      transition: all 0.15s ease;
+      text-align: left;
+    }
+    .lang-card:hover {
+      border-color: var(--green);
+      background: #FFFFFF;
+    }
+    .lang-card.active {
+      background: var(--green-mint);
+      border-color: var(--green);
+      box-shadow: 0 0 0 1px var(--green);
+    }
+    .lang-card-native {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .lang-card-en {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .lang-card-sub {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--green);
+      margin-top: 2px;
+    }
+
+    /* District Tag Interactive Segmented Switch */
+    .district-tag-group {
+      display: inline-flex;
+      background: #FFFFFF;
+      border: 1px solid rgba(13, 110, 78, 0.25);
+      border-radius: 999px;
+      padding: 2px;
+      gap: 2px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+      flex-shrink: 0;
+    }
+    .district-tag-btn {
+      background: transparent;
+      border: none;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--muted);
+      padding: 3px 8px;
+      border-radius: 999px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+    .district-tag-btn:hover {
+      color: var(--text);
+    }
+    .district-tag-btn.active {
+      background: var(--green);
+      color: #FFFFFF;
+      font-weight: 800;
+    }
+
+    /* Bus Number and Operator Name */
+    .bus-num-pill {
+      font-size: 10px;
+      font-weight: 800;
+      color: #FFFFFF;
+      background: #1E293B;
+      padding: 2.5px 7px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .bus-operator-name {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: -2px;
+    }
+
   </style>
 </head>
 <body>
@@ -818,7 +919,10 @@
           </div>
         </div>
         <div class="header-pills">
-          <button class="pill-btn" id="btnLang" onclick="toggleLang()">தமிழ்</button>
+          <button class="pill-btn" id="btnSettings" onclick="openLangModal()" title="Language & Settings">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span id="lblLangBadge">English</span>
+          </button>
           <button class="pill-btn" id="btnOffline" onclick="toggleOffline()">↓ <span id="lblOfflinePill">Offline</span></button>
         </div>
       </div>
@@ -838,7 +942,10 @@
             <option value="vellore">Vellore & Tiruvannamalai</option>
           </select>
         </div>
-        <span class="district-tag" id="lblPilotTag">Town + Express</span>
+        <div class="district-tag-group" id="districtTagGroup">
+          <button class="district-tag-btn active" id="btnTagAll" onclick="setDistrictTagFilter('all')">Town + Express</button>
+          <button class="district-tag-btn" id="btnTagTown" onclick="setDistrictTagFilter('town')">🏘️ Town (உள்ளூர்)</button>
+        </div>
       </div>
     </header>
 
@@ -981,6 +1088,20 @@
         </div>
       </div>
     
+    <!-- Settings & Multi-Language Selector Modal -->
+    <div class="modal-backdrop" id="modalLang" onclick="closeModalOnBackdrop(event)">
+      <div class="modal-sheet">
+        <div class="modal-header">
+          <div>
+            <div class="modal-title" id="lblLangModalTitle">⚙️ Settings & Language</div>
+            <div style="font-size:11.5px; color:var(--muted); margin-top:2px;" id="lblLangModalSub">Choose your preferred Indian language</div>
+          </div>
+          <button class="modal-close" onclick="closeLangModal()">&times;</button>
+        </div>
+        <div class="lang-grid" id="langGrid"></div>
+      </div>
+    </div>
+
     <!-- Community Modal: Add / Submit Bus Timing -->
     <div class="modal-backdrop" id="addTimingModal" onclick="closeModalOnBackdrop(event)">
       <div class="modal-sheet">
@@ -1049,7 +1170,7 @@
   </div>
 
   <script>
-    let lang = 'en';
+    let lang = localStorage.getItem('tnbus_lang') || 'en';
     let offline = false;
     let activeFilter = 'all';
     let isReversed = false;
@@ -1064,10 +1185,21 @@
 
     const pillPalette = ['#E11D48', '#EA580C', '#7C3AED', '#0D9488', '#2563EB', '#059669', '#B45309'];
 
+    const supportedLanguages = [
+      { code: 'en', native: 'English', en: 'English', sub: 'Default' },
+      { code: 'ta', native: 'தமிழ்', en: 'Tamil', sub: 'தமிழ்நாடு' },
+      { code: 'hi', native: 'हिन्दी', en: 'Hindi', sub: 'भारत' },
+      { code: 'te', native: 'తెలుగు', en: 'Telugu', sub: 'ఆంధ్ర / తెలంగాణ' },
+      { code: 'kn', native: 'ಕನ್ನಡ', en: 'Kannada', sub: 'ಕರ್ನಾಟಕ' },
+      { code: 'ml', native: 'മലയാളം', en: 'Malayalam', sub: 'കേരളം' }
+    ];
+
     const i18n = {
       en: {
-        appName: 'IndiaBus <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>', appSub: '8 Districts Live · All Over India Transit',
-        btnLang: 'தமிழ்', from: 'From', to: 'To',
+        appName: 'IndiaBus <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>',
+        appSub: '8 Districts Live · All Over India Transit',
+        btnSettings: 'English',
+        from: 'From', to: 'To',
         navRoutes: 'Find Bus', navBoard: 'Stand Board', navInfo: 'Data & Info',
         vetri: 'Vetri Payanam (Women & TG · ₹0)', forward: 'Forward', rev: 'Return Direction',
         fAll: 'All', fVetri: '🩷 Vetri Payanam (Women & TG · ₹0)', fTown: 'Town Only', fExpress: 'Express',
@@ -1076,15 +1208,20 @@
         savedTitle: '★ Saved Routes', tapStops: 'Tap to see stops timeline',
         addTiming: '+ Add Timing', modalTitle: '🚌 Add New Bus Timing',
         modalFrom: 'From (Origin Stop)', modalTo: 'To (Destination)',
-        modalTimes: 'Departure Timings (comma or space separated)',
+        modalTimes: 'Departure Timings (e.g. 06:15 AM, 08:30 AM, 02:45 PM)',
         modalVia: 'Via Route & Key Stops', modalType: 'Service Type',
         modalFare: 'Approx Fare', modalVetri: '🩷 Vetri Payanam Eligible (Women & TG · ₹0)',
         submitTiming: '✓ Submit to Live App & Community',
-        votedCorrect: 'Thanks! Verified as Correct 👍', votedWrong: 'Thanks! Flagged as Wrong 👎'
+        votedCorrect: 'Thanks! Verified as Correct 👍', votedWrong: 'Thanks! Flagged as Wrong 👎',
+        tagAll: 'Town + Express', tagTown: '🏘️ Town (உள்ளூர்)',
+        langModalTitle: '⚙️ Settings & Language',
+        langModalSub: 'Choose your preferred Indian language'
       },
       ta: {
-        appName: 'இந்தியா பஸ் <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>', appSub: '8 மாவட்டங்கள் · அகில இந்திய பேருந்து தளம்',
-        btnLang: 'EN', from: 'எங்கிருந்து', to: 'எங்கு',
+        appName: 'இந்தியா பஸ் <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>',
+        appSub: '8 மாவட்டங்கள் · அகில இந்திய பேருந்து தளம்',
+        btnSettings: 'தமிழ்',
+        from: 'எங்கிருந்து', to: 'எங்கு',
         navRoutes: 'பேருந்து தேடு', navBoard: 'நிலைய போர்டு', navInfo: 'தகவல்',
         vetri: 'வெற்றிப் பயணம் (மகளிர் & திருநங்கைகள் · ₹0)', forward: 'செல்லும் வழி', rev: 'திரும்பும் வழி',
         fAll: 'அனைத்தும்', fVetri: '🩷 வெற்றிப் பயணம் (மகளிர் · ₹0)', fTown: 'டவுன் பஸ்', fExpress: 'எக்ஸ்பிரஸ்',
@@ -1093,11 +1230,102 @@
         savedTitle: '★ சேமித்த வழிகள்', tapStops: 'நிறுத்தங்களைப் பார்க்க தட்டவும்',
         addTiming: '+ நேரம் சேர்க்க', modalTitle: '🚌 புதிய பேருந்து நேரம் சேர்க்க',
         modalFrom: 'எங்கிருந்து (புறப்படும் இடம்)', modalTo: 'எங்கு (சேருமிடம்)',
-        modalTimes: 'புறப்படும் நேரங்கள் (எ.கா: 06:15, 08:30)',
+        modalTimes: 'புறப்படும் நேரங்கள் (எ.கா: 06:15 AM, 08:30 AM, 02:45 PM)',
         modalVia: 'செல்லும் வழி & முக்கிய நிறுத்தங்கள்', modalType: 'சேவை வகை',
         modalFare: 'கட்டணம்', modalVetri: '🩷 வெற்றிப் பயணம் (மகளிர் & திருநங்கைகள் · ₹0)',
         submitTiming: '✓ செயலியில் சேர் (Submit)',
-        votedCorrect: 'நன்றி! சரியான நேரம் என வாக்களித்தீர்கள் 👍', votedWrong: 'நன்றி! தவறான நேரம் என கொடியிட்டீர்கள் 👎'
+        votedCorrect: 'நன்றி! சரியான நேரம் என வாக்களித்தீர்கள் 👍', votedWrong: 'நன்றி! தவறான நேரம் என கொடியிட்டீர்கள் 👎',
+        tagAll: 'டவுன் + எக்ஸ்பிரஸ்', tagTown: '🏘️ உள்ளூர் (டவுன்)',
+        langModalTitle: '⚙️ அமைப்புகள் & மொழி',
+        langModalSub: 'உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்'
+      },
+      hi: {
+        appName: 'इंडिया बस <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>',
+        appSub: '8 ज़िले लाइव · अखिल भारतीय बस ट्रांजिट',
+        btnSettings: 'हिन्दी',
+        from: 'कहाँ से', to: 'कहाँ तक',
+        navRoutes: 'बस खोजें', navBoard: 'स्टैंड बोर्ड', navInfo: 'जानकारी',
+        vetri: 'वेत्री पयणम (महिलाएं एवं टीजी · ₹0)', forward: 'जाने का मार्ग', rev: 'वापसी मार्ग',
+        fAll: 'सभी बसें', fVetri: '🩷 वेत्री पयणम (महिलाएं · ₹0)', fTown: 'लोकल टाउन', fExpress: 'एक्सप्रेस',
+        disclaimer: 'ℹ️ सार्वजनिक समय सारिणी · स्टैंड / tnstc.in से पुष्टि करें · 12-11-2026',
+        reportBtn: '⚠️ गलत समय रिपोर्ट करें', popular: 'इस ज़िले के मुख्य गंतव्य:',
+        savedTitle: '★ सहेजे गए मार्ग', tapStops: 'स्टॉप सूची देखने के लिए टैप करें',
+        addTiming: '+ नया समय जोड़ें', modalTitle: '🚌 नई बस का समय दर्ज करें',
+        modalFrom: 'कहाँ से (प्रस्थान स्टॉप)', modalTo: 'कहाँ तक (गंतव्य)',
+        modalTimes: 'प्रस्थान समय (उदा: 06:15 AM, 08:30 AM, 02:45 PM)',
+        modalVia: 'वाया मार्ग और मुख्य स्टॉप', modalType: 'सेवा प्रकार',
+        modalFare: 'अनुमानित किराया', modalVetri: '🩷 वेत्री पयणम पात्र (महिलाएं · ₹0)',
+        submitTiming: '✓ सबमिट करें (Submit)',
+        votedCorrect: 'धन्यवाद! सही समय सत्यापित किया गया 👍', votedWrong: 'धन्यवाद! गलत समय फ्लैग किया गया 👎',
+        tagAll: 'टाउन + एक्सप्रेस', tagTown: '🏘️ लोकल टाउन',
+        langModalTitle: '⚙️ सेटिंग्स और भाषा',
+        langModalSub: 'अपनी पसंदीदा भारतीय भाषा चुनें'
+      },
+      te: {
+        appName: 'ఇండియా బస్ <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>',
+        appSub: '8 జిల్లాలు లైవ్ · ఆల్ ఇండియా బస్సు రవాణా',
+        btnSettings: 'తెలుగు',
+        from: 'ఎక్కడి నుండి', to: 'ఎక్కడికి',
+        navRoutes: 'బస్సు శోధించండి', navBoard: 'స్టాండ్ బోర్డ్', navInfo: 'సమాచారం',
+        vetri: 'వెట్రి పయనం (మహిళలు & TG · ₹0)', forward: 'ముందుకు వెళ్లే మార్గం', rev: 'తిరుగు ప్రయాణం',
+        fAll: 'అన్నీ', fVetri: '🩷 వెట్రి పయనం (మహిళలు · ₹0)', fTown: 'టౌన్ బస్సు', fExpress: 'ఎక్స్‌ప్రెస్',
+        disclaimer: 'ℹ️ కమ్యూనిటీ సమాచారం · బస్ స్టాండ్ / tnstc.in లో ధృవీకరించుకోండి',
+        reportBtn: '⚠️ తప్పు సమయాన్ని నివేదించండి', popular: 'ఈ జిల్లాలో ముఖ్య గమ్యస్థానాలు:',
+        savedTitle: '★ సేవ్ చేసిన మార్గాలు', tapStops: 'స్టాప్‌ల టైమ్‌లైన్ చూడటానికి నొక్కండి',
+        addTiming: '+ సమయం జోడించండి', modalTitle: '🚌 కొత్త బస్సు సమయం జోడించండి',
+        modalFrom: 'ఎక్కడి నుండి (ప్రారంభం)', modalTo: 'ఎక్కడికి (గమ్యం)',
+        modalTimes: 'బయలుదేరే సమయాలు (ఉదా: 06:15 AM, 08:30 AM, 02:45 PM)',
+        modalVia: 'రూట్ మరియు ముఖ్య స్టాప్‌లు', modalType: 'సేవ రకం',
+        modalFare: 'సుమారు ఛార్జీ', modalVetri: '🩷 వెట్రి పయనం అర్హత (మహిళలు · ₹0)',
+        submitTiming: '✓ యాప్‌లో సమర్పించండి',
+        votedCorrect: 'ధన్యవాదాలు! సరైన సమయంగా నిర్ధారించబడింది 👍', votedWrong: 'ధన్యవాదాలు! తప్పుగా గుర్తించబడింది 👎',
+        tagAll: 'టౌన్ + ఎక్స్‌ప్రెస్', tagTown: '🏘️ టౌన్ లోకల్',
+        langModalTitle: '⚙️ సెట్టింగ్‌లు & భాష',
+        langModalSub: 'మీ ప్రాధాన్య భారతీయ భాషను ఎంచుకోండి'
+      },
+      kn: {
+        appName: 'ಇಂಡಿಯಾ ಬಸ್ <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>',
+        appSub: '8 ಜಿಲ್ಲೆಗಳು ಲೈವ್ · ಅಖಿಲ ಭಾರತ ಬಸ್ ಸಾರಿಗೆ',
+        btnSettings: 'ಕನ್ನಡ',
+        from: 'ಎಲ್ಲಿಂದ', to: 'ಎಲ್ಲಿಗೆ',
+        navRoutes: 'ಬಸ್ ಹುಡುಕಿ', navBoard: 'ಸ್ಟ್ಯಾಂಡ್ ಬೋರ್ಡ್', navInfo: 'ಮಾಹಿತಿ',
+        vetri: 'ವೆಟ್ರಿ ಪಯಣಂ (ಮಹಿಳೆಯರು & TG · ₹0)', forward: 'ಹೋಗುವ ಮಾರ್ಗ', rev: 'ಹಿಂತಿರುಗುವ ಮಾರ್ಗ',
+        fAll: 'ಎಲ್ಲಾ', fVetri: '🩷 ವೆಟ್ರಿ ಪಯಣಂ (ಮಹಿಳೆಯರು · ₹0)', fTown: 'ಟೌನ್ ಬಸ್', fExpress: 'ಎಕ್ಸ್‌ಪ್ರೆಸ್',
+        disclaimer: 'ℹ️ ಸಾರ್ವಜನಿಕ ಮಾಹಿತಿ · ಬಸ್ ನಿಲ್ದಾಣ / tnstc.in ನಲ್ಲಿ ಪರಿಶೀಲಿಸಿ',
+        reportBtn: '⚠️ ತಪ್ಪು ಸಮಯ ವರದಿ ಮಾಡಿ', popular: 'ಈ ಜಿಲ್ಲೆಯ ಪ್ರಮುಖ ತಾಣಗಳು:',
+        savedTitle: '★ ಉಳಿಸಿದ ಮಾರ್ಗಗಳು', tapStops: 'ನಿಲುಗಡೆಗಳನ್ನು ನೋಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ',
+        addTiming: '+ ಸಮಯ ಸೇರಿಸಿ', modalTitle: '🚌 ಹೊಸ ಬಸ್ ಸಮಯ ಸೇರಿಸಿ',
+        modalFrom: 'ಎಲ್ಲಿಂದ (ಆರಂಭಿಕ ನಿಲ್ದಾಣ)', modalTo: 'ಎಲ್ಲಿಗೆ (ಗಮ್ಯಸ್ಥಾನ)',
+        modalTimes: 'ಹೊರಡುವ ಸಮಯಗಳು (ಉದಾ: 06:15 AM, 08:30 AM, 02:45 PM)',
+        modalVia: 'ಮಾರ್ಗ ಮತ್ತು ಪ್ರಮುಖ ನಿಲುಗಡೆಗಳು', modalType: 'ಸೇವಾ ಪ್ರಕಾರ',
+        modalFare: 'ಅಂದಾಜು ಶುಲ್ಕ', modalVetri: '🩷 ವೆಟ್ರಿ ಪಯಣಂ ಅರ್ಹತೆ (ಮಹಿಳೆಯರು · ₹0)',
+        submitTiming: '✓ ಸಲ್ಲಿಸಿ (Submit)',
+        votedCorrect: 'ಧನ್ಯವಾದಗಳು! ಸರಿಯಾದ ಸಮಯ ಎಂದು ಖಚಿತಪಡಿಸಲಾಗಿದೆ 👍', votedWrong: 'ಧನ್ಯವಾದಗಳು! ತಪ್ಪು ಸಮಯ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ 👎',
+        tagAll: 'ಟೌನ್ + ಎಕ್ಸ್‌ಪ್ರೆಸ್', tagTown: '🏘️ ಟೌನ್ ಲೋಕಲ್',
+        langModalTitle: '⚙️ ಸೆಟ್ಟಿಂಗ್ಸ್ & ಭಾಷೆ',
+        langModalSub: 'ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಭಾರತೀಯ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ'
+      },
+      ml: {
+        appName: 'ഇന്ത്യ ബസ് <span style="font-size:12px; font-weight:700; color:var(--muted); margin-left:-2px;">TN</span>',
+        appSub: '8 ജില്ലകൾ ലൈവ് · അഖിലേന്ത്യാ ബസ് ട്രാൻസിറ്റ്',
+        btnSettings: 'മലയാളം',
+        from: 'എവിടെനിന്ന്', to: 'എവിടേക്ക്',
+        navRoutes: 'ബസ് തിരയുക', navBoard: 'സ്റ്റാൻഡ് ബോർഡ്', navInfo: 'വിവരം',
+        vetri: 'വെട്രി പയണം (വനിതകൾ & TG · ₹0)', forward: 'പോകുന്ന വഴി', rev: 'തിരികെ ഉള്ള വഴി',
+        fAll: 'എല്ലാം', fVetri: '🩷 വെട്രി പയണം (വനിതകൾ · ₹0)', fTown: 'ടൗൺ ബസ്', fExpress: 'എക്സ്പ്രസ്സ്',
+        disclaimer: 'ℹ️ ബസ് സ്റ്റാൻഡ് / tnstc.in സന്ദർശിച്ച് സമയം ഉറപ്പാക്കുക',
+        reportBtn: '⚠️ തെറ്റായ സമയം അറിയിക്കുക', popular: 'ഈ ജില്ലയിലെ പ്രധാന സ്ഥലങ്ങൾ:',
+        savedTitle: '★ സേവ് ചെയ്ത റൂട്ടുകൾ', tapStops: 'സ്റ്റോപ്പുകൾ കാണാൻ ടാപ്പ് ചെയ്യുക',
+        addTiming: '+ സമയം ചേർക്കുക', modalTitle: '🚌 പുതിയ ബസ് സമയം ചേർക്കുക',
+        modalFrom: 'എവിടെനിന്ന് (തുടങ്ങുന്ന സ്ഥലം)', modalTo: 'എവിടേക്ക് (ലക്ഷ്യസ്ഥാനം)',
+        modalTimes: 'പുറപ്പെടുന്ന സമയം (ഉദാ: 06:15 AM, 08:30 AM, 02:45 PM)',
+        modalVia: 'റൂട്ടും പ്രധാന സ്റ്റോപ്പുകളും', modalType: 'സർവീസ് ഇനം',
+        modalFare: 'ഏകദേശ നിരക്ക്', modalVetri: '🩷 വെട്രി പയണം അർഹത (വനിതകൾ · ₹0)',
+        submitTiming: '✓ സമർപ്പിക്കുക (Submit)',
+        votedCorrect: 'നന്ദി! ശരിയായ സമയം എന്ന് സ്ഥിരീകരിച്ചു 👍', votedWrong: 'നന്ദി! തെറ്റായ സമയമായി അടയാളപ്പെടുത്തി 👎',
+        tagAll: 'ടൗൺ + എക്സ്പ്രസ്സ്', tagTown: '🏘️ ടൗൺ ലോക്കൽ',
+        langModalTitle: '⚙️ ക്രമീകരണങ്ങളും ഭാഷയും',
+        langModalSub: 'നിങ്ങളുടെ പ്രിയപ്പെട്ട ഇന്ത്യൻ ഭാഷ തിരഞ്ഞെടുക്കുക'
       }
     };
 
@@ -1215,7 +1443,75 @@
       activeFilter = f;
       document.querySelectorAll('.quick-row .chip').forEach(c => c.classList.remove('active', 'pink-active'));
       btn.classList.add(f === 'vetri' ? 'pink-active' : 'active');
+
+      const btnTagAll = document.getElementById('btnTagAll');
+      const btnTagTown = document.getElementById('btnTagTown');
+      if (f === 'town') {
+        if (btnTagTown) btnTagTown.classList.add('active');
+        if (btnTagAll) btnTagAll.classList.remove('active');
+        const d = document.getElementById('districtSelect').value;
+        ensureTownRouteSelected(d);
+      } else {
+        if (btnTagAll) btnTagAll.classList.add('active');
+        if (btnTagTown) btnTagTown.classList.remove('active');
+      }
       renderResults();
+    }
+
+    function setDistrictTagFilter(type) {
+      const btnTagAll = document.getElementById('btnTagAll');
+      const btnTagTown = document.getElementById('btnTagTown');
+      const fTown = document.getElementById('f-town');
+      const fAll = document.getElementById('f-all');
+
+      if (type === 'town') {
+        if (btnTagTown) btnTagTown.classList.add('active');
+        if (btnTagAll) btnTagAll.classList.remove('active');
+        activeFilter = 'town';
+        document.querySelectorAll('.quick-row .chip').forEach(c => c.classList.remove('active', 'pink-active'));
+        if (fTown) fTown.classList.add('active');
+
+        // Smart route switch to ensure local town buses appear immediately
+        const d = document.getElementById('districtSelect').value;
+        ensureTownRouteSelected(d);
+      } else {
+        if (btnTagAll) btnTagAll.classList.add('active');
+        if (btnTagTown) btnTagTown.classList.remove('active');
+        activeFilter = 'all';
+        document.querySelectorAll('.quick-row .chip').forEach(c => c.classList.remove('active', 'pink-active'));
+        if (fAll) fAll.classList.add('active');
+      }
+      renderResults();
+      showToast(type === 'town' ? (lang === 'ta' ? '🏘️ உள்ளூர் டவுன் பஸ்கள் மட்டும்' : 'Showing Town Buses Only') : (lang === 'ta' ? 'அனைத்து பேருந்துகளும்' : 'Showing All Buses'));
+    }
+
+    function ensureTownRouteSelected(district) {
+      const fSel = document.getElementById('fromSelect');
+      const tSel = document.getElementById('toSelect');
+      const townPairs = {
+        namakkal: ['nkl_old', 'mohanur'],
+        salem: ['salem_old', 'yercaud'],
+        trichy: ['chathiram', 'srirangam'],
+        chennai: ['t_nagar', 'tambaram'],
+        madurai: ['periyar', 'thiruparankundram'],
+        coimbatore: ['gandhipuram', 'marudhamalai'],
+        tirunelveli: ['junction', 'palayamkottai'],
+        vellore: ['new_bus_stand', 'bagayam']
+      };
+
+      const pair = townPairs[district];
+      if (pair) {
+        // Only switch if current route has zero town buses
+        const fKey = standAliases[fSel.value] || fSel.value;
+        const tKey = standAliases[tSel.value] || tSel.value;
+        const key = `${fKey}->${tKey}`;
+        const currentBuses = routeDB[key] || [];
+        const hasTown = currentBuses.some(b => b.type === 'town');
+        if (!hasTown) {
+          fSel.value = pair[0];
+          tSel.value = pair[1];
+        }
+      }
     }
 
     function toggleTimeline(idx) {
@@ -1374,9 +1670,11 @@
           </div>
           <div class="bus-title">
             <span class="type-badge ${b.type === 'town' ? 'town' : ''}">${b.type === 'town' ? 'TOWN' : 'EXPRESS'}</span>
+            ${b.bus_no ? `<span class="bus-num-pill">${b.bus_no}</span>` : ''}
             <span>${b.title}</span>
             ${isVerifiedCommunity ? '<span class="verified-badge">✓ Community Verified</span>' : ''}
           </div>
+          ${b.bus_name ? `<div class="bus-operator-name"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="3" y="3" width="18" height="16" rx="2"/><path d="M7 19v2"/><path d="M17 19v2"/><circle cx="7" cy="14" r="1.5"/><circle cx="17" cy="14" r="1.5"/></svg> ${b.bus_name}</div>` : ''}
           ${isFlaggedWrong ? '<div class="flagged-warning">⚠️ Reported inaccurate by commuters. Verify at terminus.</div>' : ''}
           <div class="bus-via"><strong>${b.bay}:</strong> ${arrowVia}</div>
           <div class="stop-timeline" id="tl-${i}">
@@ -1549,24 +1847,78 @@
       btn.classList.add('active');
     }
 
-    function toggleLang() {
-      lang = lang === 'en' ? 'ta' : 'en';
-      const t = i18n[lang];
-      document.getElementById('lblAppName').innerHTML = `${t.appName} <span class="beta-pill">Beta</span>`;
-      document.getElementById('lblAppSub').textContent = t.appSub;
-      document.getElementById('btnLang').textContent = t.btnLang;
-      document.getElementById('lblFrom').textContent = t.from;
-      document.getElementById('lblTo').textContent = t.to;
-      document.getElementById('navRoutes').textContent = t.navRoutes;
-      document.getElementById('navBoard').textContent = t.navBoard;
-      document.getElementById('navInfo').textContent = t.navInfo;
-      document.getElementById('f-all').textContent = t.fAll;
-      document.getElementById('f-vetri').textContent = t.fVetri;
-      document.getElementById('f-town').textContent = t.fTown;
-      document.getElementById('f-express').textContent = t.fExpress;
-      document.getElementById('lblDisclaimer').textContent = t.disclaimer;
-      document.getElementById('lblPopularDest').textContent = t.popular;
-      document.getElementById('lblSavedTitle').textContent = t.savedTitle;
+    function openLangModal() {
+      renderLangCards();
+      const m = document.getElementById('modalLang');
+      if (m) m.classList.add('open');
+    }
+
+    function closeLangModal() {
+      const m = document.getElementById('modalLang');
+      if (m) m.classList.remove('open');
+    }
+
+    function renderLangCards() {
+      const grid = document.getElementById('langGrid');
+      if (!grid) return;
+      grid.innerHTML = supportedLanguages.map(l => `
+        <button class="lang-card ${lang === l.code ? 'active' : ''}" onclick="setLanguage('${l.code}')">
+          <span class="lang-card-native">${l.native}</span>
+          <span class="lang-card-en">${l.en}</span>
+          <span class="lang-card-sub">${lang === l.code ? '✓ Active' : l.sub}</span>
+        </button>
+      `).join('');
+    }
+
+    function setLanguage(newLang) {
+      lang = newLang;
+      localStorage.setItem('tnbus_lang', lang);
+      closeLangModal();
+      updateUiLanguage();
+      showToast((i18n[lang]?.btnSettings || 'Language') + ' selected');
+    }
+
+    function updateUiLanguage() {
+      const t = i18n[lang] || i18n.en;
+      const lblApp = document.getElementById('lblAppName');
+      if (lblApp) lblApp.innerHTML = `${t.appName} <span class="beta-pill">Beta</span>`;
+      const lblSub = document.getElementById('lblAppSub');
+      if (lblSub) lblSub.textContent = t.appSub;
+      const lblBadge = document.getElementById('lblLangBadge');
+      if (lblBadge) lblBadge.textContent = t.btnSettings;
+      const lFrom = document.getElementById('lblFrom');
+      if (lFrom) lFrom.textContent = t.from;
+      const lTo = document.getElementById('lblTo');
+      if (lTo) lTo.textContent = t.to;
+      const nRoutes = document.getElementById('navRoutes');
+      if (nRoutes) nRoutes.textContent = t.navRoutes;
+      const nBoard = document.getElementById('navBoard');
+      if (nBoard) nBoard.textContent = t.navBoard;
+      const nInfo = document.getElementById('navInfo');
+      if (nInfo) nInfo.textContent = t.navInfo;
+      const fA = document.getElementById('f-all');
+      if (fA) fA.textContent = t.fAll;
+      const fV = document.getElementById('f-vetri');
+      if (fV) fV.textContent = t.fVetri;
+      const fT = document.getElementById('f-town');
+      if (fT) fT.textContent = t.fTown;
+      const fE = document.getElementById('f-express');
+      if (fE) fE.textContent = t.fExpress;
+      const lDisc = document.getElementById('lblDisclaimer');
+      if (lDisc) lDisc.textContent = t.disclaimer;
+      const lPop = document.getElementById('lblPopularDest');
+      if (lPop) lPop.textContent = t.popular;
+      const lSave = document.getElementById('lblSavedTitle');
+      if (lSave) lSave.textContent = t.savedTitle;
+      const bTagAll = document.getElementById('btnTagAll');
+      if (bTagAll) bTagAll.textContent = t.tagAll;
+      const bTagTown = document.getElementById('btnTagTown');
+      if (bTagTown) bTagTown.textContent = t.tagTown;
+      const lMTitle = document.getElementById('lblLangModalTitle');
+      if (lMTitle) lMTitle.textContent = t.langModalTitle;
+      const lMSub = document.getElementById('lblLangModalSub');
+      if (lMSub) lMSub.textContent = t.langModalSub;
+
       const btnAdd = document.getElementById('btnAddTiming');
       if (btnAdd) btnAdd.textContent = t.addTiming;
       const mTitle = document.getElementById('lblModalTitle');
@@ -1621,6 +1973,7 @@
         }
         renderSavedBar();
         populateStops('namakkal');
+        updateUiLanguage();
         renderBoard();
       } catch (err) {
         document.getElementById('busList').innerHTML = '<div class="info-card"><p>Unable to load data/districts.json. Serve via HTTP.</p></div>';

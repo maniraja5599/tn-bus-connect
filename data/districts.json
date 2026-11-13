@@ -408,7 +408,7 @@
   "routeDB": {
     "nkl->mohanur": [
       {
-        "time": "05:30 – 21:30",
+        "time": "05:00 AM · 05:30 AM · 06:00 AM · 06:30 AM · 07:00 AM (+29 more)",
         "eta": "Every 15–20m",
         "title": "Town Bus Rt 9 (SH-95)",
         "type": "town",
@@ -420,7 +420,9 @@
         "dur": "30–40 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 9, 9A",
+        "bus_name": "TNSTC Salem Town Bus / SMT / Sri Lakshmi"
       },
       {
         "time": "Frequent",
@@ -435,12 +437,14 @@
         "dur": "30 min",
         "gps": false,
         "source": "Corridor Frequency",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "Rt 9 / 9A",
+        "bus_name": "Kaviri Town Service"
       }
     ],
     "mohanur->nkl": [
       {
-        "time": "05:30 – 21:30",
+        "time": "05:30 AM – 09:30 PM",
         "eta": "Every 15–20m",
         "title": "Town Bus Rt 9 (Return SH-95)",
         "type": "town",
@@ -452,12 +456,14 @@
         "dur": "30–40 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 9, 9A",
+        "bus_name": "TNSTC Salem Town Bus / SMT / Sri Lakshmi"
       }
     ],
     "nkl->erumapatti": [
       {
-        "time": "05:00 – 21:30",
+        "time": "05:00 AM · 05:30 AM · 06:15 AM · 06:45 AM · 07:30 AM (+16 more)",
         "eta": "Every 20–30m",
         "title": "Namakkal → Erumapatti / Thuraiyur",
         "type": "town",
@@ -469,12 +475,14 @@
         "dur": "30–45 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 1, 1A",
+        "bus_name": "TNSTC Salem Ordinary Town Bus"
       }
     ],
     "erumapatti->nkl": [
       {
-        "time": "05:30 – 21:30",
+        "time": "05:30 AM – 09:30 PM",
         "eta": "Every 20–30m",
         "title": "Erumapatti / Pottireddipatti → Namakkal",
         "type": "town",
@@ -486,16 +494,18 @@
         "dur": "30–45 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 1, 1A",
+        "bus_name": "TNSTC Salem Ordinary Town Bus"
       }
     ],
     "nkl->thuraiyur": [
       {
-        "time": "05:00 – 21:00",
+        "time": "12:30 AM · 02:00 AM · 02:45 AM · 05:00 AM · 06:15 AM (+22 more)",
         "eta": "Every 20–30m",
         "title": "Namakkal → Thuraiyur",
         "type": "express",
-        "vetri": false,
+        "vetri": true,
         "corp": "TNSTC",
         "bay": "Namakkal New / Old Stand",
         "via": "Pottireddipatti · Erumapatti · Pavithiram · Thathaiyangarpettai",
@@ -503,12 +513,14 @@
         "dur": "1h 15m",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "Corridor 1 / Mofussil Route 154",
+        "bus_name": "TNSTC Salem / Kumbakonam Mofussil"
       }
     ],
     "thuraiyur->nkl": [
       {
-        "time": "05:30 – 21:00",
+        "time": "05:30 AM – 09:00 PM",
         "eta": "Every 20–30m",
         "title": "Thuraiyur → Namakkal",
         "type": "express",
@@ -520,16 +532,18 @@
         "dur": "1h 15m",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "Corridor 1 / Mofussil Route 154",
+        "bus_name": "TNSTC Salem / Kumbakonam Mofussil"
       }
     ],
     "nkl->kolli": [
       {
-        "time": "05:50 · 06:25 · 07:50",
+        "time": "12:45 AM · 02:00 AM · 03:00 AM · 03:20 AM · 05:50 AM (+10 more)",
         "eta": "Morning Official",
         "title": "Kolli Hills Ghat (Semmedu / Temple)",
         "type": "town",
-        "vetri": false,
+        "vetri": true,
         "corp": "TNSTC Salem",
         "bay": "Namakkal New / Old Stand",
         "via": "Muthugapatti · Sendamangalam · Karavalli · 70 Hairpin Bends · Solakkadu",
@@ -537,10 +551,12 @@
         "dur": "2h 30m – 3h",
         "gps": false,
         "source": "Official Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 11 Ext / Ghat Service / Route 4B",
+        "bus_name": "TNSTC Salem Kollimalai Express / Hill Rider"
       },
       {
-        "time": "09:20 · 10:00 · 12:50 · 14:10",
+        "time": "09:20 AM · 10:00 AM · 12:50 PM · 02:10 PM",
         "eta": "Day Official",
         "title": "Kolli Hills Ghat Service",
         "type": "town",
@@ -552,10 +568,12 @@
         "dur": "2h 30m – 3h",
         "gps": false,
         "source": "Official Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 1165",
+        "bus_name": "Arapaleeswarar Ghat Rider"
       },
       {
-        "time": "17:40 · 19:45 · 21:10",
+        "time": "05:40 PM · 07:45 PM · 09:10 PM",
         "eta": "Evening / Night",
         "title": "Kolli Hills Ghat (17:40 to Vilaram)",
         "type": "town",
@@ -567,7 +585,9 @@
         "dur": "2h 30m – 3h",
         "gps": false,
         "source": "Official Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 1165",
+        "bus_name": "Arapaleeswarar Ghat Rider"
       }
     ],
     "kolli->nkl": [
@@ -584,12 +604,14 @@
         "dur": "2h 30m",
         "gps": false,
         "source": "Ghat Corridor",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 1165",
+        "bus_name": "Arapaleeswarar Ghat Rider"
       }
     ],
     "nkl->chennai": [
       {
-        "time": "06:10 · 09:00 · 09:30 · 10:00",
+        "time": "06:10 AM · 09:00 AM · 09:30 AM · 10:00 AM",
         "eta": "Morning Slots",
         "title": "TNSTC / SETC Day Express",
         "type": "express",
@@ -601,10 +623,12 @@
         "dur": "7h 30m – 8h 30m",
         "gps": true,
         "source": "OTRS / PNR Tracking",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "SETC 154",
+        "bus_name": "Chennai Day Superfast"
       },
       {
-        "time": "20:00 · 20:45 · 21:30",
+        "time": "08:00 PM · 08:45 PM · 09:30 PM",
         "eta": "Night Express",
         "title": "SETC Ultra Deluxe (21:30) / Express",
         "type": "express",
@@ -616,10 +640,12 @@
         "dur": "7h 30m – 8h",
         "gps": true,
         "source": "OTRS / PNR Tracking",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "SETC 154",
+        "bus_name": "Chennai Day Superfast"
       },
       {
-        "time": "22:15 · 23:00",
+        "time": "10:15 PM · 11:00 PM",
         "eta": "Late Night",
         "title": "SETC AC Seater / Sleeper",
         "type": "express",
@@ -631,7 +657,9 @@
         "dur": "7h 30m – 8h",
         "gps": true,
         "source": "OTRS / PNR Tracking",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "SETC 154",
+        "bus_name": "Chennai Day Superfast"
       }
     ],
     "chennai->nkl": [
@@ -648,12 +676,14 @@
         "dur": "7h 30m – 8h 30m",
         "gps": true,
         "source": "OTRS / PNR Tracking",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "SETC 154",
+        "bus_name": "Chennai Day Superfast"
       }
     ],
     "nkl->salem": [
       {
-        "time": "04:30 – 23:30 + 24/7",
+        "time": "04:30 AM – 11:30 PM + 24/7",
         "eta": "Every 5–15m",
         "title": "Namakkal → Salem (NH 44 + 1-to-1)",
         "type": "express",
@@ -665,7 +695,9 @@
         "dur": "1h – 1h 15m",
         "gps": false,
         "source": "24/7 Corridor",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Kongu Speed Express"
       }
     ],
     "salem->nkl": [
@@ -682,12 +714,14 @@
         "dur": "1h – 1h 15m",
         "gps": false,
         "source": "24/7 Corridor",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Kongu Speed Express"
       }
     ],
     "nkl->rasipuram": [
       {
-        "time": "05:00 – 22:30",
+        "time": "05:00 AM · 05:40 AM · 06:00 AM · 06:30 AM · 07:15 AM (+20 more)",
         "eta": "Every 10–15m",
         "title": "Namakkal ↔ Rasipuram",
         "type": "town",
@@ -699,12 +733,14 @@
         "dur": "40–50 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 7, 7A / Mofussil Corridor",
+        "bus_name": "TNSTC Salem Kongu Express / Town Bus"
       }
     ],
     "rasipuram->nkl": [
       {
-        "time": "05:00 – 22:30",
+        "time": "05:00 AM – 10:30 PM",
         "eta": "Every 10–15m",
         "title": "Rasipuram → Namakkal",
         "type": "town",
@@ -716,16 +752,18 @@
         "dur": "40–50 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 7, 7A / Mofussil Corridor",
+        "bus_name": "TNSTC Salem Kongu Express / Town Bus"
       }
     ],
     "nkl->tiruchengode": [
       {
-        "time": "05:30 – 22:00",
+        "time": "05:15 AM · 05:45 AM · 06:15 AM · 06:45 AM · 07:15 AM (+29 more)",
         "eta": "Every 15–20m",
         "title": "Namakkal → Tiruchengode (SH-86)",
         "type": "town",
-        "vetri": false,
+        "vetri": true,
         "corp": "TNSTC Salem",
         "bay": "Namakkal New / Old Stand",
         "via": "Nallipalayam · Unjanai · Kumaramangalam · Kootapalli · KSR Kalvi Nagar",
@@ -733,12 +771,14 @@
         "dur": "45–60 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "Route 2, 14 / SH-86 Corridor",
+        "bus_name": "TNSTC Salem Kongu Chariot / Town Bus"
       }
     ],
     "tiruchengode->nkl": [
       {
-        "time": "05:30 – 22:00",
+        "time": "05:30 AM – 10:00 PM",
         "eta": "Every 15–20m",
         "title": "Tiruchengode → Namakkal (SH-86)",
         "type": "town",
@@ -750,12 +790,14 @@
         "dur": "45–60 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "Route 2, 14 / SH-86 Corridor",
+        "bus_name": "TNSTC Salem Kongu Chariot / Town Bus"
       }
     ],
     "nkl->sendamangalam": [
       {
-        "time": "05:30 – 22:00",
+        "time": "05:15 AM · 05:50 AM · 06:15 AM · 07:00 AM · 07:50 AM (+20 more)",
         "eta": "Every 10–15m",
         "title": "Namakkal → Sendamangalam",
         "type": "town",
@@ -767,12 +809,14 @@
         "dur": "15–25 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 4, 11, 11A",
+        "bus_name": "TNSTC Salem Town Bus / Kolli Feeder"
       }
     ],
     "sendamangalam->nkl": [
       {
-        "time": "05:30 – 22:00",
+        "time": "05:30 AM – 10:00 PM",
         "eta": "Every 10–15m",
         "title": "Sendamangalam → Namakkal",
         "type": "town",
@@ -784,7 +828,9 @@
         "dur": "15–25 min",
         "gps": false,
         "source": "General Frequency",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Route 4, 11, 11A",
+        "bus_name": "TNSTC Salem Town Bus / Kolli Feeder"
       }
     ],
     "salem->salem_old": [
@@ -800,7 +846,9 @@
         "fare": "₹5 – ₹10",
         "dur": "12–15 min",
         "gps": false,
-        "source": "24/7 City Frequency"
+        "source": "24/7 City Frequency",
+        "bus_no": "Rt 3 / 56 / 73",
+        "bus_name": "VOC Market City Bus"
       }
     ],
     "salem_old->salem": [
@@ -816,12 +864,14 @@
         "fare": "₹5 – ₹10",
         "dur": "12–15 min",
         "gps": false,
-        "source": "24/7 City Frequency"
+        "source": "24/7 City Frequency",
+        "bus_no": "Rt 3 / 56 / 73",
+        "bus_name": "VOC Market City Bus"
       }
     ],
     "salem->yercaud": [
       {
-        "time": "04:00 · 05:15 · 06:00 · 07:15 · 08:20",
+        "time": "04:00 AM · 05:15 AM · 06:00 AM · 07:15 AM · 08:20 AM",
         "eta": "Morning Official",
         "title": "Salem → Yercaud Ghat (Rt 1165)",
         "type": "town",
@@ -832,10 +882,12 @@
         "fare": "₹30 – ₹45",
         "dur": "1h 15m",
         "gps": false,
-        "source": "Official Timetable"
+        "source": "Official Timetable",
+        "bus_no": "Rt 1165 (20 Bends)",
+        "bus_name": "Shevaroys Hill Queen"
       },
       {
-        "time": "09:50 · 10:30 · 11:10 · 12:30 · 13:50",
+        "time": "09:50 AM · 10:30 AM · 11:10 AM · 12:30 PM · 01:50 PM",
         "eta": "Midday Official",
         "title": "Salem → Yercaud Ghat (Rt 1165)",
         "type": "town",
@@ -846,12 +898,14 @@
         "fare": "₹30 – ₹45",
         "dur": "1h 15m",
         "gps": false,
-        "source": "Official Timetable"
+        "source": "Official Timetable",
+        "bus_no": "Rt 1165 (20 Bends)",
+        "bus_name": "Shevaroys Hill Queen"
       }
     ],
     "yercaud->salem": [
       {
-        "time": "05:30 – 22:30",
+        "time": "05:30 AM – 10:30 PM",
         "eta": "Every 30–45m",
         "title": "Yercaud → Salem (Rt 1165 Return)",
         "type": "town",
@@ -862,12 +916,14 @@
         "fare": "₹30 – ₹45",
         "dur": "1h 10m",
         "gps": false,
-        "source": "Official Ghat Service"
+        "source": "Official Ghat Service",
+        "bus_no": "Rt 1165 (20 Bends)",
+        "bus_name": "Shevaroys Hill Queen"
       }
     ],
     "salem->mettur": [
       {
-        "time": "05:45 · 07:20 · 08:20 · 09:45 · 11:20",
+        "time": "05:45 AM · 07:20 AM · 08:20 AM · 09:45 AM · 11:20 AM",
         "eta": "Morning Official",
         "title": "Salem → Mettur Dam",
         "type": "express",
@@ -878,10 +934,12 @@
         "fare": "₹40 – ₹50",
         "dur": "1h 20m",
         "gps": false,
-        "source": "Official Timetable"
+        "source": "Official Timetable",
+        "bus_no": "Rt 27 / 54",
+        "bus_name": "Stanley Reservoir Express"
       },
       {
-        "time": "12:00 · 12:50 · 13:20 · 14:50 · 17:40 · 19:20",
+        "time": "12:00 PM · 12:50 PM · 01:20 PM · 02:50 PM · 05:40 PM · 07:20 PM",
         "eta": "Day / Eve Official",
         "title": "Salem → Mettur Dam",
         "type": "express",
@@ -892,12 +950,14 @@
         "fare": "₹40 – ₹50",
         "dur": "1h 20m",
         "gps": false,
-        "source": "Official Timetable"
+        "source": "Official Timetable",
+        "bus_no": "Rt 27 / 54",
+        "bus_name": "Stanley Reservoir Express"
       }
     ],
     "mettur->salem": [
       {
-        "time": "05:00 – 22:30",
+        "time": "05:00 AM – 10:30 PM",
         "eta": "Every 15–20m",
         "title": "Mettur Dam → Salem MGR Central",
         "type": "express",
@@ -908,12 +968,14 @@
         "fare": "₹40 – ₹50",
         "dur": "1h 20m",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 27 / 54",
+        "bus_name": "Stanley Reservoir Express"
       }
     ],
     "salem->attur": [
       {
-        "time": "04:00 – 24/7",
+        "time": "04:00 AM – 24/7",
         "eta": "Every 10–15m",
         "title": "Salem → Attur (NH 79)",
         "type": "express",
@@ -924,7 +986,9 @@
         "fare": "₹40 – ₹50",
         "dur": "1h 10m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "Rt 84 / 1-to-1",
+        "bus_name": "Vashista Express"
       }
     ],
     "attur->salem": [
@@ -940,7 +1004,9 @@
         "fare": "₹40 – ₹50",
         "dur": "1h 10m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "Rt 84 / 1-to-1",
+        "bus_name": "Vashista Express"
       }
     ],
     "salem->chennai": [
@@ -956,7 +1022,9 @@
         "fare": "₹280 – ₹780",
         "dur": "6h 30m – 7h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 119 UD",
+        "bus_name": "Salem - Chennai Super Deluxe"
       }
     ],
     "chennai->salem": [
@@ -972,7 +1040,9 @@
         "fare": "₹280 – ₹780",
         "dur": "6h 30m – 7h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 119 UD",
+        "bus_name": "Salem - Chennai Super Deluxe"
       }
     ],
     "salem->kovai": [
@@ -988,7 +1058,9 @@
         "fare": "₹160 – ₹190",
         "dur": "3h – 3h 15m",
         "gps": false,
-        "source": "1-to-1 Corridor"
+        "source": "1-to-1 Corridor",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Kongu Superfast"
       }
     ],
     "kovai->salem": [
@@ -1004,12 +1076,14 @@
         "fare": "₹160 – ₹190",
         "dur": "3h – 3h 15m",
         "gps": false,
-        "source": "1-to-1 Corridor"
+        "source": "1-to-1 Corridor",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Kongu Superfast"
       }
     ],
     "trichy->srirangam": [
       {
-        "time": "24/7 Continuous",
+        "time": "05:00 AM · 05:30 AM · 06:00 AM · 06:30 AM · 07:00 AM (+32 more)",
         "eta": "Every 3–5m",
         "title": "City Trunk Rt 1 / 1A / 1C",
         "type": "town",
@@ -1020,7 +1094,9 @@
         "fare": "₹10 – ₹15",
         "dur": "35–45 min",
         "gps": false,
-        "source": "24/7 Trunk"
+        "source": "24/7 Trunk",
+        "bus_no": "KKBT-1",
+        "bus_name": "Panjappur IBT - Srirangam Super Feeder"
       }
     ],
     "srirangam->trichy": [
@@ -1036,12 +1112,14 @@
         "fare": "₹10 – ₹15",
         "dur": "35–45 min",
         "gps": false,
-        "source": "24/7 Trunk"
+        "source": "24/7 Trunk",
+        "bus_no": "Rt 1 / 1A / 1C",
+        "bus_name": "Ranganathar Temple Line"
       }
     ],
     "trichy->thuvakudi": [
       {
-        "time": "05:30 – 22:30",
+        "time": "06:00 AM · 06:45 AM · 07:30 AM · 08:15 AM · 09:00 AM (+15 more)",
         "eta": "Every 10–15m",
         "title": "Town Bus Rt 128 (NIT / BHEL)",
         "type": "town",
@@ -1052,12 +1130,14 @@
         "fare": "₹15 – ₹20",
         "dur": "40–50 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "KKBT-3",
+        "bus_name": "Panjappur - Thuvakudi Ring Road Express"
       }
     ],
     "thuvakudi->trichy": [
       {
-        "time": "05:30 – 22:30",
+        "time": "05:30 AM – 10:30 PM",
         "eta": "Every 10–15m",
         "title": "Thuvakudi (NIT) → Central BS (Rt 128)",
         "type": "town",
@@ -1068,7 +1148,9 @@
         "fare": "₹15 – ₹20",
         "dur": "40–50 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 116 / 128",
+        "bus_name": "BHEL / NIT Tech Express"
       }
     ],
     "trichy->thanjavur": [
@@ -1084,7 +1166,9 @@
         "fare": "₹50 – ₹80",
         "dur": "1h – 1h 15m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Chola Capital Superfast"
       }
     ],
     "thanjavur->trichy": [
@@ -1100,7 +1184,9 @@
         "fare": "₹50 – ₹80",
         "dur": "1h – 1h 15m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Chola Capital Superfast"
       }
     ],
     "trichy->chennai": [
@@ -1116,7 +1202,9 @@
         "fare": "₹280 – ₹480",
         "dur": "5h 30m – 6h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 123 UD",
+        "bus_name": "Rockfort - Kilambakkam Deluxe"
       }
     ],
     "chennai->trichy": [
@@ -1132,12 +1220,14 @@
         "fare": "₹280 – ₹480",
         "dur": "5h 30m – 6h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 123 UD",
+        "bus_name": "Rockfort - Kilambakkam Deluxe"
       }
     ],
     "chennai->cmbt": [
       {
-        "time": "05:00 – 23:00",
+        "time": "05:00 AM – 11:00 PM",
         "eta": "Every 5–10m",
         "title": "MTC Route 70C / 70V (Ordinary & DLX)",
         "type": "town",
@@ -1148,12 +1238,14 @@
         "fare": "₹15 – ₹45",
         "dur": "65–85 min",
         "gps": true,
-        "source": "Chalo GPS / CUMTA GTFS"
+        "source": "Chalo GPS / CUMTA GTFS",
+        "bus_no": "MTC 70C / 70V",
+        "bus_name": "100 Feet Road Express"
       }
     ],
     "cmbt->chennai": [
       {
-        "time": "05:00 – 23:00",
+        "time": "05:00 AM – 11:00 PM",
         "eta": "Every 5–10m",
         "title": "MTC Route 70C / 70V (Return to KCBT)",
         "type": "town",
@@ -1164,12 +1256,14 @@
         "fare": "₹15 – ₹45",
         "dur": "65–85 min",
         "gps": true,
-        "source": "Chalo GPS / CUMTA GTFS"
+        "source": "Chalo GPS / CUMTA GTFS",
+        "bus_no": "MTC 70C / 70V",
+        "bus_name": "100 Feet Road Express"
       }
     ],
     "chennai->broadway": [
       {
-        "time": "05:00 – 22:30",
+        "time": "05:00 AM – 10:30 PM",
         "eta": "Every 10–15m",
         "title": "MTC 18A / E18 & 21G (Ordinary & DLX)",
         "type": "town",
@@ -1180,12 +1274,14 @@
         "fare": "₹15 – ₹45",
         "dur": "80–100 min",
         "gps": true,
-        "source": "Chalo GPS / CUMTA GTFS"
+        "source": "Chalo GPS / CUMTA GTFS",
+        "bus_no": "MTC 18A / E18",
+        "bus_name": "GST Central Corridor"
       }
     ],
     "broadway->chennai": [
       {
-        "time": "05:00 – 22:30",
+        "time": "05:00 AM – 10:30 PM",
         "eta": "Every 10–15m",
         "title": "MTC 18A / E18 & 21G → KCBT",
         "type": "town",
@@ -1196,7 +1292,9 @@
         "fare": "₹15 – ₹45",
         "dur": "80–100 min",
         "gps": true,
-        "source": "Chalo GPS / CUMTA GTFS"
+        "source": "Chalo GPS / CUMTA GTFS",
+        "bus_no": "MTC 18A / E18",
+        "bus_name": "GST Central Corridor"
       }
     ],
     "chennai->madurai": [
@@ -1212,7 +1310,9 @@
         "fare": "₹456 – ₹980",
         "dur": "7h – 8h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 165 UD",
+        "bus_name": "KCBT Pandian Super Deluxe"
       }
     ],
     "madurai->chennai": [
@@ -1228,7 +1328,9 @@
         "fare": "₹456 – ₹980",
         "dur": "7h – 8h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 165 UD",
+        "bus_name": "KCBT Pandian Super Deluxe"
       }
     ],
     "madurai->periyar": [
@@ -1244,7 +1346,9 @@
         "fare": "₹10 – ₹15",
         "dur": "25–30 min",
         "gps": false,
-        "source": "24/7 City Trunk"
+        "source": "24/7 City Trunk",
+        "bus_no": "Rt 1B / 77",
+        "bus_name": "Meenakshi Temple City Line"
       }
     ],
     "periyar->madurai": [
@@ -1260,12 +1364,14 @@
         "fare": "₹10 – ₹15",
         "dur": "25–30 min",
         "gps": false,
-        "source": "24/7 City Trunk"
+        "source": "24/7 City Trunk",
+        "bus_no": "Rt 1B / 77",
+        "bus_name": "Meenakshi Temple City Line"
       }
     ],
     "madurai->alagar": [
       {
-        "time": "05:30 – 21:30",
+        "time": "05:30 AM – 09:30 PM",
         "eta": "Every 20–30m",
         "title": "Town Bus Rt 444 (via MIBT)",
         "type": "town",
@@ -1276,12 +1382,14 @@
         "fare": "₹15 – ₹20",
         "dur": "40–50 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 44 / 44A",
+        "bus_name": "Kallalagar Temple Express"
       }
     ],
     "alagar->madurai": [
       {
-        "time": "06:00 – 21:30",
+        "time": "06:00 AM – 09:30 PM",
         "eta": "Every 20–30m",
         "title": "Alagar Kovil → MIBT / Periyar (Rt 444)",
         "type": "town",
@@ -1292,28 +1400,32 @@
         "fare": "₹15 – ₹20",
         "dur": "40–50 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 44 / 44A",
+        "bus_name": "Kallalagar Temple Express"
       }
     ],
     "madurai->melur": [
       {
-        "time": "04:45 – 22:00",
+        "time": "06:30 AM · 07:15 AM · 08:00 AM · 08:45 AM · 09:30 AM (+15 more)",
         "eta": "Every 10–15m",
         "title": "Route 75 / Mofussil Shuttle",
         "type": "town",
-        "vetri": true,
+        "vetri": false,
         "corp": "TNSTC Madurai",
         "bay": "Periyar / Mattuthavani MIBT",
         "via": "Goripalayam · Mattuthavani · Othakadai · Melur Bus Stand",
         "fare": "₹20 – ₹30",
         "dur": "45 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "3M",
+        "bus_name": "High Court - Melur Express"
       }
     ],
     "melur->madurai": [
       {
-        "time": "05:00 – 22:00",
+        "time": "05:00 AM – 10:00 PM",
         "eta": "Every 10–15m",
         "title": "Melur → Mattuthavani / Periyar (Rt 75)",
         "type": "town",
@@ -1324,12 +1436,14 @@
         "fare": "₹20 – ₹30",
         "dur": "45 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 22 / 24",
+        "bus_name": "Melur Town Bus"
       }
     ],
     "kovai->ukkadam": [
       {
-        "time": "05:00 – 23:00",
+        "time": "05:00 AM – 11:00 PM",
         "eta": "Every 2–4m",
         "title": "City Trunk Rt 3 / 3A / 11 / 101",
         "type": "town",
@@ -1340,12 +1454,14 @@
         "fare": "₹8 – ₹12",
         "dur": "15–20 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 14",
+        "bus_name": "City Trunk Rt 3 / 3A / 11 / 101"
       }
     ],
     "ukkadam->kovai": [
       {
-        "time": "05:00 – 23:00",
+        "time": "05:00 AM – 11:00 PM",
         "eta": "Every 2–4m",
         "title": "Ukkadam → Gandhipuram (Rt 3 / 11)",
         "type": "town",
@@ -1356,7 +1472,9 @@
         "fare": "₹8 – ₹12",
         "dur": "15–20 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 14",
+        "bus_name": "City Trunk Rt 3 / 3A / 11 / 101"
       }
     ],
     "ukkadam->pollachi": [
@@ -1372,7 +1490,9 @@
         "fare": "₹30 – ₹45",
         "dur": "55–65 min",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Ukkadam ↔ Pollachi (Rt 33 / PTP)"
       }
     ],
     "pollachi->ukkadam": [
@@ -1388,12 +1508,14 @@
         "fare": "₹30 – ₹45",
         "dur": "55–65 min",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Ukkadam ↔ Pollachi (Rt 33 / PTP)"
       }
     ],
     "kovai->ooty": [
       {
-        "time": "04:30 – 23:30",
+        "time": "04:30 AM – 11:30 PM",
         "eta": "Every 15–25m",
         "title": "Kovai / Mettupalayam → Ooty ATC (NH 181)",
         "type": "express",
@@ -1404,12 +1526,14 @@
         "fare": "₹75 – ₹115",
         "dur": "3h – 3h 30m",
         "gps": false,
-        "source": "Ghat Corridor"
+        "source": "Ghat Corridor",
+        "bus_no": "Ghat Superfast",
+        "bus_name": "Queen of Hills Rider"
       }
     ],
     "ooty->kovai": [
       {
-        "time": "05:00 – 22:00",
+        "time": "05:00 AM – 10:00 PM",
         "eta": "Every 20–30m",
         "title": "Ooty ATC → Mettupalayam / Coimbatore",
         "type": "express",
@@ -1420,12 +1544,14 @@
         "fare": "₹75 – ₹115",
         "dur": "3h – 3h 30m",
         "gps": false,
-        "source": "Ghat Corridor"
+        "source": "Ghat Corridor",
+        "bus_no": "Ghat Superfast",
+        "bus_name": "Queen of Hills Rider"
       }
     ],
     "nellai->nellai_jn": [
       {
-        "time": "05:30 – 22:30",
+        "time": "05:30 AM – 10:30 PM",
         "eta": "Every 5–10m",
         "title": "Town Bus Rt 2T",
         "type": "town",
@@ -1436,12 +1562,14 @@
         "fare": "₹10 – ₹15",
         "dur": "15–20 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 29",
+        "bus_name": "Town Bus Rt 2T"
       }
     ],
     "nellai_jn->nellai": [
       {
-        "time": "05:30 – 22:30",
+        "time": "05:30 AM – 10:30 PM",
         "eta": "Every 5–10m",
         "title": "Town Bus Rt 2T (Jn → New Stand)",
         "type": "town",
@@ -1452,12 +1580,14 @@
         "fare": "₹10 – ₹15",
         "dur": "15–20 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "Rt 29",
+        "bus_name": "Town Bus Rt 2T"
       }
     ],
     "nellai->nagercoil": [
       {
-        "time": "05:00 – 23:00",
+        "time": "05:00 AM – 11:00 PM",
         "eta": "Every 10–15m",
         "title": "Route 565 / 564 Express",
         "type": "express",
@@ -1468,12 +1598,14 @@
         "fare": "₹65 – ₹125",
         "dur": "1h 30m – 1h 50m",
         "gps": false,
-        "source": "Corridor Frequency"
+        "source": "Corridor Frequency",
+        "bus_no": "Rt 565 NH-44",
+        "bus_name": "Cape Comorin Superfast"
       }
     ],
     "nagercoil->nellai": [
       {
-        "time": "05:00 – 23:00",
+        "time": "05:00 AM – 11:00 PM",
         "eta": "Every 10–15m",
         "title": "Nagercoil Vadasery → Tirunelveli (Rt 565)",
         "type": "express",
@@ -1484,12 +1616,14 @@
         "fare": "₹65 – ₹125",
         "dur": "1h 30m – 1h 50m",
         "gps": false,
-        "source": "Corridor Frequency"
+        "source": "Corridor Frequency",
+        "bus_no": "Rt 565 NH-44",
+        "bus_name": "Cape Comorin Superfast"
       }
     ],
     "nellai->kanyakumari": [
       {
-        "time": "05:30 – 22:00",
+        "time": "05:30 AM – 10:00 PM",
         "eta": "Every 15–20m",
         "title": "Route 501 (Tirunelveli → Kanyakumari)",
         "type": "express",
@@ -1500,12 +1634,14 @@
         "fare": "₹75 – ₹100",
         "dur": "1h 45m – 2h 10m",
         "gps": false,
-        "source": "Corridor Frequency"
+        "source": "Corridor Frequency",
+        "bus_no": "Beach Express",
+        "bus_name": "Triveni Sangam Express"
       }
     ],
     "kanyakumari->nellai": [
       {
-        "time": "05:30 – 22:00",
+        "time": "05:30 AM – 10:00 PM",
         "eta": "Every 15–20m",
         "title": "Kanyakumari → Tirunelveli (Rt 501)",
         "type": "express",
@@ -1516,7 +1652,9 @@
         "fare": "₹75 – ₹100",
         "dur": "1h 45m – 2h 10m",
         "gps": false,
-        "source": "Corridor Frequency"
+        "source": "Corridor Frequency",
+        "bus_no": "Beach Express",
+        "bus_name": "Triveni Sangam Express"
       }
     ],
     "nellai->chennai": [
@@ -1532,7 +1670,9 @@
         "fare": "₹510 – ₹1,150",
         "dur": "10h 30m – 11h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 184 AC",
+        "bus_name": "Nellai - Chennai KCBT Multi-Axle"
       }
     ],
     "chennai->nellai": [
@@ -1548,12 +1688,14 @@
         "fare": "₹510 – ₹1,150",
         "dur": "10h 30m – 11h 30m",
         "gps": true,
-        "source": "OTRS / PNR Tracking"
+        "source": "OTRS / PNR Tracking",
+        "bus_no": "SETC 184 AC",
+        "bus_name": "Nellai - Chennai KCBT Multi-Axle"
       }
     ],
     "vellore->katpadi": [
       {
-        "time": "04:30 – 23:30",
+        "time": "04:30 AM – 11:30 PM",
         "eta": "Every 5–10m",
         "title": "Town Bus Rt 1 / 1A / 2",
         "type": "town",
@@ -1564,12 +1706,14 @@
         "fare": "₹7 – ₹12",
         "dur": "15–20 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "TNSTC Vellore",
+        "bus_name": "Vellore Fort City Express"
       }
     ],
     "katpadi->vellore": [
       {
-        "time": "04:30 – 23:30",
+        "time": "04:30 AM – 11:30 PM",
         "eta": "Every 5–10m",
         "title": "Katpadi / VIT → Vellore Green Circle (Rt 1/2)",
         "type": "town",
@@ -1580,7 +1724,9 @@
         "fare": "₹7 – ₹12",
         "dur": "15–20 min",
         "gps": false,
-        "source": "General Frequency"
+        "source": "General Frequency",
+        "bus_no": "TNSTC Vellore",
+        "bus_name": "Vellore Fort City Express"
       }
     ],
     "vellore->cmbt": [
@@ -1596,7 +1742,9 @@
         "fare": "₹115 – ₹200",
         "dur": "2h 30m – 3h 30m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "TNSTC Vellore",
+        "bus_name": "Vellore Fort City Express"
       }
     ],
     "cmbt->vellore": [
@@ -1612,12 +1760,14 @@
         "fare": "₹115 – ₹200",
         "dur": "2h 30m – 3h 30m",
         "gps": false,
-        "source": "24/7 Corridor"
+        "source": "24/7 Corridor",
+        "bus_no": "TNSTC Vellore",
+        "bus_name": "Vellore Fort City Express"
       }
     ],
     "vellore->tvm": [
       {
-        "time": "05:00 – 22:30",
+        "time": "05:00 AM – 10:30 PM",
         "eta": "Every 15–20m",
         "title": "Vellore → Tiruvannamalai (NH 38 / SH 9)",
         "type": "express",
@@ -1628,12 +1778,14 @@
         "fare": "₹85 – ₹140",
         "dur": "2h – 2h 15m",
         "gps": false,
-        "source": "Corridor Frequency"
+        "source": "Corridor Frequency",
+        "bus_no": "TNSTC Vellore",
+        "bus_name": "Vellore Fort City Express"
       }
     ],
     "tvm->vellore": [
       {
-        "time": "05:00 – 22:30",
+        "time": "05:00 AM – 10:30 PM",
         "eta": "Every 15–20m",
         "title": "Tiruvannamalai → Vellore",
         "type": "express",
@@ -1644,17 +1796,19 @@
         "fare": "₹85 – ₹140",
         "dur": "2h – 2h 15m",
         "gps": false,
-        "source": "Corridor Frequency"
+        "source": "Corridor Frequency",
+        "bus_no": "TNSTC Vellore",
+        "bus_name": "Vellore Fort City Express"
       }
     ],
     "nkl->kallakurichi": [
       {
-        "time": "04:45 · 09:50 · 12:30 · 18:30",
+        "time": "04:45 AM · 09:50 AM · 12:30 PM · 06:30 PM",
         "all_exact_departures": [
-          "04:45",
-          "09:50",
-          "12:30",
-          "18:30"
+          "04:45 AM",
+          "09:50 AM",
+          "12:30 PM",
+          "06:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Kallakurichi",
@@ -1667,17 +1821,19 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Kallakurichi"
       }
     ],
     "kallakurichi->nkl": [
       {
-        "time": "04:45 · 09:50 · 12:30 · 18:30",
+        "time": "04:45 AM · 09:50 AM · 12:30 PM · 06:30 PM",
         "all_exact_departures": [
-          "04:45",
-          "09:50",
-          "12:30",
-          "18:30"
+          "04:45 AM",
+          "09:50 AM",
+          "12:30 PM",
+          "06:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Kallakurichi → Namakkal",
@@ -1689,16 +1845,18 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Kallakurichi"
       }
     ],
     "nkl->perambalur": [
       {
-        "time": "05:45 · 08:45 · 13:00",
+        "time": "05:45 AM · 08:45 AM · 01:00 PM",
         "all_exact_departures": [
-          "05:45",
-          "08:45",
-          "13:00"
+          "05:45 AM",
+          "08:45 AM",
+          "01:00 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Perambalur",
@@ -1711,16 +1869,18 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Perambalur"
       }
     ],
     "perambalur->nkl": [
       {
-        "time": "05:45 · 08:45 · 13:00",
+        "time": "05:45 AM · 08:45 AM · 01:00 PM",
         "all_exact_departures": [
-          "05:45",
-          "08:45",
-          "13:00"
+          "05:45 AM",
+          "08:45 AM",
+          "01:00 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Perambalur → Namakkal",
@@ -1732,25 +1892,27 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Perambalur"
       }
     ],
     "nkl->erode": [
       {
-        "time": "00:00 · 00:20 · 01:30 · 05:00 · 05:30 · 20:15 · 21:30 · 21:50 (+4 more slots)",
+        "time": "12:00 AM · 12:20 AM · 01:30 AM · 05:00 AM · 05:30 AM · 08:15 PM · 09:30 PM · 09:50 PM (+4 more slots)",
         "all_exact_departures": [
-          "00:00",
-          "00:20",
-          "01:30",
-          "05:00",
-          "05:30",
-          "20:15",
-          "21:30",
-          "21:50",
-          "22:10",
-          "22:45",
-          "23:15",
-          "23:30"
+          "12:00 AM",
+          "12:20 AM",
+          "01:30 AM",
+          "05:00 AM",
+          "05:30 AM",
+          "08:15 PM",
+          "09:30 PM",
+          "09:50 PM",
+          "10:10 PM",
+          "10:45 PM",
+          "11:15 PM",
+          "11:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Erode",
@@ -1763,25 +1925,27 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Erode"
       }
     ],
     "erode->nkl": [
       {
-        "time": "00:00 · 00:20 · 01:30 · 05:00 · 05:30 · 20:15 · 21:30 · 21:50 (+4 more slots)",
+        "time": "12:00 AM · 12:20 AM · 01:30 AM · 05:00 AM · 05:30 AM · 08:15 PM · 09:30 PM · 09:50 PM (+4 more slots)",
         "all_exact_departures": [
-          "00:00",
-          "00:20",
-          "01:30",
-          "05:00",
-          "05:30",
-          "20:15",
-          "21:30",
-          "21:50",
-          "22:10",
-          "22:45",
-          "23:15",
-          "23:30"
+          "12:00 AM",
+          "12:20 AM",
+          "01:30 AM",
+          "05:00 AM",
+          "05:30 AM",
+          "08:15 PM",
+          "09:30 PM",
+          "09:50 PM",
+          "10:10 PM",
+          "10:45 PM",
+          "11:15 PM",
+          "11:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Erode → Namakkal",
@@ -1793,18 +1957,20 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Erode"
       }
     ],
     "nkl->coimbatore": [
       {
-        "time": "05:45 · 06:00 · 07:40 · 07:50 · 16:15",
+        "time": "05:45 AM · 06:00 AM · 07:40 AM · 07:50 AM · 04:15 PM",
         "all_exact_departures": [
-          "05:45",
-          "06:00",
-          "07:40",
-          "07:50",
-          "16:15"
+          "05:45 AM",
+          "06:00 AM",
+          "07:40 AM",
+          "07:50 AM",
+          "04:15 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Coimbatore",
@@ -1817,18 +1983,20 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Coimbatore"
       }
     ],
     "coimbatore->nkl": [
       {
-        "time": "05:45 · 06:00 · 07:40 · 07:50 · 16:15",
+        "time": "05:45 AM · 06:00 AM · 07:40 AM · 07:50 AM · 04:15 PM",
         "all_exact_departures": [
-          "05:45",
-          "06:00",
-          "07:40",
-          "07:50",
-          "16:15"
+          "05:45 AM",
+          "06:00 AM",
+          "07:40 AM",
+          "07:50 AM",
+          "04:15 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Coimbatore → Namakkal",
@@ -1840,18 +2008,20 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Coimbatore"
       }
     ],
     "nkl->mettupalayam": [
       {
-        "time": "00:20 · 01:00 · 07:20 · 09:15 · 10:20",
+        "time": "12:20 AM · 01:00 AM · 07:20 AM · 09:15 AM · 10:20 AM",
         "all_exact_departures": [
-          "00:20",
-          "01:00",
-          "07:20",
-          "09:15",
-          "10:20"
+          "12:20 AM",
+          "01:00 AM",
+          "07:20 AM",
+          "09:15 AM",
+          "10:20 AM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Mettupalayam",
@@ -1864,18 +2034,20 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "Rt 4A / 4B",
+        "bus_name": "Nilgiri Foothills Express"
       }
     ],
     "mettupalayam->nkl": [
       {
-        "time": "00:20 · 01:00 · 07:20 · 09:15 · 10:20",
+        "time": "12:20 AM · 01:00 AM · 07:20 AM · 09:15 AM · 10:20 AM",
         "all_exact_departures": [
-          "00:20",
-          "01:00",
-          "07:20",
-          "09:15",
-          "10:20"
+          "12:20 AM",
+          "01:00 AM",
+          "07:20 AM",
+          "09:15 AM",
+          "10:20 AM"
         ],
         "eta": "Scheduled Official",
         "title": "Mettupalayam → Namakkal",
@@ -1887,15 +2059,17 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "Rt 4A / 4B",
+        "bus_name": "Nilgiri Foothills Express"
       }
     ],
     "nkl->periyasamy_kovil": [
       {
-        "time": "00:45 · 03:00",
+        "time": "12:45 AM · 03:00 AM",
         "all_exact_departures": [
-          "00:45",
-          "03:00"
+          "12:45 AM",
+          "03:00 AM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Periyasamy Kovil",
@@ -1908,15 +2082,17 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 33",
+        "bus_name": "Namakkal → Periyasamy Kovil"
       }
     ],
     "periyasamy_kovil->nkl": [
       {
-        "time": "00:45 · 03:00",
+        "time": "12:45 AM · 03:00 AM",
         "all_exact_departures": [
-          "00:45",
-          "03:00"
+          "12:45 AM",
+          "03:00 AM"
         ],
         "eta": "Scheduled Official",
         "title": "Periyasamy Kovil → Namakkal",
@@ -1928,15 +2104,17 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "Rt 33",
+        "bus_name": "Namakkal → Periyasamy Kovil"
       }
     ],
     "nkl->vendalapadi": [
       {
-        "time": "03:00 · 05:50",
+        "time": "03:00 AM · 05:50 AM",
         "all_exact_departures": [
-          "03:00",
-          "05:50"
+          "03:00 AM",
+          "05:50 AM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Vendalapadi",
@@ -1949,15 +2127,17 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Vendalapadi"
       }
     ],
     "vendalapadi->nkl": [
       {
-        "time": "03:00 · 05:50",
+        "time": "03:00 AM · 05:50 AM",
         "all_exact_departures": [
-          "03:00",
-          "05:50"
+          "03:00 AM",
+          "05:50 AM"
         ],
         "eta": "Scheduled Official",
         "title": "Vendalapadi → Namakkal",
@@ -1969,21 +2149,23 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Vendalapadi"
       }
     ],
     "nkl->arapaleeswarar_temple": [
       {
-        "time": "02:00 · 03:00 · 03:20 · 06:15 · 09:20 · 10:00 · 14:10 · 21:10",
+        "time": "02:00 AM · 03:00 AM · 03:20 AM · 06:15 AM · 09:20 AM · 10:00 AM · 02:10 PM · 09:10 PM",
         "all_exact_departures": [
-          "02:00",
-          "03:00",
-          "03:20",
-          "06:15",
-          "09:20",
-          "10:00",
-          "14:10",
-          "21:10"
+          "02:00 AM",
+          "03:00 AM",
+          "03:20 AM",
+          "06:15 AM",
+          "09:20 AM",
+          "10:00 AM",
+          "02:10 PM",
+          "09:10 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Arapaleeswarar Temple",
@@ -1996,21 +2178,23 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 59",
+        "bus_name": "Namakkal → Arapaleeswarar Temple"
       }
     ],
     "arapaleeswarar_temple->nkl": [
       {
-        "time": "02:00 · 03:00 · 03:20 · 06:15 · 09:20 · 10:00 · 14:10 · 21:10",
+        "time": "02:00 AM · 03:00 AM · 03:20 AM · 06:15 AM · 09:20 AM · 10:00 AM · 02:10 PM · 09:10 PM",
         "all_exact_departures": [
-          "02:00",
-          "03:00",
-          "03:20",
-          "06:15",
-          "09:20",
-          "10:00",
-          "14:10",
-          "21:10"
+          "02:00 AM",
+          "03:00 AM",
+          "03:20 AM",
+          "06:15 AM",
+          "09:20 AM",
+          "10:00 AM",
+          "02:10 PM",
+          "09:10 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Arapaleeswarar Temple → Namakkal",
@@ -2022,17 +2206,19 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "Rt 59",
+        "bus_name": "Namakkal → Arapaleeswarar Temple"
       }
     ],
     "nkl->vilaram": [
       {
-        "time": "03:00 · 07:50 · 12:50 · 17:40",
+        "time": "03:00 AM · 07:50 AM · 12:50 PM · 05:40 PM",
         "all_exact_departures": [
-          "03:00",
-          "07:50",
-          "12:50",
-          "17:40"
+          "03:00 AM",
+          "07:50 AM",
+          "12:50 PM",
+          "05:40 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Vilaram",
@@ -2045,17 +2231,19 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 47",
+        "bus_name": "Namakkal → Vilaram"
       }
     ],
     "vilaram->nkl": [
       {
-        "time": "03:00 · 07:50 · 12:50 · 17:40",
+        "time": "03:00 AM · 07:50 AM · 12:50 PM · 05:40 PM",
         "all_exact_departures": [
-          "03:00",
-          "07:50",
-          "12:50",
-          "17:40"
+          "03:00 AM",
+          "07:50 AM",
+          "12:50 PM",
+          "05:40 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Vilaram → Namakkal",
@@ -2067,15 +2255,17 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "Rt 47",
+        "bus_name": "Namakkal → Vilaram"
       }
     ],
     "nkl->velikkad": [
       {
-        "time": "03:30 · 14:30",
+        "time": "03:30 AM · 02:30 PM",
         "all_exact_departures": [
-          "03:30",
-          "14:30"
+          "03:30 AM",
+          "02:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Velikkad",
@@ -2088,15 +2278,17 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 93",
+        "bus_name": "Namakkal → Velikkad"
       }
     ],
     "velikkad->nkl": [
       {
-        "time": "03:30 · 14:30",
+        "time": "03:30 AM · 02:30 PM",
         "all_exact_departures": [
-          "03:30",
-          "14:30"
+          "03:30 AM",
+          "02:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Velikkad → Namakkal",
@@ -2108,15 +2300,17 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "Rt 93",
+        "bus_name": "Namakkal → Velikkad"
       }
     ],
     "nkl->meganikadu": [
       {
-        "time": "03:30 · 19:45",
+        "time": "03:30 AM · 07:45 PM",
         "all_exact_departures": [
-          "03:30",
-          "19:45"
+          "03:30 AM",
+          "07:45 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Meganikadu",
@@ -2129,15 +2323,17 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Meganikadu"
       }
     ],
     "meganikadu->nkl": [
       {
-        "time": "03:30 · 19:45",
+        "time": "03:30 AM · 07:45 PM",
         "all_exact_departures": [
-          "03:30",
-          "19:45"
+          "03:30 AM",
+          "07:45 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Meganikadu → Namakkal",
@@ -2149,52 +2345,54 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Meganikadu"
       }
     ],
     "nkl->paramathi_velur": [
       {
-        "time": "04:30 · 05:00 · 05:30 · 06:00 · 06:15 · 06:45 · 07:10 · 07:30 (+31 more slots)",
+        "time": "04:30 AM · 05:00 AM · 05:30 AM · 06:00 AM · 06:15 AM · 06:45 AM · 07:10 AM · 07:30 AM (+31 more slots)",
         "all_exact_departures": [
-          "04:30",
-          "05:00",
-          "05:30",
-          "06:00",
-          "06:15",
-          "06:45",
-          "07:10",
-          "07:30",
-          "08:00",
-          "08:20",
-          "08:45",
-          "09:00",
-          "09:30",
-          "10:00",
-          "10:30",
-          "11:00",
-          "11:30",
-          "12:00",
-          "12:30",
-          "13:00",
-          "13:30",
-          "14:00",
-          "14:30",
-          "15:00",
-          "15:30",
-          "16:00",
-          "16:30",
-          "17:00",
-          "17:30",
-          "18:00",
-          "18:30",
-          "19:00",
-          "19:30",
-          "20:00",
-          "20:30",
-          "21:00",
-          "21:30",
-          "22:00",
-          "22:30"
+          "04:30 AM",
+          "05:00 AM",
+          "05:30 AM",
+          "06:00 AM",
+          "06:15 AM",
+          "06:45 AM",
+          "07:10 AM",
+          "07:30 AM",
+          "08:00 AM",
+          "08:20 AM",
+          "08:45 AM",
+          "09:00 AM",
+          "09:30 AM",
+          "10:00 AM",
+          "10:30 AM",
+          "11:00 AM",
+          "11:30 AM",
+          "12:00 PM",
+          "12:30 PM",
+          "01:00 PM",
+          "01:30 PM",
+          "02:00 PM",
+          "02:30 PM",
+          "03:00 PM",
+          "03:30 PM",
+          "04:00 PM",
+          "04:30 PM",
+          "05:00 PM",
+          "05:30 PM",
+          "06:00 PM",
+          "06:30 PM",
+          "07:00 PM",
+          "07:30 PM",
+          "08:00 PM",
+          "08:30 PM",
+          "09:00 PM",
+          "09:30 PM",
+          "10:00 PM",
+          "10:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Paramathi Velur",
@@ -2207,52 +2405,54 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "OLD+NEW"
+        "standScope": "OLD+NEW",
+        "bus_no": "Rt 2 / 2A",
+        "bus_name": "Kaviri Karai Town Bus"
       }
     ],
     "paramathi_velur->nkl": [
       {
-        "time": "04:30 · 05:00 · 05:30 · 06:00 · 06:15 · 06:45 · 07:10 · 07:30 (+31 more slots)",
+        "time": "04:30 AM · 05:00 AM · 05:30 AM · 06:00 AM · 06:15 AM · 06:45 AM · 07:10 AM · 07:30 AM (+31 more slots)",
         "all_exact_departures": [
-          "04:30",
-          "05:00",
-          "05:30",
-          "06:00",
-          "06:15",
-          "06:45",
-          "07:10",
-          "07:30",
-          "08:00",
-          "08:20",
-          "08:45",
-          "09:00",
-          "09:30",
-          "10:00",
-          "10:30",
-          "11:00",
-          "11:30",
-          "12:00",
-          "12:30",
-          "13:00",
-          "13:30",
-          "14:00",
-          "14:30",
-          "15:00",
-          "15:30",
-          "16:00",
-          "16:30",
-          "17:00",
-          "17:30",
-          "18:00",
-          "18:30",
-          "19:00",
-          "19:30",
-          "20:00",
-          "20:30",
-          "21:00",
-          "21:30",
-          "22:00",
-          "22:30"
+          "04:30 AM",
+          "05:00 AM",
+          "05:30 AM",
+          "06:00 AM",
+          "06:15 AM",
+          "06:45 AM",
+          "07:10 AM",
+          "07:30 AM",
+          "08:00 AM",
+          "08:20 AM",
+          "08:45 AM",
+          "09:00 AM",
+          "09:30 AM",
+          "10:00 AM",
+          "10:30 AM",
+          "11:00 AM",
+          "11:30 AM",
+          "12:00 PM",
+          "12:30 PM",
+          "01:00 PM",
+          "01:30 PM",
+          "02:00 PM",
+          "02:30 PM",
+          "03:00 PM",
+          "03:30 PM",
+          "04:00 PM",
+          "04:30 PM",
+          "05:00 PM",
+          "05:30 PM",
+          "06:00 PM",
+          "06:30 PM",
+          "07:00 PM",
+          "07:30 PM",
+          "08:00 PM",
+          "08:30 PM",
+          "09:00 PM",
+          "09:30 PM",
+          "10:00 PM",
+          "10:30 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Paramathi Velur → Namakkal",
@@ -2264,48 +2464,50 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "Rt 2 / 2A",
+        "bus_name": "Kaviri Karai Town Bus"
       }
     ],
     "nkl->karur": [
       {
-        "time": "05:00 · 05:45 · 06:15 · 06:45 · 07:15 · 07:45 · 08:15 · 08:45 (+27 more slots)",
+        "time": "05:00 AM · 05:45 AM · 06:15 AM · 06:45 AM · 07:15 AM · 07:45 AM · 08:15 AM · 08:45 AM (+27 more slots)",
         "all_exact_departures": [
-          "05:00",
-          "05:45",
-          "06:15",
-          "06:45",
-          "07:15",
-          "07:45",
-          "08:15",
-          "08:45",
-          "09:15",
-          "09:45",
-          "10:15",
-          "10:45",
-          "11:15",
-          "11:45",
-          "12:15",
-          "12:45",
-          "13:15",
-          "13:45",
-          "14:15",
-          "14:45",
-          "15:15",
-          "15:45",
-          "16:15",
-          "16:45",
-          "17:15",
-          "17:45",
-          "18:15",
-          "18:45",
-          "19:15",
-          "19:45",
-          "20:15",
-          "20:45",
-          "21:15",
-          "22:00",
-          "22:45"
+          "05:00 AM",
+          "05:45 AM",
+          "06:15 AM",
+          "06:45 AM",
+          "07:15 AM",
+          "07:45 AM",
+          "08:15 AM",
+          "08:45 AM",
+          "09:15 AM",
+          "09:45 AM",
+          "10:15 AM",
+          "10:45 AM",
+          "11:15 AM",
+          "11:45 AM",
+          "12:15 PM",
+          "12:45 PM",
+          "01:15 PM",
+          "01:45 PM",
+          "02:15 PM",
+          "02:45 PM",
+          "03:15 PM",
+          "03:45 PM",
+          "04:15 PM",
+          "04:45 PM",
+          "05:15 PM",
+          "05:45 PM",
+          "06:15 PM",
+          "06:45 PM",
+          "07:15 PM",
+          "07:45 PM",
+          "08:15 PM",
+          "08:45 PM",
+          "09:15 PM",
+          "10:00 PM",
+          "10:45 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Karur",
@@ -2318,48 +2520,50 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Karur"
       }
     ],
     "karur->nkl": [
       {
-        "time": "05:00 · 05:45 · 06:15 · 06:45 · 07:15 · 07:45 · 08:15 · 08:45 (+27 more slots)",
+        "time": "05:00 AM · 05:45 AM · 06:15 AM · 06:45 AM · 07:15 AM · 07:45 AM · 08:15 AM · 08:45 AM (+27 more slots)",
         "all_exact_departures": [
-          "05:00",
-          "05:45",
-          "06:15",
-          "06:45",
-          "07:15",
-          "07:45",
-          "08:15",
-          "08:45",
-          "09:15",
-          "09:45",
-          "10:15",
-          "10:45",
-          "11:15",
-          "11:45",
-          "12:15",
-          "12:45",
-          "13:15",
-          "13:45",
-          "14:15",
-          "14:45",
-          "15:15",
-          "15:45",
-          "16:15",
-          "16:45",
-          "17:15",
-          "17:45",
-          "18:15",
-          "18:45",
-          "19:15",
-          "19:45",
-          "20:15",
-          "20:45",
-          "21:15",
-          "22:00",
-          "22:45"
+          "05:00 AM",
+          "05:45 AM",
+          "06:15 AM",
+          "06:45 AM",
+          "07:15 AM",
+          "07:45 AM",
+          "08:15 AM",
+          "08:45 AM",
+          "09:15 AM",
+          "09:45 AM",
+          "10:15 AM",
+          "10:45 AM",
+          "11:15 AM",
+          "11:45 AM",
+          "12:15 PM",
+          "12:45 PM",
+          "01:15 PM",
+          "01:45 PM",
+          "02:15 PM",
+          "02:45 PM",
+          "03:15 PM",
+          "03:45 PM",
+          "04:15 PM",
+          "04:45 PM",
+          "05:15 PM",
+          "05:45 PM",
+          "06:15 PM",
+          "06:45 PM",
+          "07:15 PM",
+          "07:45 PM",
+          "08:15 PM",
+          "08:45 PM",
+          "09:15 PM",
+          "10:00 PM",
+          "10:45 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Karur → Namakkal",
@@ -2371,32 +2575,34 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Karur"
       }
     ],
     "nkl->madurai": [
       {
-        "time": "00:30 · 01:45 · 03:00 · 04:15 · 05:30 · 06:45 · 08:00 · 09:15 (+11 more slots)",
+        "time": "12:30 AM · 01:45 AM · 03:00 AM · 04:15 AM · 05:30 AM · 06:45 AM · 08:00 AM · 09:15 AM (+11 more slots)",
         "all_exact_departures": [
-          "00:30",
-          "01:45",
-          "03:00",
-          "04:15",
-          "05:30",
-          "06:45",
-          "08:00",
-          "09:15",
-          "10:30",
-          "11:45",
-          "13:00",
-          "14:15",
-          "15:30",
-          "16:45",
-          "18:00",
-          "19:15",
-          "20:30",
-          "21:45",
-          "23:00"
+          "12:30 AM",
+          "01:45 AM",
+          "03:00 AM",
+          "04:15 AM",
+          "05:30 AM",
+          "06:45 AM",
+          "08:00 AM",
+          "09:15 AM",
+          "10:30 AM",
+          "11:45 AM",
+          "01:00 PM",
+          "02:15 PM",
+          "03:30 PM",
+          "04:45 PM",
+          "06:00 PM",
+          "07:15 PM",
+          "08:30 PM",
+          "09:45 PM",
+          "11:00 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Namakkal → Madurai",
@@ -2409,32 +2615,34 @@
         "dur": "30m – 2h",
         "gps": true,
         "source": "TicketToGetLost / TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Madurai"
       }
     ],
     "madurai->nkl": [
       {
-        "time": "00:30 · 01:45 · 03:00 · 04:15 · 05:30 · 06:45 · 08:00 · 09:15 (+11 more slots)",
+        "time": "12:30 AM · 01:45 AM · 03:00 AM · 04:15 AM · 05:30 AM · 06:45 AM · 08:00 AM · 09:15 AM (+11 more slots)",
         "all_exact_departures": [
-          "00:30",
-          "01:45",
-          "03:00",
-          "04:15",
-          "05:30",
-          "06:45",
-          "08:00",
-          "09:15",
-          "10:30",
-          "11:45",
-          "13:00",
-          "14:15",
-          "15:30",
-          "16:45",
-          "18:00",
-          "19:15",
-          "20:30",
-          "21:45",
-          "23:00"
+          "12:30 AM",
+          "01:45 AM",
+          "03:00 AM",
+          "04:15 AM",
+          "05:30 AM",
+          "06:45 AM",
+          "08:00 AM",
+          "09:15 AM",
+          "10:30 AM",
+          "11:45 AM",
+          "01:00 PM",
+          "02:15 PM",
+          "03:30 PM",
+          "04:45 PM",
+          "06:00 PM",
+          "07:15 PM",
+          "08:30 PM",
+          "09:45 PM",
+          "11:00 PM"
         ],
         "eta": "Scheduled Official",
         "title": "Madurai → Namakkal",
@@ -2446,12 +2654,14 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Madurai"
       }
     ],
     "nkl_old->nkl_new": [
       {
-        "time": "05:30 – 22:30 · Every 10 mins",
+        "time": "05:30 AM – 10:30 PM · Every 10 mins",
         "eta": "Frequent Shuttle",
         "title": "Namakkal Old Stand ↔ Mudalaipatti New Stand",
         "type": "town",
@@ -2462,12 +2672,14 @@
         "fare": "₹10",
         "dur": "12m",
         "gps": true,
-        "source": "TNSTC Town Shuttle"
+        "source": "TNSTC Town Shuttle",
+        "bus_no": "Rt 97",
+        "bus_name": "Namakkal Old Stand ↔ Mudalaipatti New Stand"
       }
     ],
     "nkl_new->nkl_old": [
       {
-        "time": "05:30 – 22:30 · Every 10 mins",
+        "time": "05:30 AM – 10:30 PM · Every 10 mins",
         "eta": "Frequent Shuttle",
         "title": "Mudalaipatti New Stand ↔ Namakkal Old Stand",
         "type": "town",
@@ -2478,12 +2690,14 @@
         "fare": "₹10",
         "dur": "12m",
         "gps": true,
-        "source": "TNSTC Town Shuttle"
+        "source": "TNSTC Town Shuttle",
+        "bus_no": "Rt 97",
+        "bus_name": "Namakkal Old Stand ↔ Mudalaipatti New Stand"
       }
     ],
     "nkl->trichy": [
       {
-        "time": "05:15 · 06:45 · 08:30 · 11:20 · 14:10 · 17:00 · 19:30",
+        "time": "05:15 AM · 06:45 AM · 08:30 AM · 11:20 AM · 02:10 PM · 05:00 PM · 07:30 PM",
         "eta": "Corridor Express",
         "title": "Namakkal → Trichy Panjappur IBT",
         "type": "express",
@@ -2495,12 +2709,14 @@
         "dur": "2h 15m",
         "gps": true,
         "source": "TNSTC Timetable",
-        "standScope": "NEW"
+        "standScope": "NEW",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Trichy Panjappur IBT"
       }
     ],
     "trichy->nkl": [
       {
-        "time": "06:00 · 07:30 · 09:15 · 12:00 · 14:45 · 17:30 · 20:15",
+        "time": "06:00 AM · 07:30 AM · 09:15 AM · 12:00 PM · 02:45 PM · 05:30 PM · 08:15 PM",
         "eta": "Corridor Express",
         "title": "Trichy Panjappur IBT → Namakkal",
         "type": "express",
@@ -2511,12 +2727,14 @@
         "fare": "₹75 – ₹95",
         "dur": "2h 15m",
         "gps": true,
-        "source": "TNSTC Timetable"
+        "source": "TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Namakkal → Trichy Panjappur IBT"
       }
     ],
     "trichy->chathiram": [
       {
-        "time": "05:00 – 23:00 · Every 5 mins (Rt 1, 1A, 1B, 1C)",
+        "time": "05:00 AM – 11:00 PM · Every 5 mins (Rt 1, 1A, 1B, 1C)",
         "eta": "City Shuttle",
         "title": "Panjappur IBT ↔ Chathiram Bus Stand",
         "type": "town",
@@ -2527,12 +2745,14 @@
         "fare": "₹12 – ₹16",
         "dur": "25m",
         "gps": true,
-        "source": "Trichy City Timetable"
+        "source": "Trichy City Timetable",
+        "bus_no": "Rt 1 Shuttle",
+        "bus_name": "Cauvery Bridge City Bus"
       }
     ],
     "chathiram->trichy": [
       {
-        "time": "05:00 – 23:00 · Every 5 mins (Rt 1, 1A, 1B, 1C)",
+        "time": "05:00 AM – 11:00 PM · Every 5 mins (Rt 1, 1A, 1B, 1C)",
         "eta": "City Shuttle",
         "title": "Chathiram Bus Stand ↔ Panjappur IBT",
         "type": "town",
@@ -2543,7 +2763,9 @@
         "fare": "₹12 – ₹16",
         "dur": "25m",
         "gps": true,
-        "source": "Trichy City Timetable"
+        "source": "Trichy City Timetable",
+        "bus_no": "Rt 1 Shuttle",
+        "bus_name": "Cauvery Bridge City Bus"
       }
     ],
     "trichy->madurai": [
@@ -2559,7 +2781,9 @@
         "fare": "₹115 – ₹160",
         "dur": "2h 30m",
         "gps": true,
-        "source": "NH-44 Express Schedule"
+        "source": "NH-44 Express Schedule",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Trichy - Madurai NH-38 Express"
       }
     ],
     "madurai->trichy": [
@@ -2575,12 +2799,14 @@
         "fare": "₹115 – ₹160",
         "dur": "2h 30m",
         "gps": true,
-        "source": "NH-44 Express Schedule"
+        "source": "NH-44 Express Schedule",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Trichy - Madurai NH-38 Express"
       }
     ],
     "chennai->tambaram": [
       {
-        "time": "04:30 – 23:30 · Every 5 mins",
+        "time": "04:30 AM – 11:30 PM · Every 5 mins",
         "eta": "MTC Corridor",
         "title": "Kilambakkam (KCBT) ↔ Tambaram",
         "type": "town",
@@ -2591,12 +2817,14 @@
         "fare": "₹10 – ₹15",
         "dur": "18m",
         "gps": true,
-        "source": "MTC GTFS"
+        "source": "MTC GTFS",
+        "bus_no": "MTC G18 / 70",
+        "bus_name": "Vandalur Zoo City Shuttle"
       }
     ],
     "tambaram->chennai": [
       {
-        "time": "04:30 – 23:30 · Every 5 mins",
+        "time": "04:30 AM – 11:30 PM · Every 5 mins",
         "eta": "MTC Corridor",
         "title": "Tambaram ↔ Kilambakkam (KCBT)",
         "type": "town",
@@ -2607,12 +2835,14 @@
         "fare": "₹10 – ₹15",
         "dur": "18m",
         "gps": true,
-        "source": "MTC GTFS"
+        "source": "MTC GTFS",
+        "bus_no": "MTC G18 / 70",
+        "bus_name": "Vandalur Zoo City Shuttle"
       }
     ],
     "kovai->pollachi": [
       {
-        "time": "05:00 – 22:30 · Every 10 mins",
+        "time": "05:00 AM – 10:30 PM · Every 10 mins",
         "eta": "Express Shuttle",
         "title": "Gandhipuram / Ukkadam → Pollachi",
         "type": "express",
@@ -2623,12 +2853,14 @@
         "fare": "₹35 – ₹45",
         "dur": "55m",
         "gps": true,
-        "source": "TNSTC Coimbatore"
+        "source": "TNSTC Coimbatore",
+        "bus_no": "Ukkadam Shuttle",
+        "bus_name": "Anamalai Foothills Express"
       }
     ],
     "pollachi->kovai": [
       {
-        "time": "05:00 – 22:30 · Every 10 mins",
+        "time": "05:00 AM – 10:30 PM · Every 10 mins",
         "eta": "Express Shuttle",
         "title": "Pollachi → Ukkadam / Gandhipuram",
         "type": "express",
@@ -2639,12 +2871,14 @@
         "fare": "₹35 – ₹45",
         "dur": "55m",
         "gps": true,
-        "source": "TNSTC Coimbatore"
+        "source": "TNSTC Coimbatore",
+        "bus_no": "Ukkadam Shuttle",
+        "bus_name": "Anamalai Foothills Express"
       }
     ],
     "kovai->marudhamalai": [
       {
-        "time": "05:30 – 22:00 · Every 8 mins (Rt 1C, 70, 70A)",
+        "time": "05:30 AM – 10:00 PM · Every 8 mins (Rt 1C, 70, 70A)",
         "eta": "Town Service",
         "title": "Gandhipuram → Marudhamalai Temple",
         "type": "town",
@@ -2655,12 +2889,14 @@
         "fare": "₹13 – ₹18",
         "dur": "35m",
         "gps": true,
-        "source": "TNSTC Town Bus"
+        "source": "TNSTC Town Bus",
+        "bus_no": "Rt 1C / 70 / 70A",
+        "bus_name": "Subramaniya Temple Line"
       }
     ],
     "marudhamalai->kovai": [
       {
-        "time": "05:30 – 22:00 · Every 8 mins (Rt 1C, 70, 70A)",
+        "time": "05:30 AM – 10:00 PM · Every 8 mins (Rt 1C, 70, 70A)",
         "eta": "Town Service",
         "title": "Marudhamalai Temple → Gandhipuram",
         "type": "town",
@@ -2671,12 +2907,14 @@
         "fare": "₹13 – ₹18",
         "dur": "35m",
         "gps": true,
-        "source": "TNSTC Town Bus"
+        "source": "TNSTC Town Bus",
+        "bus_no": "Rt 1C / 70 / 70A",
+        "bus_name": "Subramaniya Temple Line"
       }
     ],
     "nellai->thoothukudi": [
       {
-        "time": "05:00 – 22:30 · Every 10 mins",
+        "time": "05:00 AM – 10:30 PM · Every 10 mins",
         "eta": "Express 1-to-1",
         "title": "Tirunelveli New Stand → Thoothukudi Old / New Stand",
         "type": "express",
@@ -2687,12 +2925,14 @@
         "fare": "₹40 – ₹55",
         "dur": "1h 05m",
         "gps": true,
-        "source": "TNSTC Tirunelveli"
+        "source": "TNSTC Tirunelveli",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Pearl City Pearl Express"
       }
     ],
     "thoothukudi->nellai": [
       {
-        "time": "05:00 – 22:30 · Every 10 mins",
+        "time": "05:00 AM – 10:30 PM · Every 10 mins",
         "eta": "Express 1-to-1",
         "title": "Thoothukudi → Tirunelveli New Stand",
         "type": "express",
@@ -2703,76 +2943,80 @@
         "fare": "₹40 – ₹55",
         "dur": "1h 05m",
         "gps": true,
-        "source": "TNSTC Tirunelveli"
+        "source": "TNSTC Tirunelveli",
+        "bus_no": "1-to-1 Non-Stop",
+        "bus_name": "Pearl City Pearl Express"
       }
     ],
     "salem->edappadi": [
       {
-        "time": "00:30 · 01:45 · 02:00 · 02:45 · 03:10 (+41 more slots)",
+        "time": "12:30 AM · 01:45 AM · 02:00 AM · 05:00 AM · 06:40 AM (+12 more)",
         "all_exact_departures": [
-          "00:30",
-          "01:45",
-          "02:00",
-          "02:45",
-          "03:10",
-          "05:00",
-          "05:20",
-          "06:40",
-          "07:00",
-          "07:20",
-          "07:30",
-          "07:45",
-          "08:00",
-          "08:10",
-          "08:20",
-          "08:30",
-          "08:40",
-          "09:15",
-          "09:30",
-          "09:40",
-          "10:30",
-          "11:40",
-          "12:00",
-          "12:15",
-          "12:30",
-          "12:50",
-          "13:00",
-          "14:10",
-          "14:40",
-          "15:00",
-          "15:15",
-          "15:45",
-          "16:40",
-          "16:50",
-          "17:15",
-          "17:30",
-          "18:10",
-          "19:20",
-          "19:30",
-          "19:40",
-          "20:00",
-          "20:15",
-          "21:40",
-          "21:50",
-          "22:50",
-          "23:00"
+          "12:30 AM",
+          "01:45 AM",
+          "02:00 AM",
+          "02:45 AM",
+          "03:10 AM",
+          "05:00 AM",
+          "05:20 AM",
+          "06:40 AM",
+          "07:00 AM",
+          "07:20 AM",
+          "07:30 AM",
+          "07:45 AM",
+          "08:00 AM",
+          "08:10 AM",
+          "08:20 AM",
+          "08:30 AM",
+          "08:40 AM",
+          "09:15 AM",
+          "09:30 AM",
+          "09:40 AM",
+          "10:30 AM",
+          "11:40 AM",
+          "12:00 PM",
+          "12:15 PM",
+          "12:30 PM",
+          "12:50 PM",
+          "01:00 PM",
+          "02:10 PM",
+          "02:40 PM",
+          "03:00 PM",
+          "03:15 PM",
+          "03:45 PM",
+          "04:40 PM",
+          "04:50 PM",
+          "05:15 PM",
+          "05:30 PM",
+          "06:10 PM",
+          "07:20 PM",
+          "07:30 PM",
+          "07:40 PM",
+          "08:00 PM",
+          "08:15 PM",
+          "09:40 PM",
+          "09:50 PM",
+          "10:50 PM",
+          "11:00 PM"
         ],
         "eta": "Scheduled Service",
         "title": "Salem MGR Central → Edappadi Stand",
         "type": "express",
-        "vetri": false,
+        "vetri": true,
         "corp": "TNSTC Salem",
         "bay": "Platform 2, Bay 9",
         "via": "Salem MGR → Kandhampatty → Magudanchavadi → Sankari R.S → Edappadi (~42 km)",
         "fare": "₹35 – ₹45",
         "dur": "1h 10m",
         "gps": true,
-        "source": "TNSTC Salem Operating Timetable"
+        "source": "TNSTC Salem Operating Timetable",
+        "bus_no": "84, 84A",
+        "bus_name": "TNSTC Salem / Edappadi Depot Mofussil & Express"
       }
     ],
     "edappadi->salem": [
       {
-        "time": "05:00 – 21:30 · Every 15 mins",
+        "time": "05:00 AM – 09:30 PM · Every 15 mins",
         "eta": "Scheduled Service",
         "title": "Edappadi Stand → Salem MGR Central",
         "type": "express",
@@ -2783,31 +3027,33 @@
         "fare": "₹35 – ₹45",
         "dur": "1h 10m",
         "gps": true,
-        "source": "TNSTC Salem Operating Timetable"
+        "source": "TNSTC Salem Operating Timetable",
+        "bus_no": "84, 84A",
+        "bus_name": "TNSTC Salem / Edappadi Depot Mofussil & Express"
       }
     ],
     "salem->bhavani": [
       {
-        "time": "03:45 · 05:45 · 06:15 · 06:30 · 07:50 (+13 more slots)",
+        "time": "03:45 AM · 05:45 AM · 06:15 AM · 06:30 AM · 07:50 AM (+13 more slots)",
         "all_exact_departures": [
-          "03:45",
-          "05:45",
-          "06:15",
-          "06:30",
-          "07:50",
-          "08:50",
-          "09:50",
-          "10:10",
-          "11:00",
-          "11:30",
-          "12:30",
-          "14:00",
-          "14:40",
-          "15:20",
-          "15:30",
-          "16:30",
-          "18:00",
-          "19:50"
+          "03:45 AM",
+          "05:45 AM",
+          "06:15 AM",
+          "06:30 AM",
+          "07:50 AM",
+          "08:50 AM",
+          "09:50 AM",
+          "10:10 AM",
+          "11:00 AM",
+          "11:30 AM",
+          "12:30 PM",
+          "02:00 PM",
+          "02:40 PM",
+          "03:20 PM",
+          "03:30 PM",
+          "04:30 PM",
+          "06:00 PM",
+          "07:50 PM"
         ],
         "eta": "Frequent Express",
         "title": "Salem MGR Central → Bhavani / Sankari",
@@ -2819,12 +3065,14 @@
         "fare": "₹45 – ₹60",
         "dur": "1h 20m",
         "gps": true,
-        "source": "TNSTC Salem Timetable"
+        "source": "TNSTC Salem Timetable",
+        "bus_no": "Rt 18 / 62",
+        "bus_name": "Kooduthurai Shuttle"
       }
     ],
     "bhavani->salem": [
       {
-        "time": "05:30 – 22:00 · Every 15–20m",
+        "time": "05:30 AM – 10:00 PM · Every 15–20m",
         "eta": "Frequent Express",
         "title": "Bhavani / Sankari → Salem MGR Central",
         "type": "express",
@@ -2835,12 +3083,14 @@
         "fare": "₹45 – ₹60",
         "dur": "1h 20m",
         "gps": true,
-        "source": "TNSTC Salem Timetable"
+        "source": "TNSTC Salem Timetable",
+        "bus_no": "Rt 18 / 62",
+        "bus_name": "Kooduthurai Shuttle"
       }
     ],
     "salem->erode": [
       {
-        "time": "04:00 – 23:30 · Every 15–20 mins (1-to-1 Non-Stop & Ordinary)",
+        "time": "04:00 AM – 11:30 PM · Every 15–20 mins (1-to-1 Non-Stop & Ordinary)",
         "eta": "Corridor Non-Stop",
         "title": "Salem MGR Central → Erode Central Stand",
         "type": "express",
@@ -2851,12 +3101,14 @@
         "fare": "₹55 – ₹70",
         "dur": "1h 30m",
         "gps": true,
-        "source": "TNSTC Salem Timetable"
+        "source": "TNSTC Salem Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Salem MGR Central → Erode Central Stand"
       }
     ],
     "erode->salem": [
       {
-        "time": "04:00 – 23:30 · Every 15–20 mins (1-to-1 Non-Stop & Ordinary)",
+        "time": "04:00 AM – 11:30 PM · Every 15–20 mins (1-to-1 Non-Stop & Ordinary)",
         "eta": "Corridor Non-Stop",
         "title": "Erode Central Stand → Salem MGR Central",
         "type": "express",
@@ -2867,43 +3119,45 @@
         "fare": "₹55 – ₹70",
         "dur": "1h 30m",
         "gps": true,
-        "source": "TNSTC Salem Timetable"
+        "source": "TNSTC Salem Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Salem MGR Central → Erode Central Stand"
       }
     ],
     "salem->bangalore": [
       {
-        "time": "00:00 · 01:00 · 01:30 · 02:00 · 02:30 (+25 more slots)",
+        "time": "12:00 AM · 01:00 AM · 01:30 AM · 02:00 AM · 02:30 AM (+25 more slots)",
         "all_exact_departures": [
-          "00:00",
-          "01:00",
-          "01:30",
-          "02:00",
-          "02:30",
-          "03:00",
-          "04:00",
-          "04:30",
-          "04:50",
-          "05:15",
-          "06:00",
-          "06:30",
-          "07:00",
-          "08:00",
-          "08:40",
-          "09:00",
-          "11:30",
-          "13:00",
-          "13:30",
-          "14:00",
-          "14:30",
-          "15:00",
-          "16:50",
-          "17:50",
-          "18:15",
-          "18:40",
-          "19:00",
-          "19:30",
-          "20:30",
-          "22:30"
+          "12:00 AM",
+          "01:00 AM",
+          "01:30 AM",
+          "02:00 AM",
+          "02:30 AM",
+          "03:00 AM",
+          "04:00 AM",
+          "04:30 AM",
+          "04:50 AM",
+          "05:15 AM",
+          "06:00 AM",
+          "06:30 AM",
+          "07:00 AM",
+          "08:00 AM",
+          "08:40 AM",
+          "09:00 AM",
+          "11:30 AM",
+          "01:00 PM",
+          "01:30 PM",
+          "02:00 PM",
+          "02:30 PM",
+          "03:00 PM",
+          "04:50 PM",
+          "05:50 PM",
+          "06:15 PM",
+          "06:40 PM",
+          "07:00 PM",
+          "07:30 PM",
+          "08:30 PM",
+          "10:30 PM"
         ],
         "eta": "Interstate Express",
         "title": "Salem MGR Central → Bangalore (Shanthi Nagar / Majestic)",
@@ -2915,7 +3169,9 @@
         "fare": "₹195 – ₹280",
         "dur": "4h 15m",
         "gps": true,
-        "source": "SETC / TNSTC Interstate Timetable"
+        "source": "SETC / TNSTC Interstate Timetable",
+        "bus_no": "SETC Interstate",
+        "bus_name": "Silicon Corridor Express"
       }
     ],
     "bangalore->salem": [
@@ -2931,12 +3187,14 @@
         "fare": "₹195 – ₹280",
         "dur": "4h 15m",
         "gps": true,
-        "source": "SETC / TNSTC Interstate Timetable"
+        "source": "SETC / TNSTC Interstate Timetable",
+        "bus_no": "SETC Interstate",
+        "bus_name": "Silicon Corridor Express"
       }
     ],
     "salem->trichy": [
       {
-        "time": "04:30 – 22:30 · Every 20 mins",
+        "time": "04:30 AM – 10:30 PM · Every 20 mins",
         "eta": "NH Corridor Superfast",
         "title": "Salem MGR Central → Trichy Panjappur IBT",
         "type": "express",
@@ -2947,12 +3205,14 @@
         "fare": "₹120 – ₹160",
         "dur": "3h 15m",
         "gps": true,
-        "source": "TNSTC Operating Timetable"
+        "source": "TNSTC Operating Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Salem MGR Central → Trichy Panjappur IBT"
       }
     ],
     "trichy->salem": [
       {
-        "time": "04:30 – 22:30 · Every 20 mins",
+        "time": "04:30 AM – 10:30 PM · Every 20 mins",
         "eta": "NH Corridor Superfast",
         "title": "Trichy Panjappur IBT → Salem MGR Central",
         "type": "express",
@@ -2963,32 +3223,34 @@
         "fare": "₹120 – ₹160",
         "dur": "3h 15m",
         "gps": true,
-        "source": "TNSTC Operating Timetable"
+        "source": "TNSTC Operating Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Salem MGR Central → Trichy Panjappur IBT"
       }
     ],
     "salem->madurai": [
       {
-        "time": "02:00 · 05:30 · 07:00 · 09:20 · 10:20 (+14 more slots)",
+        "time": "02:00 AM · 05:30 AM · 07:00 AM · 09:20 AM · 10:20 AM (+14 more slots)",
         "all_exact_departures": [
-          "02:00",
-          "05:30",
-          "07:00",
-          "09:20",
-          "10:20",
-          "10:40",
-          "10:55",
-          "11:15",
-          "11:35",
-          "13:45",
-          "14:20",
-          "15:00",
-          "15:15",
-          "15:40",
-          "16:00",
-          "17:50",
-          "18:00",
-          "18:25",
-          "19:30"
+          "02:00 AM",
+          "05:30 AM",
+          "07:00 AM",
+          "09:20 AM",
+          "10:20 AM",
+          "10:40 AM",
+          "10:55 AM",
+          "11:15 AM",
+          "11:35 AM",
+          "01:45 PM",
+          "02:20 PM",
+          "03:00 PM",
+          "03:15 PM",
+          "03:40 PM",
+          "04:00 PM",
+          "05:50 PM",
+          "06:00 PM",
+          "06:25 PM",
+          "07:30 PM"
         ],
         "eta": "NH-44 Superfast",
         "title": "Salem MGR Central → Madurai Mattuthavani",
@@ -3000,7 +3262,9 @@
         "fare": "₹195 – ₹260",
         "dur": "4h 30m",
         "gps": true,
-        "source": "TNSTC / SETC Timetable"
+        "source": "TNSTC / SETC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Salem MGR Central → Madurai Mattuthavani"
       }
     ],
     "madurai->salem": [
@@ -3016,58 +3280,60 @@
         "fare": "₹195 – ₹260",
         "dur": "4h 30m",
         "gps": true,
-        "source": "TNSTC / SETC Timetable"
+        "source": "TNSTC / SETC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Salem MGR Central → Madurai Mattuthavani"
       }
     ],
     "trichy->ariyalur": [
       {
-        "time": "00:20 · 02:20 · 04:15 · 05:30 · 06:15 (+40 more slots)",
+        "time": "12:20 AM · 02:20 AM · 04:15 AM · 05:30 AM · 06:15 AM (+40 more slots)",
         "all_exact_departures": [
-          "00:20",
-          "02:20",
-          "04:15",
-          "05:30",
-          "06:15",
-          "06:45",
-          "07:00",
-          "07:20",
-          "07:30",
-          "07:40",
-          "08:00",
-          "08:20",
-          "09:00",
-          "10:10",
-          "10:20",
-          "10:50",
-          "11:20",
-          "11:45",
-          "12:00",
-          "12:10",
-          "12:30",
-          "12:40",
-          "13:00",
-          "13:20",
-          "13:30",
-          "14:00",
-          "14:20",
-          "14:40",
-          "15:00",
-          "15:20",
-          "16:20",
-          "17:20",
-          "17:45",
-          "18:20",
-          "18:30",
-          "18:40",
-          "19:00",
-          "19:10",
-          "19:20",
-          "20:00",
-          "20:15",
-          "20:30",
-          "21:10",
-          "21:50",
-          "22:20"
+          "12:20 AM",
+          "02:20 AM",
+          "04:15 AM",
+          "05:30 AM",
+          "06:15 AM",
+          "06:45 AM",
+          "07:00 AM",
+          "07:20 AM",
+          "07:30 AM",
+          "07:40 AM",
+          "08:00 AM",
+          "08:20 AM",
+          "09:00 AM",
+          "10:10 AM",
+          "10:20 AM",
+          "10:50 AM",
+          "11:20 AM",
+          "11:45 AM",
+          "12:00 PM",
+          "12:10 PM",
+          "12:30 PM",
+          "12:40 PM",
+          "01:00 PM",
+          "01:20 PM",
+          "01:30 PM",
+          "02:00 PM",
+          "02:20 PM",
+          "02:40 PM",
+          "03:00 PM",
+          "03:20 PM",
+          "04:20 PM",
+          "05:20 PM",
+          "05:45 PM",
+          "06:20 PM",
+          "06:30 PM",
+          "06:40 PM",
+          "07:00 PM",
+          "07:10 PM",
+          "07:20 PM",
+          "08:00 PM",
+          "08:15 PM",
+          "08:30 PM",
+          "09:10 PM",
+          "09:50 PM",
+          "10:20 PM"
         ],
         "eta": "Chathiram Suburban",
         "title": "Trichy Chathiram → Ariyalur Stand",
@@ -3079,12 +3345,14 @@
         "fare": "₹0 (Women) / ₹50",
         "dur": "1h 45m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Timetable"
+        "source": "TNSTC Kumbakonam Timetable",
+        "bus_no": "Rt 45 / 55",
+        "bus_name": "Cement City Express"
       }
     ],
     "ariyalur->trichy": [
       {
-        "time": "05:00 – 22:00 · Every 20 mins",
+        "time": "05:00 AM – 10:00 PM · Every 20 mins",
         "eta": "Chathiram Suburban",
         "title": "Ariyalur Stand → Trichy Chathiram",
         "type": "town",
@@ -3095,22 +3363,24 @@
         "fare": "₹0 (Women) / ₹50",
         "dur": "1h 45m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Timetable"
+        "source": "TNSTC Kumbakonam Timetable",
+        "bus_no": "Rt 45 / 55",
+        "bus_name": "Cement City Express"
       }
     ],
     "trichy->perambalur": [
       {
-        "time": "03:20 · 07:00 · 07:10 · 07:22 · 07:40 (+4 more slots)",
+        "time": "03:20 AM · 07:00 AM · 07:10 AM · 07:22 AM · 07:40 AM (+4 more slots)",
         "all_exact_departures": [
-          "03:20",
-          "07:00",
-          "07:10",
-          "07:22",
-          "07:40",
-          "09:16",
-          "10:00",
-          "22:10",
-          "22:30"
+          "03:20 AM",
+          "07:00 AM",
+          "07:10 AM",
+          "07:22 AM",
+          "07:40 AM",
+          "09:16 AM",
+          "10:00 AM",
+          "10:10 PM",
+          "10:30 PM"
         ],
         "eta": "NH-45 Superfast / Suburban",
         "title": "Trichy Chathiram / Panjappur → Perambalur Stand",
@@ -3122,12 +3392,14 @@
         "fare": "₹45 – ₹60",
         "dur": "1h 15m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Timetable"
+        "source": "TNSTC Kumbakonam Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Trichy Chathiram / Panjappur → Perambalur Stand"
       }
     ],
     "perambalur->trichy": [
       {
-        "time": "05:30 – 22:30 · Every 15 mins",
+        "time": "05:30 AM – 10:30 PM · Every 15 mins",
         "eta": "NH-45 Superfast / Suburban",
         "title": "Perambalur Stand → Trichy Chathiram / Panjappur",
         "type": "express",
@@ -3138,17 +3410,19 @@
         "fare": "₹45 – ₹60",
         "dur": "1h 15m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Timetable"
+        "source": "TNSTC Kumbakonam Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Trichy Chathiram / Panjappur → Perambalur Stand"
       }
     ],
     "trichy->kumbakonam": [
       {
-        "time": "10:20 · 11:00 · 15:30 · 17:00",
+        "time": "10:20 AM · 11:00 AM · 03:30 PM · 05:00 PM",
         "all_exact_departures": [
-          "10:20",
-          "11:00",
-          "15:30",
-          "17:00"
+          "10:20 AM",
+          "11:00 AM",
+          "03:30 PM",
+          "05:00 PM"
         ],
         "eta": "Delta Corridor AC / Express",
         "title": "Trichy Panjappur IBT → Kumbakonam Stand",
@@ -3160,12 +3434,14 @@
         "fare": "₹85 – ₹120",
         "dur": "2h 15m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Master Timetable"
+        "source": "TNSTC Kumbakonam Master Timetable",
+        "bus_no": "Delta Express",
+        "bus_name": "Mahamaham AC Rider"
       }
     ],
     "kumbakonam->trichy": [
       {
-        "time": "05:00 – 22:00 · Every 20 mins",
+        "time": "05:00 AM – 10:00 PM · Every 20 mins",
         "eta": "Delta Corridor AC / Express",
         "title": "Kumbakonam Stand → Trichy Panjappur IBT",
         "type": "express",
@@ -3176,40 +3452,42 @@
         "fare": "₹85 – ₹120",
         "dur": "2h 15m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Master Timetable"
+        "source": "TNSTC Kumbakonam Master Timetable",
+        "bus_no": "Delta Express",
+        "bus_name": "Mahamaham AC Rider"
       }
     ],
     "trichy->rameswaram": [
       {
-        "time": "00:10 · 01:00 · 02:00 · 03:00 · 04:20 (+22 more slots)",
+        "time": "12:10 AM · 01:00 AM · 02:00 AM · 03:00 AM · 04:20 AM (+22 more slots)",
         "all_exact_departures": [
-          "00:10",
-          "01:00",
-          "02:00",
-          "03:00",
-          "04:20",
-          "04:45",
-          "05:00",
-          "05:10",
-          "05:20",
-          "05:45",
-          "06:20",
-          "07:20",
-          "08:15",
-          "08:50",
-          "09:30",
-          "11:20",
-          "12:00",
-          "13:00",
-          "13:30",
-          "14:10",
-          "14:30",
-          "15:00",
-          "15:50",
-          "17:00",
-          "18:00",
-          "20:50",
-          "21:25"
+          "12:10 AM",
+          "01:00 AM",
+          "02:00 AM",
+          "03:00 AM",
+          "04:20 AM",
+          "04:45 AM",
+          "05:00 AM",
+          "05:10 AM",
+          "05:20 AM",
+          "05:45 AM",
+          "06:20 AM",
+          "07:20 AM",
+          "08:15 AM",
+          "08:50 AM",
+          "09:30 AM",
+          "11:20 AM",
+          "12:00 PM",
+          "01:00 PM",
+          "01:30 PM",
+          "02:10 PM",
+          "02:30 PM",
+          "03:00 PM",
+          "03:50 PM",
+          "05:00 PM",
+          "06:00 PM",
+          "08:50 PM",
+          "09:25 PM"
         ],
         "eta": "Pilgrim Express",
         "title": "Trichy Panjappur IBT → Rameswaram Temple Stand",
@@ -3221,12 +3499,14 @@
         "fare": "₹195 – ₹270",
         "dur": "5h 15m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Operating Schedule"
+        "source": "TNSTC Kumbakonam Operating Schedule",
+        "bus_no": "Pilgrim Superfast",
+        "bus_name": "Ramanathaswamy Express"
       }
     ],
     "rameswaram->trichy": [
       {
-        "time": "05:00 · 07:30 · 11:00 · 14:15 · 18:00 · 21:30",
+        "time": "05:00 AM · 07:30 AM · 11:00 AM · 02:15 PM · 06:00 PM · 09:30 PM",
         "eta": "Pilgrim Express",
         "title": "Rameswaram Temple Stand → Trichy Panjappur IBT",
         "type": "express",
@@ -3237,12 +3517,14 @@
         "fare": "₹195 – ₹270",
         "dur": "5h 15m",
         "gps": true,
-        "source": "TNSTC Kumbakonam Operating Schedule"
+        "source": "TNSTC Kumbakonam Operating Schedule",
+        "bus_no": "Pilgrim Superfast",
+        "bus_name": "Ramanathaswamy Express"
       }
     ],
     "trichy->musiri": [
       {
-        "time": "05:00 – 22:30 · Every 10 mins (Rt 14, 21, Town & Mofussil)",
+        "time": "04:30 AM · 05:00 AM · 05:30 AM · 06:00 AM · 06:30 AM (+22 more)",
         "eta": "Cauvery Bank Shuttle",
         "title": "Trichy Chathiram → Musiri Bus Stand",
         "type": "town",
@@ -3253,12 +3535,14 @@
         "fare": "₹0 (Women) / ₹28",
         "dur": "55m",
         "gps": true,
-        "source": "Trichy Sub-Division Timetable"
+        "source": "Trichy Sub-Division Timetable",
+        "bus_no": "54",
+        "bus_name": "Gunaseelam - Musiri Town Connector"
       }
     ],
     "musiri->trichy": [
       {
-        "time": "05:00 – 22:30 · Every 10 mins (Rt 14, 21)",
+        "time": "05:00 AM – 10:30 PM · Every 10 mins (Rt 14, 21)",
         "eta": "Cauvery Bank Shuttle",
         "title": "Musiri Bus Stand → Trichy Chathiram",
         "type": "town",
@@ -3269,46 +3553,48 @@
         "fare": "₹0 (Women) / ₹28",
         "dur": "55m",
         "gps": true,
-        "source": "Trichy Sub-Division Timetable"
+        "source": "Trichy Sub-Division Timetable",
+        "bus_no": "Rt 45",
+        "bus_name": "Akhanda Cauvery Express"
       }
     ],
     "madurai->tiruchendur": [
       {
-        "time": "00:30 · 01:00 · 01:20 · 04:00 · 04:20 (+28 more slots)",
+        "time": "12:30 AM · 01:00 AM · 01:20 AM · 04:00 AM · 04:20 AM (+28 more slots)",
         "all_exact_departures": [
-          "00:30",
-          "01:00",
-          "01:20",
-          "04:00",
-          "04:20",
-          "04:40",
-          "05:30",
-          "06:15",
-          "07:30",
-          "07:45",
-          "08:00",
-          "08:45",
-          "09:00",
-          "10:00",
-          "10:45",
-          "11:00",
-          "11:15",
-          "12:45",
-          "13:00",
-          "13:10",
-          "14:20",
-          "15:00",
-          "16:15",
-          "16:45",
-          "17:15",
-          "17:40",
-          "17:50",
-          "18:45",
-          "19:15",
-          "20:00",
-          "20:15",
-          "20:30",
-          "21:00"
+          "12:30 AM",
+          "01:00 AM",
+          "01:20 AM",
+          "04:00 AM",
+          "04:20 AM",
+          "04:40 AM",
+          "05:30 AM",
+          "06:15 AM",
+          "07:30 AM",
+          "07:45 AM",
+          "08:00 AM",
+          "08:45 AM",
+          "09:00 AM",
+          "10:00 AM",
+          "10:45 AM",
+          "11:00 AM",
+          "11:15 AM",
+          "12:45 PM",
+          "01:00 PM",
+          "01:10 PM",
+          "02:20 PM",
+          "03:00 PM",
+          "04:15 PM",
+          "04:45 PM",
+          "05:15 PM",
+          "05:40 PM",
+          "05:50 PM",
+          "06:45 PM",
+          "07:15 PM",
+          "08:00 PM",
+          "08:15 PM",
+          "08:30 PM",
+          "09:00 PM"
         ],
         "eta": "Pilgrim Express (33 Daily Slots)",
         "title": "Madurai Mattuthavani → Tiruchendur Temple Stand",
@@ -3320,12 +3606,14 @@
         "fare": "₹155 – ₹210",
         "dur": "4h 00m",
         "gps": true,
-        "source": "TNSTC Madurai Operating Schedule"
+        "source": "TNSTC Madurai Operating Schedule",
+        "bus_no": "Pilgrim Express",
+        "bus_name": "Murugan Shore Temple Rider"
       }
     ],
     "tiruchendur->madurai": [
       {
-        "time": "04:30 – 22:00 · Every 25 mins",
+        "time": "04:30 AM – 10:00 PM · Every 25 mins",
         "eta": "Pilgrim Express",
         "title": "Tiruchendur Temple Stand → Madurai Mattuthavani",
         "type": "express",
@@ -3336,68 +3624,70 @@
         "fare": "₹155 – ₹210",
         "dur": "4h 00m",
         "gps": true,
-        "source": "TNSTC Madurai Operating Schedule"
+        "source": "TNSTC Madurai Operating Schedule",
+        "bus_no": "Pilgrim Express",
+        "bus_name": "Murugan Shore Temple Rider"
       }
     ],
     "madurai->dindigul": [
       {
-        "time": "00:00 · 01:00 · 01:20 · 01:50 · 03:30 (+50 more slots)",
+        "time": "12:00 AM · 01:00 AM · 01:20 AM · 01:50 AM · 03:30 AM (+50 more slots)",
         "all_exact_departures": [
-          "00:00",
-          "01:00",
-          "01:20",
-          "01:50",
-          "03:30",
-          "05:20",
-          "06:00",
-          "06:15",
-          "06:30",
-          "06:50",
-          "07:00",
-          "07:20",
-          "07:50",
-          "07:55",
-          "08:00",
-          "08:50",
-          "09:10",
-          "09:30",
-          "10:10",
-          "10:20",
-          "10:50",
-          "10:55",
-          "11:10",
-          "11:30",
-          "11:50",
-          "12:30",
-          "12:40",
-          "12:55",
-          "13:20",
-          "14:20",
-          "15:00",
-          "15:40",
-          "16:00",
-          "16:10",
-          "16:40",
-          "16:55",
-          "17:00",
-          "17:20",
-          "17:45",
-          "17:55",
-          "18:15",
-          "18:20",
-          "18:55",
-          "19:15",
-          "19:20",
-          "20:10",
-          "20:20",
-          "20:40",
-          "21:10",
-          "21:15",
-          "21:30",
-          "21:50",
-          "22:40",
-          "23:00",
-          "23:15"
+          "12:00 AM",
+          "01:00 AM",
+          "01:20 AM",
+          "01:50 AM",
+          "03:30 AM",
+          "05:20 AM",
+          "06:00 AM",
+          "06:15 AM",
+          "06:30 AM",
+          "06:50 AM",
+          "07:00 AM",
+          "07:20 AM",
+          "07:50 AM",
+          "07:55 AM",
+          "08:00 AM",
+          "08:50 AM",
+          "09:10 AM",
+          "09:30 AM",
+          "10:10 AM",
+          "10:20 AM",
+          "10:50 AM",
+          "10:55 AM",
+          "11:10 AM",
+          "11:30 AM",
+          "11:50 AM",
+          "12:30 PM",
+          "12:40 PM",
+          "12:55 PM",
+          "01:20 PM",
+          "02:20 PM",
+          "03:00 PM",
+          "03:40 PM",
+          "04:00 PM",
+          "04:10 PM",
+          "04:40 PM",
+          "04:55 PM",
+          "05:00 PM",
+          "05:20 PM",
+          "05:45 PM",
+          "05:55 PM",
+          "06:15 PM",
+          "06:20 PM",
+          "06:55 PM",
+          "07:15 PM",
+          "07:20 PM",
+          "08:10 PM",
+          "08:20 PM",
+          "08:40 PM",
+          "09:10 PM",
+          "09:15 PM",
+          "09:30 PM",
+          "09:50 PM",
+          "10:40 PM",
+          "11:00 PM",
+          "11:15 PM"
         ],
         "eta": "High Frequency Superfast (55 Daily Slots)",
         "title": "Madurai Arappalayam → Dindigul Central Stand",
@@ -3409,7 +3699,9 @@
         "fare": "₹55 – ₹70",
         "dur": "1h 15m",
         "gps": true,
-        "source": "TNSTC Madurai Master Timetable"
+        "source": "TNSTC Madurai Master Timetable",
+        "bus_no": "Superfast 1-to-1",
+        "bus_name": "Lock City Speed Line"
       }
     ],
     "dindigul->madurai": [
@@ -3425,17 +3717,19 @@
         "fare": "₹55 – ₹70",
         "dur": "1h 15m",
         "gps": true,
-        "source": "TNSTC Madurai Master Timetable"
+        "source": "TNSTC Madurai Master Timetable",
+        "bus_no": "Superfast 1-to-1",
+        "bus_name": "Lock City Speed Line"
       }
     ],
     "madurai->tenkasi": [
       {
-        "time": "03:30 · 06:30 · 07:20 · 08:15",
+        "time": "03:30 AM · 06:30 AM · 07:20 AM · 08:15 AM",
         "all_exact_departures": [
-          "03:30",
-          "06:30",
-          "07:20",
-          "08:15"
+          "03:30 AM",
+          "06:30 AM",
+          "07:20 AM",
+          "08:15 AM"
         ],
         "eta": "Courtallam Corridor Express",
         "title": "Madurai Mattuthavani / Periyar → Tenkasi Bus Stand",
@@ -3447,12 +3741,14 @@
         "fare": "₹140 – ₹190",
         "dur": "3h 45m",
         "gps": true,
-        "source": "TNSTC Madurai Timetable"
+        "source": "TNSTC Madurai Timetable",
+        "bus_no": "Rt 50",
+        "bus_name": "Courtallam Falls Express"
       }
     ],
     "tenkasi->madurai": [
       {
-        "time": "05:00 – 21:30 · Every 30 mins",
+        "time": "05:00 AM – 09:30 PM · Every 30 mins",
         "eta": "Courtallam Corridor Express",
         "title": "Tenkasi Bus Stand → Madurai Mattuthavani / Periyar",
         "type": "express",
@@ -3463,12 +3759,14 @@
         "fare": "₹140 – ₹190",
         "dur": "3h 45m",
         "gps": true,
-        "source": "TNSTC Madurai Timetable"
+        "source": "TNSTC Madurai Timetable",
+        "bus_no": "Rt 50",
+        "bus_name": "Courtallam Falls Express"
       }
     ],
     "madurai->tirumangalam": [
       {
-        "time": "05:00 – 23:00 · Every 5 mins (Rt 48, 48A, 77, 77B)",
+        "time": "05:00 AM – 11:00 PM · Every 5 mins (Rt 48, 48A, 77, 77B)",
         "eta": "City Suburban Frequent",
         "title": "Madurai Periyar / MIBT → Tirumangalam Stand",
         "type": "town",
@@ -3479,12 +3777,14 @@
         "fare": "₹0 (Women) / ₹16",
         "dur": "35m",
         "gps": true,
-        "source": "Madurai City Bus Master Roster"
+        "source": "Madurai City Bus Master Roster",
+        "bus_no": "Rt 48 / 48A / 77",
+        "bus_name": "Thiruparankundram Line"
       }
     ],
     "tirumangalam->madurai": [
       {
-        "time": "05:00 – 23:00 · Every 5 mins (Rt 48, 77)",
+        "time": "05:00 AM – 11:00 PM · Every 5 mins (Rt 48, 77)",
         "eta": "City Suburban Frequent",
         "title": "Tirumangalam Stand → Madurai Periyar / MIBT",
         "type": "town",
@@ -3495,19 +3795,21 @@
         "fare": "₹0 (Women) / ₹16",
         "dur": "35m",
         "gps": true,
-        "source": "Madurai City Bus Master Roster"
+        "source": "Madurai City Bus Master Roster",
+        "bus_no": "Rt 48 / 48A / 77",
+        "bus_name": "Thiruparankundram Line"
       }
     ],
     "nellai->madurai": [
       {
-        "time": "06:10 · 07:00 · 10:50 · 13:10 · 17:50 · 20:10",
+        "time": "06:10 AM · 07:00 AM · 10:50 AM · 01:10 PM · 05:50 PM · 08:10 PM",
         "all_exact_departures": [
-          "06:10",
-          "07:00",
-          "10:50",
-          "13:10",
-          "17:50",
-          "20:10"
+          "06:10 AM",
+          "07:00 AM",
+          "10:50 AM",
+          "01:10 PM",
+          "05:50 PM",
+          "08:10 PM"
         ],
         "eta": "NH-44 1-to-1 Superfast & AC",
         "title": "Tirunelveli New Stand (Venthankulam) → Madurai Mattuthavani",
@@ -3519,7 +3821,9 @@
         "fare": "₹135 – ₹195",
         "dur": "2h 45m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Master Timetable"
+        "source": "TNSTC Tirunelveli Master Timetable",
+        "bus_no": "TNSTC Nellai",
+        "bus_name": "Nellai - Madurai Bypass Rider"
       }
     ],
     "madurai->nellai": [
@@ -3535,23 +3839,25 @@
         "fare": "₹135 – ₹195",
         "dur": "2h 45m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Master Timetable"
+        "source": "TNSTC Tirunelveli Master Timetable",
+        "bus_no": "TNSTC Nellai",
+        "bus_name": "Nellai - Madurai Bypass Rider"
       }
     ],
     "nellai->kovai": [
       {
-        "time": "02:30 · 06:40 · 07:30 · 09:20 · 10:30 (+5 more slots)",
+        "time": "02:30 AM · 06:40 AM · 07:30 AM · 09:20 AM · 10:30 AM (+5 more slots)",
         "all_exact_departures": [
-          "02:30",
-          "06:40",
-          "07:30",
-          "09:20",
-          "10:30",
-          "11:15",
-          "13:40",
-          "16:20",
-          "19:40",
-          "20:45"
+          "02:30 AM",
+          "06:40 AM",
+          "07:30 AM",
+          "09:20 AM",
+          "10:30 AM",
+          "11:15 AM",
+          "01:40 PM",
+          "04:20 PM",
+          "07:40 PM",
+          "08:45 PM"
         ],
         "eta": "Direct Corridor Express",
         "title": "Tirunelveli New Stand → Coimbatore Gandhipuram / Ukkadam",
@@ -3563,12 +3869,14 @@
         "fare": "₹310 – ₹420",
         "dur": "7h 30m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Schedule"
+        "source": "TNSTC Tirunelveli Schedule",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Tirunelveli New Stand → Coimbatore Gandhipuram / Ukkadam"
       }
     ],
     "kovai->nellai": [
       {
-        "time": "06:00 · 08:30 · 11:15 · 14:00 · 18:30 · 20:30 · 21:45",
+        "time": "06:00 AM · 08:30 AM · 11:15 AM · 02:00 PM · 06:30 PM · 08:30 PM · 09:45 PM",
         "eta": "Direct Corridor Express",
         "title": "Coimbatore Gandhipuram / Ukkadam → Tirunelveli New Stand",
         "type": "express",
@@ -3579,22 +3887,24 @@
         "fare": "₹310 – ₹420",
         "dur": "7h 30m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Schedule"
+        "source": "TNSTC Tirunelveli Schedule",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Tirunelveli New Stand → Coimbatore Gandhipuram / Ukkadam"
       }
     ],
     "nellai->tenkasi": [
       {
-        "time": "04:50 · 06:40 · 08:30 · 10:20 · 12:15 (+4 more slots)",
+        "time": "04:50 AM · 06:40 AM · 08:30 AM · 10:20 AM · 12:15 PM (+4 more slots)",
         "all_exact_departures": [
-          "04:50",
-          "06:40",
-          "08:30",
-          "10:20",
-          "12:15",
-          "14:10",
-          "16:00",
-          "17:50",
-          "19:45"
+          "04:50 AM",
+          "06:40 AM",
+          "08:30 AM",
+          "10:20 AM",
+          "12:15 PM",
+          "02:10 PM",
+          "04:00 PM",
+          "05:50 PM",
+          "07:45 PM"
         ],
         "eta": "Western Ghats Corridor",
         "title": "Tirunelveli New Stand → Tenkasi Bus Stand",
@@ -3606,12 +3916,14 @@
         "fare": "₹45 – ₹65",
         "dur": "1h 15m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Operating Timetable"
+        "source": "TNSTC Tirunelveli Operating Timetable",
+        "bus_no": "Rt 40 / 42",
+        "bus_name": "Courtallam Waterfalls Express"
       }
     ],
     "tenkasi->nellai": [
       {
-        "time": "05:00 – 22:30 · Every 15 mins",
+        "time": "05:00 AM – 10:30 PM · Every 15 mins",
         "eta": "Western Ghats Corridor",
         "title": "Tenkasi Bus Stand → Tirunelveli New Stand",
         "type": "express",
@@ -3622,12 +3934,14 @@
         "fare": "₹45 – ₹65",
         "dur": "1h 15m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Operating Timetable"
+        "source": "TNSTC Tirunelveli Operating Timetable",
+        "bus_no": "Rt 40 / 42",
+        "bus_name": "Courtallam Waterfalls Express"
       }
     ],
     "kovai->erode": [
       {
-        "time": "04:30 – 23:30 · Every 10 mins (1-to-1 Non-Stop & Town)",
+        "time": "04:30 AM – 11:30 PM · Every 10 mins (1-to-1 Non-Stop & Town)",
         "eta": "Frequent Express",
         "title": "Coimbatore Gandhipuram → Erode Central Stand",
         "type": "express",
@@ -3638,12 +3952,14 @@
         "fare": "₹85 – ₹115",
         "dur": "2h 15m",
         "gps": true,
-        "source": "TNSTC Coimbatore Timetable"
+        "source": "TNSTC Coimbatore Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Coimbatore Gandhipuram → Erode Central Stand"
       }
     ],
     "erode->kovai": [
       {
-        "time": "04:30 – 23:30 · Every 10 mins",
+        "time": "04:30 AM – 11:30 PM · Every 10 mins",
         "eta": "Frequent Express",
         "title": "Erode Central Stand → Coimbatore Gandhipuram",
         "type": "express",
@@ -3654,12 +3970,14 @@
         "fare": "₹85 – ₹115",
         "dur": "2h 15m",
         "gps": true,
-        "source": "TNSTC Coimbatore Timetable"
+        "source": "TNSTC Coimbatore Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Coimbatore Gandhipuram → Erode Central Stand"
       }
     ],
     "kovai->tiruppur": [
       {
-        "time": "05:00 – 23:00 · Every 10 mins (Rt 20A, Non-Stop)",
+        "time": "05:00 AM – 11:00 PM · Every 10 mins (Rt 20A, Non-Stop)",
         "eta": "Industrial Corridor Non-Stop",
         "title": "Coimbatore Gandhipuram → Tiruppur Old / New Stand",
         "type": "express",
@@ -3670,12 +3988,14 @@
         "fare": "₹45 – ₹60",
         "dur": "1h 10m",
         "gps": true,
-        "source": "TNSTC Coimbatore Timetable"
+        "source": "TNSTC Coimbatore Timetable",
+        "bus_no": "Rt 20A Non-Stop",
+        "bus_name": "Knit City Industrial Express"
       }
     ],
     "tiruppur->kovai": [
       {
-        "time": "05:00 – 23:00 · Every 10 mins",
+        "time": "05:00 AM – 11:00 PM · Every 10 mins",
         "eta": "Industrial Corridor Non-Stop",
         "title": "Tiruppur Old / New Stand → Coimbatore Gandhipuram",
         "type": "express",
@@ -3686,12 +4006,14 @@
         "fare": "₹45 – ₹60",
         "dur": "1h 10m",
         "gps": true,
-        "source": "TNSTC Coimbatore Timetable"
+        "source": "TNSTC Coimbatore Timetable",
+        "bus_no": "Rt 20A Non-Stop",
+        "bus_name": "Knit City Industrial Express"
       }
     ],
     "kovai->mettupalayam": [
       {
-        "time": "04:30 – 23:00 · Every 8 mins (Rt 100, 100A, Blue Line)",
+        "time": "04:30 AM – 11:00 PM · Every 8 mins (Rt 100, 100A, Blue Line)",
         "eta": "Ooty Foothills Express",
         "title": "Coimbatore Gandhipuram → Mettupalayam Stand",
         "type": "town",
@@ -3702,12 +4024,14 @@
         "fare": "₹0 (Women) / ₹28",
         "dur": "50m",
         "gps": true,
-        "source": "TNSTC Coimbatore Operating Timetable"
+        "source": "TNSTC Coimbatore Operating Timetable",
+        "bus_no": "Rt 100 Blue Line",
+        "bus_name": "Nilgiri Foothills Express"
       }
     ],
     "mettupalayam->kovai": [
       {
-        "time": "04:30 – 23:00 · Every 8 mins",
+        "time": "04:30 AM – 11:00 PM · Every 8 mins",
         "eta": "Ooty Foothills Express",
         "title": "Mettupalayam Stand → Coimbatore Gandhipuram",
         "type": "town",
@@ -3718,12 +4042,14 @@
         "fare": "₹0 (Women) / ₹28",
         "dur": "50m",
         "gps": true,
-        "source": "TNSTC Coimbatore Operating Timetable"
+        "source": "TNSTC Coimbatore Operating Timetable",
+        "bus_no": "Rt 100 Blue Line",
+        "bus_name": "Nilgiri Foothills Express"
       }
     ],
     "kovai->madurai": [
       {
-        "time": "05:00 – 23:00 · Every 20 mins",
+        "time": "05:00 AM – 11:00 PM · Every 20 mins",
         "eta": "Superfast Intercity",
         "title": "Coimbatore Singanallur / Gandhipuram → Madurai Arappalayam",
         "type": "express",
@@ -3734,12 +4060,14 @@
         "fare": "₹185 – ₹250",
         "dur": "4h 30m",
         "gps": true,
-        "source": "TNSTC Intercity Timetable"
+        "source": "TNSTC Intercity Timetable",
+        "bus_no": "TNSTC Madurai",
+        "bus_name": "Kovai - Madurai Bypass Rider"
       }
     ],
     "madurai->kovai": [
       {
-        "time": "05:00 – 23:00 · Every 20 mins",
+        "time": "05:00 AM – 11:00 PM · Every 20 mins",
         "eta": "Superfast Intercity",
         "title": "Madurai Arappalayam → Coimbatore Singanallur / Gandhipuram",
         "type": "express",
@@ -3750,12 +4078,14 @@
         "fare": "₹185 – ₹250",
         "dur": "4h 30m",
         "gps": true,
-        "source": "TNSTC Intercity Timetable"
+        "source": "TNSTC Intercity Timetable",
+        "bus_no": "TNSTC Madurai",
+        "bus_name": "Kovai - Madurai Bypass Rider"
       }
     ],
     "madurai->arappalayam": [
       {
-        "time": "04:30 – 23:30 · Every 5 mins (Rt 77, 70, 7A Shuttle)",
+        "time": "04:30 AM – 11:30 PM · Every 5 mins (Rt 77, 70, 7A Shuttle)",
         "eta": "City Inter-Stand Shuttle",
         "title": "Madurai Mattuthavani ↔ Arappalayam Stand",
         "type": "town",
@@ -3766,12 +4096,14 @@
         "fare": "₹0 (Women) / ₹12",
         "dur": "25m",
         "gps": true,
-        "source": "Madurai City Transit Master"
+        "source": "Madurai City Transit Master",
+        "bus_no": "Rt 20",
+        "bus_name": "Madurai Mattuthavani ↔ Arappalayam Stand"
       }
     ],
     "arappalayam->madurai": [
       {
-        "time": "04:30 – 23:30 · Every 5 mins (Rt 77, 70, 7A Shuttle)",
+        "time": "04:30 AM – 11:30 PM · Every 5 mins (Rt 77, 70, 7A Shuttle)",
         "eta": "City Inter-Stand Shuttle",
         "title": "Arappalayam Stand ↔ Madurai Mattuthavani",
         "type": "town",
@@ -3782,12 +4114,14 @@
         "fare": "₹0 (Women) / ₹12",
         "dur": "25m",
         "gps": true,
-        "source": "Madurai City Transit Master"
+        "source": "Madurai City Transit Master",
+        "bus_no": "Rt 20",
+        "bus_name": "Madurai Mattuthavani ↔ Arappalayam Stand"
       }
     ],
     "nellai->valliyur": [
       {
-        "time": "05:00 – 22:30 · Every 15 mins (NH-44 Kanyakumari Corridor)",
+        "time": "05:00 AM – 10:30 PM · Every 15 mins (NH-44 Kanyakumari Corridor)",
         "eta": "NH-44 Express",
         "title": "Tirunelveli New Stand (Venthankulam) → Valliyur Stand",
         "type": "express",
@@ -3798,12 +4132,14 @@
         "fare": "₹40 – ₹55",
         "dur": "55m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Timetable"
+        "source": "TNSTC Tirunelveli Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Tirunelveli New Stand (Venthankulam) → Valliyur Stand"
       }
     ],
     "valliyur->nellai": [
       {
-        "time": "05:00 – 22:30 · Every 15 mins",
+        "time": "05:00 AM – 10:30 PM · Every 15 mins",
         "eta": "NH-44 Express",
         "title": "Valliyur Stand → Tirunelveli New Stand",
         "type": "express",
@@ -3814,12 +4150,14 @@
         "fare": "₹40 – ₹55",
         "dur": "55m",
         "gps": true,
-        "source": "TNSTC Tirunelveli Timetable"
+        "source": "TNSTC Tirunelveli Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Tirunelveli New Stand (Venthankulam) → Valliyur Stand"
       }
     ],
     "nellai->trichy": [
       {
-        "time": "06:00 · 08:30 · 11:00 · 13:45 · 17:00 · 20:30 · 22:00",
+        "time": "06:00 AM · 08:30 AM · 11:00 AM · 01:45 PM · 05:00 PM · 08:30 PM · 10:00 PM",
         "eta": "NH-44 Superfast",
         "title": "Tirunelveli New Stand → Trichy Panjappur IBT",
         "type": "express",
@@ -3830,12 +4168,14 @@
         "fare": "₹245 – ₹330",
         "dur": "5h 30m",
         "gps": true,
-        "source": "SETC / TNSTC Timetable"
+        "source": "SETC / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Tirunelveli New Stand → Trichy Panjappur IBT"
       }
     ],
     "trichy->nellai": [
       {
-        "time": "05:30 · 08:00 · 12:15 · 15:30 · 19:00 · 21:30",
+        "time": "05:30 AM · 08:00 AM · 12:15 PM · 03:30 PM · 07:00 PM · 09:30 PM",
         "eta": "NH-44 Superfast",
         "title": "Trichy Panjappur IBT → Tirunelveli New Stand",
         "type": "express",
@@ -3846,7 +4186,9 @@
         "fare": "₹245 – ₹330",
         "dur": "5h 30m",
         "gps": true,
-        "source": "SETC / TNSTC Timetable"
+        "source": "SETC / TNSTC Timetable",
+        "bus_no": "TNSTC Exp",
+        "bus_name": "Tirunelveli New Stand → Trichy Panjappur IBT"
       }
     ]
   },
@@ -3855,7 +4197,7 @@
       {
         "bay": "NEW",
         "dest": "Chennai Kilambakkam (KCBT)",
-        "meta": "SETC / TNSTC: 09:00 · 09:30 · 20:00 · 21:30",
+        "meta": "SETC / TNSTC: 09:00 AM · 09:30 AM · 08:00 PM · 09:30 PM",
         "status": "₹310+",
         "color": "#0D6E4E"
       },
@@ -3869,7 +4211,7 @@
       {
         "bay": "NEW",
         "dest": "Kolli Hills · Semmedu (70 Hairpin Bends)",
-        "meta": "Official: 09:20 · 10:00 · 12:50 · 14:10 · 17:40",
+        "meta": "Official: 09:20 AM · 10:00 AM · 12:50 PM · 02:10 PM · 05:40 PM",
         "status": "₹60–₹80",
         "color": "#D97706"
       },
@@ -3922,14 +4264,14 @@
       {
         "bay": "NEW",
         "dest": "Yercaud Lake (Rt 1165 · 20 Bends)",
-        "meta": "Official: 09:50 · 10:30 · 11:10 · 12:30 · 13:50",
+        "meta": "Official: 09:50 AM · 10:30 AM · 11:10 AM · 12:30 PM · 01:50 PM",
         "status": "₹30–₹45",
         "color": "#D97706"
       },
       {
         "bay": "NEW",
         "dest": "Mettur Dam via Omalur, Mecheri",
-        "meta": "Official: 09:45 · 11:20 · 12:00 · 12:50 · 14:50",
+        "meta": "Official: 09:45 AM · 11:20 AM · 12:00 PM · 12:50 PM · 02:50 PM",
         "status": "₹40–₹50",
         "color": "#0D6B4E"
       },
