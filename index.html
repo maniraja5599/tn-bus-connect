@@ -249,62 +249,87 @@
       flex: 1;
       min-width: 0;
       position: relative;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      background: var(--surface-2);
-      overflow: hidden;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 16px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .inputs-stack:focus-within {
+      border-color: var(--green);
+      box-shadow: 0 4px 16px rgba(13, 110, 78, 0.14);
     }
     .stop-row {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 44px 10px 12px;
-      min-height: 46px;
+      gap: 12px;
+      padding: 13px 56px 13px 16px;
+      min-height: 58px;
     }
     .stop-divider {
       height: 1px;
-      background: var(--border);
+      background: #E2E8F0;
       width: 100%;
     }
     .stop-label {
-      font-size: 9.5px;
+      font-size: 10px;
       font-weight: 800;
-      color: var(--muted);
       text-transform: uppercase;
-      width: 34px;
+      letter-spacing: 0.5px;
+      padding: 4px 8px;
+      border-radius: 6px;
       flex-shrink: 0;
-      letter-spacing: 0.4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #lblFrom {
+      background: #E6F4EA;
+      color: #0D6E4E;
+      border: 1px solid rgba(13, 110, 78, 0.25);
+    }
+    #lblTo {
+      background: #FEF3C7;
+      color: #B45309;
+      border: 1px solid rgba(217, 119, 6, 0.28);
     }
     .stop-select {
       background: transparent;
       border: none;
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 15.5px;
+      font-weight: 750;
       color: var(--text);
       width: 100%;
       outline: none;
       cursor: pointer;
       font-family: inherit;
       text-overflow: ellipsis;
+      padding: 4px 0;
     }
     .reverse-btn {
       position: absolute;
-      right: 8px;
+      right: 10px;
       top: 50%;
       transform: translateY(-50%);
-      width: 36px; height: 36px;
+      width: 44px; height: 44px;
       border-radius: 50%;
-      background: var(--surface);
-      border: 1.5px solid var(--green);
+      background: #FFFFFF;
+      border: 2px solid var(--green);
       color: var(--green);
       display: grid; place-items: center;
       cursor: pointer;
-      box-shadow: 0 3px 10px rgba(13, 110, 78, 0.18);
-      transition: transform 0.2s ease, background 0.15s ease;
-      z-index: 3;
+      box-shadow: 0 4px 14px rgba(13, 110, 78, 0.24);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.15s ease, box-shadow 0.15s ease;
+      z-index: 10;
     }
-    .reverse-btn:hover { background: var(--green-mint); }
-    .reverse-btn:active { transform: translateY(-50%) rotate(180deg); }
+    .reverse-btn:hover {
+      background: var(--green-mint);
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 6px 18px rgba(13, 110, 78, 0.32);
+    }
+    .reverse-btn:active {
+      transform: translateY(-50%) rotate(180deg) scale(0.95);
+    }
 
     /* Quick Destinations */
     .quick-dest-label { font-size: 10.5px; font-weight: 700; color: var(--muted); }
@@ -394,23 +419,30 @@
     /* Bus Schedule Cards (High Scannability) */
     .bus-card {
       background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 13px 14px;
-      box-shadow: var(--shadow);
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+      box-shadow: 0 3px 14px rgba(15, 23, 42, 0.04);
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
+      margin-bottom: 12px;
       cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .bus-card:hover {
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
     }
     .bus-top {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #E2E8F0;
     }
     .time-hero {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 900;
       letter-spacing: -0.4px;
       color: var(--text);
@@ -418,18 +450,37 @@
     }
     .shift-pill {
       display: inline-block;
-      margin-top: 4px;
-      font-size: 10.5px;
+      margin-top: 5px;
+      font-size: 11px;
       font-weight: 700;
-      padding: 3px 9px;
+      padding: 3px 10px;
       border-radius: 999px;
     }
     .shift-day { background: var(--green-mint); color: var(--green); }
     .shift-night { background: var(--navy-soft); color: var(--navy); }
 
-    .fare-box { text-align: right; flex-shrink: 0; }
-    .fare-val { font-size: 15px; font-weight: 800; color: var(--text); }
-    .dur-val { font-size: 11px; color: var(--muted); font-weight: 600; margin-top: 2px; }
+    .fare-box {
+      text-align: right;
+      flex-shrink: 0;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 7px 12px;
+      min-width: 95px;
+    }
+    .fare-val {
+      font-size: 15.5px;
+      font-weight: 900;
+      color: #0D6E4E;
+      line-height: 1.2;
+    }
+    .dur-val {
+      font-size: 11px;
+      color: #64748B;
+      font-weight: 700;
+      margin-top: 2px;
+      line-height: 1.2;
+    }
 
     .bus-title {
       font-size: 13.5px;
@@ -557,29 +608,7 @@
     .info-card h3 { font-size: 13.5px; font-weight: 800; margin-bottom: 4px; }
     .info-card p { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
 
-    /* Fixed 3-Tab Bottom Navigation */
-    .bottom-nav {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 6px 6px 10px;
-    }
-    .nav-btn {
-      min-height: 44px;
-      background: none;
-      border: none;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      font-size: 11px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .nav-btn.active { color: var(--green); }
+    /* 3-Tab Bottom Navigation defined below */
 
     .toast {
       position: absolute;
@@ -902,23 +931,23 @@
     }
 
   
-    /* Glassmorphism & Modern Terminal Bottom Navigation */
+    /* High-Touch Mobile Bottom Navigation Bar */
     .bottom-nav {
       position: relative;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      border-top: 1.5px solid #E2E8F0;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      padding: 6px 10px 10px;
-      gap: 8px;
-      box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.06);
+      padding: 8px 12px 14px;
+      gap: 10px;
+      box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.08);
       z-index: 40;
     }
     .nav-btn {
-      min-height: 48px;
-      border-radius: 12px;
+      min-height: 52px;
+      border-radius: 14px;
       background: transparent;
       border: 1px solid transparent;
       color: #64748B;
@@ -926,33 +955,30 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 3px;
-      font-size: 11px;
+      gap: 4px;
+      font-size: 11.5px;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
     }
+    .nav-btn svg {
+      transition: transform 0.15s ease, stroke 0.15s ease;
+    }
     .nav-btn:hover {
       color: #0F172A;
-      background: #F1F5F9;
+      background: #F8FAFC;
     }
     .nav-btn.active {
-      color: #0D6E4E;
-      background: #E6F4EA;
-      border: 1px solid rgba(13, 110, 78, 0.25);
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #0D6E4E 0%, #0F825C 100%);
+      border: 1px solid rgba(13, 110, 78, 0.3);
       font-weight: 800;
-      box-shadow: 0 2px 10px rgba(13, 110, 78, 0.16);
+      box-shadow: 0 4px 16px rgba(13, 110, 78, 0.32);
     }
-    .nav-btn.active::before {
-      content: '';
-      position: absolute;
-      top: -6px;
-      width: 22px;
-      height: 3px;
-      border-radius: 999px;
-      background: #0D6E4E;
-      box-shadow: 0 0 8px #0D6E4E;
+    .nav-btn.active svg {
+      stroke: #FFFFFF;
+      transform: scale(1.08);
     }
 
     /* Prominent Live & Verified Notice Bar */
@@ -1001,23 +1027,27 @@
     .fare-box {
       text-align: right;
       flex-shrink: 0;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 7px 12px;
+      min-width: 90px;
       max-width: 48%;
-      min-width: 0;
     }
     .fare-val {
-      font-size: 14.5px;
-      font-weight: 800;
-      color: var(--text);
+      font-size: 15px;
+      font-weight: 900;
+      color: #0D6E4E;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     .time-hero {
-      font-size: 17px;
+      font-size: 19px;
       font-weight: 900;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.4px;
       color: var(--text);
-      line-height: 1.2;
+      line-height: 1.15;
       min-width: 0;
       word-break: break-word;
     }
@@ -2109,13 +2139,15 @@
             </div>
             <div class="fare-box">
               <div class="fare-val" title="${b.fare}">${b.vetri ? '₹0 / ' + b.fare : b.fare}</div>
-              <div class="dur-val">${b.dur}</div>
+              <div class="dur-val">⏱️ ${b.dur}</div>
             </div>
           </div>
           <div class="bus-title">
-            <span class="type-badge ${b.type === 'town' ? 'town' : ''}">${b.type === 'town' ? 'TOWN' : 'EXPRESS'}</span>
-            ${b.bus_no ? `<span class="bus-num-pill">${b.bus_no}</span>` : ''}
-            <span>${b.title}</span>
+            <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; flex:1;">
+              <span class="type-badge ${b.type === 'town' ? 'town' : ''}">${b.type === 'town' ? 'TOWN' : 'EXPRESS'}</span>
+              ${b.bus_no ? `<span class="bus-num-pill">${b.bus_no}</span>` : ''}
+              <span style="font-size:14px; font-weight:800; color:var(--text);">${b.title}</span>
+            </div>
             ${isVerifiedCommunity ? '<span class="tag t-crowdsourced">👥 Commuter Verified</span>' : '<span class="tag t-verified">🛡️ Official Verified</span>'}
           </div>
           ${b.bus_name ? `<div class="bus-operator-name"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="3" y="3" width="18" height="16" rx="2"/><path d="M7 19v2"/><path d="M17 19v2"/><circle cx="7" cy="14" r="1.5"/><circle cx="17" cy="14" r="1.5"/></svg> ${b.bus_name}</div>` : ''}
@@ -2147,8 +2179,7 @@
           <div class="badge-row">
             ${b.vetri ? `<span class="tag t-vetri">🩷 ${tr.vetri}</span>` : ''}
             ${standTag}
-            <span class="tag ${b.gps && !offline ? 't-gps' : 't-sched'}">${b.gps && !offline ? '● AIS-140 PNR' : '🕒 ' + (b.source || 'Schedule')}</span>
-            <span class="tag t-sched">${b.corp}</span>
+            ${b.gps && !offline ? '<span class="tag t-gps">● AIS-140 Live</span>' : ''}
             <span class="crowd-indicator ${crowdClass}" onclick="cycleCrowding('${busId}', event)" title="Tap to update seat/crowd status">
               ${crowdText}
             </span>
@@ -2156,7 +2187,7 @@
 
           <!-- 48x48px Touch Targets for Voting & Quick In-App Reporting -->
           <div class="card-footer">
-            <span class="footer-left"><b>✓ ${b.source || 'Verified'}</b> · Tap stops for timeline</span>
+            <span class="footer-left"><b>✓ ${b.source || 'Verified'}</b> · Tap stops for route</span>
             <div style="display:flex; align-items:center; gap:8px;">
               <div class="vote-bar" onclick="event.stopPropagation()">
                 <button class="vote-btn ${voteData.myVote === 1 ? 'voted-up' : ''}" onclick="voteTiming('${busId}', 1)" title="Confirm timing is correct (48x48px touch target)">
@@ -2166,7 +2197,7 @@
                   👎 <span>${voteData.down || 0}</span>
                 </button>
               </div>
-              <button class="report-btn" onclick="openReportModal('${busId}', '${b.title.replace(/'/g, "\\'")}', '${b.bus_no || ''}')" title="Report inaccurate timing (48x48px touch target)">
+              <button class="report-btn" onclick="openReportModal('${busId}', '${b.title.replace(/'/g, "\'")}', '${b.bus_no || ''}')" title="Report inaccurate timing (48x48px touch target)">
                 ⚠️ Report
               </button>
             </div>
