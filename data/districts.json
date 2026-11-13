@@ -91,6 +91,14 @@
         {
           "id": "attur",
           "name": "Attur Municipal Stand"
+        },
+        {
+          "id": "edappadi",
+          "name": "Edappadi Stand"
+        },
+        {
+          "id": "bhavani",
+          "name": "Bhavani / Sankari Gate"
         }
       ],
       "outside": [
@@ -105,6 +113,22 @@
         {
           "id": "kovai",
           "name": "Coimbatore Gandhipuram"
+        },
+        {
+          "id": "erode",
+          "name": "Erode Central Stand"
+        },
+        {
+          "id": "bangalore",
+          "name": "Bangalore (Majestic / Shanthi Nagar)"
+        },
+        {
+          "id": "trichy",
+          "name": "Trichy Panjappur IBT"
+        },
+        {
+          "id": "madurai",
+          "name": "Madurai Mattuthavani"
         }
       ]
     },
@@ -125,6 +149,10 @@
         {
           "id": "thuvakudi",
           "name": "Thuvakudi (NIT / BHEL)"
+        },
+        {
+          "id": "musiri",
+          "name": "Musiri Bus Stand"
         }
       ],
       "outside": [
@@ -139,6 +167,26 @@
         {
           "id": "madurai",
           "name": "Madurai Mattuthavani"
+        },
+        {
+          "id": "ariyalur",
+          "name": "Ariyalur Bus Stand"
+        },
+        {
+          "id": "perambalur",
+          "name": "Perambalur Bus Stand"
+        },
+        {
+          "id": "kumbakonam",
+          "name": "Kumbakonam Stand"
+        },
+        {
+          "id": "rameswaram",
+          "name": "Rameswaram Temple Stand"
+        },
+        {
+          "id": "salem",
+          "name": "Salem MGR Central Stand"
         }
       ]
     },
@@ -197,6 +245,14 @@
         {
           "id": "melur",
           "name": "Melur Bus Stand"
+        },
+        {
+          "id": "arappalayam",
+          "name": "Arappalayam Bus Stand"
+        },
+        {
+          "id": "tirumangalam",
+          "name": "Tirumangalam Stand"
         }
       ],
       "outside": [
@@ -207,6 +263,26 @@
         {
           "id": "nkl_new",
           "name": "Namakkal New Stand (Mudalaipatti)"
+        },
+        {
+          "id": "tiruchendur",
+          "name": "Tiruchendur Temple Stand"
+        },
+        {
+          "id": "tenkasi",
+          "name": "Tenkasi Bus Stand"
+        },
+        {
+          "id": "dindigul",
+          "name": "Dindigul Central Stand"
+        },
+        {
+          "id": "trichy",
+          "name": "Trichy Panjappur IBT"
+        },
+        {
+          "id": "salem",
+          "name": "Salem MGR Central Stand"
         }
       ]
     },
@@ -227,6 +303,10 @@
         {
           "id": "marudhamalai",
           "name": "Marudhamalai Foot"
+        },
+        {
+          "id": "mettupalayam",
+          "name": "Mettupalayam Stand"
         }
       ],
       "outside": [
@@ -237,6 +317,18 @@
         {
           "id": "salem",
           "name": "Salem MGR Central"
+        },
+        {
+          "id": "erode",
+          "name": "Erode Central Stand"
+        },
+        {
+          "id": "tiruppur",
+          "name": "Tiruppur Old / New Stand"
+        },
+        {
+          "id": "madurai",
+          "name": "Madurai Mattuthavani"
         }
       ]
     },
@@ -253,6 +345,14 @@
         {
           "id": "thoothukudi",
           "name": "Thoothukudi Stand"
+        },
+        {
+          "id": "tenkasi",
+          "name": "Tenkasi Bus Stand"
+        },
+        {
+          "id": "valliyur",
+          "name": "Valliyur Stand"
         }
       ],
       "outside": [
@@ -267,6 +367,18 @@
         {
           "id": "chennai",
           "name": "Chennai Kilambakkam (KCBT)"
+        },
+        {
+          "id": "madurai",
+          "name": "Madurai Mattuthavani"
+        },
+        {
+          "id": "trichy",
+          "name": "Trichy Panjappur IBT"
+        },
+        {
+          "id": "kovai",
+          "name": "Coimbatore Gandhipuram"
         }
       ]
     },
@@ -1549,12 +1661,13 @@
         "type": "express",
         "vetri": true,
         "corp": "TNSTC Salem",
-        "bay": "Namakkal Old / New Stand",
+        "bay": "Mudalaipatti New Stand",
         "via": "Namakkal – Senthamangalam – Belukurichi – Attur – Chinnasalem – Kallakurichi",
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "kallakurichi->nkl": [
@@ -1592,12 +1705,13 @@
         "type": "express",
         "vetri": true,
         "corp": "TNSTC Salem",
-        "bay": "Namakkal Old / New Stand",
+        "bay": "Mudalaipatti New Stand",
         "via": "Namakkal – Erumapatti – Thuraiyur – Perambalur",
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "perambalur->nkl": [
@@ -1643,12 +1757,13 @@
         "type": "express",
         "vetri": true,
         "corp": "TNSTC Salem",
-        "bay": "Namakkal Old / New Stand",
+        "bay": "Mudalaipatti New Stand",
         "via": "Namakkal – Thiruchengode – Erode",
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "erode->nkl": [
@@ -1696,12 +1811,13 @@
         "type": "express",
         "vetri": true,
         "corp": "TNSTC Salem",
-        "bay": "Namakkal Old / New Stand",
+        "bay": "Mudalaipatti New Stand",
         "via": "",
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "coimbatore->nkl": [
@@ -1742,12 +1858,13 @@
         "type": "express",
         "vetri": true,
         "corp": "TNSTC Salem",
-        "bay": "Namakkal Old / New Stand",
+        "bay": "Mudalaipatti New Stand",
         "via": "",
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "mettupalayam->nkl": [
@@ -1790,7 +1907,8 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "periyasamy_kovil->nkl": [
@@ -1830,7 +1948,8 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "vendalapadi->nkl": [
@@ -1876,7 +1995,8 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "arapaleeswarar_temple->nkl": [
@@ -1924,7 +2044,8 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "vilaram->nkl": [
@@ -1966,7 +2087,8 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "velikkad->nkl": [
@@ -2006,7 +2128,8 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "meganikadu->nkl": [
@@ -2083,7 +2206,8 @@
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "OLD+NEW"
       }
     ],
     "paramathi_velur->nkl": [
@@ -2188,12 +2312,13 @@
         "type": "express",
         "vetri": true,
         "corp": "TNSTC Salem",
-        "bay": "Namakkal Old / New Stand",
+        "bay": "Mudalaipatti New Stand",
         "via": "Paramathi Velur · Manmangalam · Vangal · Karur (NH-44)",
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "karur->nkl": [
@@ -2278,12 +2403,13 @@
         "type": "express",
         "vetri": true,
         "corp": "TNSTC Salem",
-        "bay": "Namakkal Old / New Stand",
+        "bay": "Mudalaipatti New Stand",
         "via": "Paramathi Velur · Karur Bypass · Dindigul Bypass · Madurai MIBT",
         "fare": "₹15 – ₹55",
         "dur": "30m – 2h",
         "gps": true,
-        "source": "TicketToGetLost / TNSTC Timetable"
+        "source": "TicketToGetLost / TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "madurai->nkl": [
@@ -2363,12 +2489,13 @@
         "type": "express",
         "vetri": false,
         "corp": "TNSTC Kumbakonam / Salem",
-        "bay": "Mudalaipatti Bay 4",
+        "bay": "Mudalaipatti New Stand",
         "via": "Mudalaipatti → Thathiengarpet → Musiri → Gunaseelam → Srirangam By-pass → Trichy Panjappur (~88 km)",
         "fare": "₹75 – ₹95",
         "dur": "2h 15m",
         "gps": true,
-        "source": "TNSTC Timetable"
+        "source": "TNSTC Timetable",
+        "standScope": "NEW"
       }
     ],
     "trichy->nkl": [
@@ -2578,6 +2705,1149 @@
         "gps": true,
         "source": "TNSTC Tirunelveli"
       }
+    ],
+    "salem->edappadi": [
+      {
+        "time": "00:30 · 01:45 · 02:00 · 02:45 · 03:10 (+41 more slots)",
+        "all_exact_departures": [
+          "00:30",
+          "01:45",
+          "02:00",
+          "02:45",
+          "03:10",
+          "05:00",
+          "05:20",
+          "06:40",
+          "07:00",
+          "07:20",
+          "07:30",
+          "07:45",
+          "08:00",
+          "08:10",
+          "08:20",
+          "08:30",
+          "08:40",
+          "09:15",
+          "09:30",
+          "09:40",
+          "10:30",
+          "11:40",
+          "12:00",
+          "12:15",
+          "12:30",
+          "12:50",
+          "13:00",
+          "14:10",
+          "14:40",
+          "15:00",
+          "15:15",
+          "15:45",
+          "16:40",
+          "16:50",
+          "17:15",
+          "17:30",
+          "18:10",
+          "19:20",
+          "19:30",
+          "19:40",
+          "20:00",
+          "20:15",
+          "21:40",
+          "21:50",
+          "22:50",
+          "23:00"
+        ],
+        "eta": "Scheduled Service",
+        "title": "Salem MGR Central → Edappadi Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem",
+        "bay": "Platform 2, Bay 9",
+        "via": "Salem MGR → Kandhampatty → Magudanchavadi → Sankari R.S → Edappadi (~42 km)",
+        "fare": "₹35 – ₹45",
+        "dur": "1h 10m",
+        "gps": true,
+        "source": "TNSTC Salem Operating Timetable"
+      }
+    ],
+    "edappadi->salem": [
+      {
+        "time": "05:00 – 21:30 · Every 15 mins",
+        "eta": "Scheduled Service",
+        "title": "Edappadi Stand → Salem MGR Central",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem",
+        "bay": "Edappadi Main Bay",
+        "via": "Edappadi → Sankari R.S → Magudanchavadi → Kandhampatty → Salem MGR (~42 km)",
+        "fare": "₹35 – ₹45",
+        "dur": "1h 10m",
+        "gps": true,
+        "source": "TNSTC Salem Operating Timetable"
+      }
+    ],
+    "salem->bhavani": [
+      {
+        "time": "03:45 · 05:45 · 06:15 · 06:30 · 07:50 (+13 more slots)",
+        "all_exact_departures": [
+          "03:45",
+          "05:45",
+          "06:15",
+          "06:30",
+          "07:50",
+          "08:50",
+          "09:50",
+          "10:10",
+          "11:00",
+          "11:30",
+          "12:30",
+          "14:00",
+          "14:40",
+          "15:20",
+          "15:30",
+          "16:30",
+          "18:00",
+          "19:50"
+        ],
+        "eta": "Frequent Express",
+        "title": "Salem MGR Central → Bhavani / Sankari",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem",
+        "bay": "Platform 3, Bay 14",
+        "via": "Salem MGR → Magudanchavadi → Sankari → Bhavani Kooduthurai (~55 km)",
+        "fare": "₹45 – ₹60",
+        "dur": "1h 20m",
+        "gps": true,
+        "source": "TNSTC Salem Timetable"
+      }
+    ],
+    "bhavani->salem": [
+      {
+        "time": "05:30 – 22:00 · Every 15–20m",
+        "eta": "Frequent Express",
+        "title": "Bhavani / Sankari → Salem MGR Central",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem",
+        "bay": "Bhavani Main Bay",
+        "via": "Bhavani Kooduthurai → Sankari → Magudanchavadi → Salem MGR (~55 km)",
+        "fare": "₹45 – ₹60",
+        "dur": "1h 20m",
+        "gps": true,
+        "source": "TNSTC Salem Timetable"
+      }
+    ],
+    "salem->erode": [
+      {
+        "time": "04:00 – 23:30 · Every 15–20 mins (1-to-1 Non-Stop & Ordinary)",
+        "eta": "Corridor Non-Stop",
+        "title": "Salem MGR Central → Erode Central Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem / Coimbatore",
+        "bay": "Platform 3, Bay 15",
+        "via": "Salem MGR → Sankari Bypass → Bhavani Bypass → Erode Stand (~64 km)",
+        "fare": "₹55 – ₹70",
+        "dur": "1h 30m",
+        "gps": true,
+        "source": "TNSTC Salem Timetable"
+      }
+    ],
+    "erode->salem": [
+      {
+        "time": "04:00 – 23:30 · Every 15–20 mins (1-to-1 Non-Stop & Ordinary)",
+        "eta": "Corridor Non-Stop",
+        "title": "Erode Central Stand → Salem MGR Central",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem / Coimbatore",
+        "bay": "Erode Bay 2",
+        "via": "Erode Stand → Bhavani Bypass → Sankari Bypass → Salem MGR (~64 km)",
+        "fare": "₹55 – ₹70",
+        "dur": "1h 30m",
+        "gps": true,
+        "source": "TNSTC Salem Timetable"
+      }
+    ],
+    "salem->bangalore": [
+      {
+        "time": "00:00 · 01:00 · 01:30 · 02:00 · 02:30 (+25 more slots)",
+        "all_exact_departures": [
+          "00:00",
+          "01:00",
+          "01:30",
+          "02:00",
+          "02:30",
+          "03:00",
+          "04:00",
+          "04:30",
+          "04:50",
+          "05:15",
+          "06:00",
+          "06:30",
+          "07:00",
+          "08:00",
+          "08:40",
+          "09:00",
+          "11:30",
+          "13:00",
+          "13:30",
+          "14:00",
+          "14:30",
+          "15:00",
+          "16:50",
+          "17:50",
+          "18:15",
+          "18:40",
+          "19:00",
+          "19:30",
+          "20:30",
+          "22:30"
+        ],
+        "eta": "Interstate Express",
+        "title": "Salem MGR Central → Bangalore (Shanthi Nagar / Majestic)",
+        "type": "express",
+        "vetri": false,
+        "corp": "SETC / TNSTC Salem / KSRTC",
+        "bay": "Platform 1, Bay 1-3",
+        "via": "Salem MGR → Dharmapuri Bypass → Krishnagiri → Hosur → Electronic City → Bangalore (~202 km)",
+        "fare": "₹195 – ₹280",
+        "dur": "4h 15m",
+        "gps": true,
+        "source": "SETC / TNSTC Interstate Timetable"
+      }
+    ],
+    "bangalore->salem": [
+      {
+        "time": "24 Hours · Every 20 mins",
+        "eta": "Interstate Express",
+        "title": "Bangalore (Shanthi Nagar / Majestic) → Salem MGR Central",
+        "type": "express",
+        "vetri": false,
+        "corp": "SETC / TNSTC Salem / KSRTC",
+        "bay": "Shanthi Nagar Platform 2",
+        "via": "Bangalore → Electronic City → Hosur → Krishnagiri → Dharmapuri → Salem MGR (~202 km)",
+        "fare": "₹195 – ₹280",
+        "dur": "4h 15m",
+        "gps": true,
+        "source": "SETC / TNSTC Interstate Timetable"
+      }
+    ],
+    "salem->trichy": [
+      {
+        "time": "04:30 – 22:30 · Every 20 mins",
+        "eta": "NH Corridor Superfast",
+        "title": "Salem MGR Central → Trichy Panjappur IBT",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem / Kumbakonam",
+        "bay": "Platform 4, Bay 21",
+        "via": "Salem MGR → Rasipuram Bypass → Namakkal Mudalaipatti → Musiri → Trichy Panjappur (~142 km)",
+        "fare": "₹120 – ₹160",
+        "dur": "3h 15m",
+        "gps": true,
+        "source": "TNSTC Operating Timetable"
+      }
+    ],
+    "trichy->salem": [
+      {
+        "time": "04:30 – 22:30 · Every 20 mins",
+        "eta": "NH Corridor Superfast",
+        "title": "Trichy Panjappur IBT → Salem MGR Central",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem / Kumbakonam",
+        "bay": "Panjappur IBT Bay 7",
+        "via": "Trichy Panjappur → Musiri → Namakkal Mudalaipatti → Rasipuram Bypass → Salem MGR (~142 km)",
+        "fare": "₹120 – ₹160",
+        "dur": "3h 15m",
+        "gps": true,
+        "source": "TNSTC Operating Timetable"
+      }
+    ],
+    "salem->madurai": [
+      {
+        "time": "02:00 · 05:30 · 07:00 · 09:20 · 10:20 (+14 more slots)",
+        "all_exact_departures": [
+          "02:00",
+          "05:30",
+          "07:00",
+          "09:20",
+          "10:20",
+          "10:40",
+          "10:55",
+          "11:15",
+          "11:35",
+          "13:45",
+          "14:20",
+          "15:00",
+          "15:15",
+          "15:40",
+          "16:00",
+          "17:50",
+          "18:00",
+          "18:25",
+          "19:30"
+        ],
+        "eta": "NH-44 Superfast",
+        "title": "Salem MGR Central → Madurai Mattuthavani",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem / Madurai",
+        "bay": "Platform 4, Bay 24",
+        "via": "Salem MGR → Namakkal Bypass → Karur Bypass → Dindigul Bypass → Madurai MIBT (~235 km)",
+        "fare": "₹195 – ₹260",
+        "dur": "4h 30m",
+        "gps": true,
+        "source": "TNSTC / SETC Timetable"
+      }
+    ],
+    "madurai->salem": [
+      {
+        "time": "24 Hours · Every 30 mins",
+        "eta": "NH-44 Superfast",
+        "title": "Madurai Mattuthavani → Salem MGR Central",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Salem / Madurai",
+        "bay": "MIBT Bay 12",
+        "via": "Madurai MIBT → Dindigul → Karur → Namakkal Bypass → Salem MGR (~235 km)",
+        "fare": "₹195 – ₹260",
+        "dur": "4h 30m",
+        "gps": true,
+        "source": "TNSTC / SETC Timetable"
+      }
+    ],
+    "trichy->ariyalur": [
+      {
+        "time": "00:20 · 02:20 · 04:15 · 05:30 · 06:15 (+40 more slots)",
+        "all_exact_departures": [
+          "00:20",
+          "02:20",
+          "04:15",
+          "05:30",
+          "06:15",
+          "06:45",
+          "07:00",
+          "07:20",
+          "07:30",
+          "07:40",
+          "08:00",
+          "08:20",
+          "09:00",
+          "10:10",
+          "10:20",
+          "10:50",
+          "11:20",
+          "11:45",
+          "12:00",
+          "12:10",
+          "12:30",
+          "12:40",
+          "13:00",
+          "13:20",
+          "13:30",
+          "14:00",
+          "14:20",
+          "14:40",
+          "15:00",
+          "15:20",
+          "16:20",
+          "17:20",
+          "17:45",
+          "18:20",
+          "18:30",
+          "18:40",
+          "19:00",
+          "19:10",
+          "19:20",
+          "20:00",
+          "20:15",
+          "20:30",
+          "21:10",
+          "21:50",
+          "22:20"
+        ],
+        "eta": "Chathiram Suburban",
+        "title": "Trichy Chathiram → Ariyalur Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Chathiram Bay 3",
+        "via": "Chathiram → Samayapuram Toll → Lalgudi → Pullambadi → Dalmiapuram → Ariyalur (~67 km)",
+        "fare": "₹0 (Women) / ₹50",
+        "dur": "1h 45m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Timetable"
+      }
+    ],
+    "ariyalur->trichy": [
+      {
+        "time": "05:00 – 22:00 · Every 20 mins",
+        "eta": "Chathiram Suburban",
+        "title": "Ariyalur Stand → Trichy Chathiram",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Ariyalur Platform 1",
+        "via": "Ariyalur → Dalmiapuram → Pullambadi → Lalgudi → Chathiram (~67 km)",
+        "fare": "₹0 (Women) / ₹50",
+        "dur": "1h 45m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Timetable"
+      }
+    ],
+    "trichy->perambalur": [
+      {
+        "time": "03:20 · 07:00 · 07:10 · 07:22 · 07:40 (+4 more slots)",
+        "all_exact_departures": [
+          "03:20",
+          "07:00",
+          "07:10",
+          "07:22",
+          "07:40",
+          "09:16",
+          "10:00",
+          "22:10",
+          "22:30"
+        ],
+        "eta": "NH-45 Superfast / Suburban",
+        "title": "Trichy Chathiram / Panjappur → Perambalur Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Chathiram Bay 5 / Panjappur Bay 8",
+        "via": "Trichy → Samayapuram Tollgate → Siruvachur → Perambalur Stand (~54 km)",
+        "fare": "₹45 – ₹60",
+        "dur": "1h 15m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Timetable"
+      }
+    ],
+    "perambalur->trichy": [
+      {
+        "time": "05:30 – 22:30 · Every 15 mins",
+        "eta": "NH-45 Superfast / Suburban",
+        "title": "Perambalur Stand → Trichy Chathiram / Panjappur",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Perambalur Platform 2",
+        "via": "Perambalur → Siruvachur → Samayapuram Tollgate → Trichy (~54 km)",
+        "fare": "₹45 – ₹60",
+        "dur": "1h 15m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Timetable"
+      }
+    ],
+    "trichy->kumbakonam": [
+      {
+        "time": "10:20 · 11:00 · 15:30 · 17:00",
+        "all_exact_departures": [
+          "10:20",
+          "11:00",
+          "15:30",
+          "17:00"
+        ],
+        "eta": "Delta Corridor AC / Express",
+        "title": "Trichy Panjappur IBT → Kumbakonam Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Panjappur IBT Bay 9",
+        "via": "Panjappur IBT → Thanjavur Old Stand → Papanasam → Kumbakonam Stand (~95 km)",
+        "fare": "₹85 – ₹120",
+        "dur": "2h 15m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Master Timetable"
+      }
+    ],
+    "kumbakonam->trichy": [
+      {
+        "time": "05:00 – 22:00 · Every 20 mins",
+        "eta": "Delta Corridor AC / Express",
+        "title": "Kumbakonam Stand → Trichy Panjappur IBT",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Kumbakonam Platform 3",
+        "via": "Kumbakonam → Papanasam → Thanjavur → Panjappur IBT (~95 km)",
+        "fare": "₹85 – ₹120",
+        "dur": "2h 15m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Master Timetable"
+      }
+    ],
+    "trichy->rameswaram": [
+      {
+        "time": "00:10 · 01:00 · 02:00 · 03:00 · 04:20 (+22 more slots)",
+        "all_exact_departures": [
+          "00:10",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:20",
+          "04:45",
+          "05:00",
+          "05:10",
+          "05:20",
+          "05:45",
+          "06:20",
+          "07:20",
+          "08:15",
+          "08:50",
+          "09:30",
+          "11:20",
+          "12:00",
+          "13:00",
+          "13:30",
+          "14:10",
+          "14:30",
+          "15:00",
+          "15:50",
+          "17:00",
+          "18:00",
+          "20:50",
+          "21:25"
+        ],
+        "eta": "Pilgrim Express",
+        "title": "Trichy Panjappur IBT → Rameswaram Temple Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "SETC / TNSTC Kumbakonam",
+        "bay": "Panjappur IBT Bay 12",
+        "via": "Panjappur IBT → Pudukkottai → Karaikudi → Ramanathapuram → Pamban Bridge → Rameswaram (~228 km)",
+        "fare": "₹195 – ₹270",
+        "dur": "5h 15m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Operating Schedule"
+      }
+    ],
+    "rameswaram->trichy": [
+      {
+        "time": "05:00 · 07:30 · 11:00 · 14:15 · 18:00 · 21:30",
+        "eta": "Pilgrim Express",
+        "title": "Rameswaram Temple Stand → Trichy Panjappur IBT",
+        "type": "express",
+        "vetri": false,
+        "corp": "SETC / TNSTC Kumbakonam",
+        "bay": "Rameswaram Main Stand",
+        "via": "Rameswaram → Pamban → Ramanathapuram → Karaikudi → Pudukkottai → Panjappur IBT (~228 km)",
+        "fare": "₹195 – ₹270",
+        "dur": "5h 15m",
+        "gps": true,
+        "source": "TNSTC Kumbakonam Operating Schedule"
+      }
+    ],
+    "trichy->musiri": [
+      {
+        "time": "05:00 – 22:30 · Every 10 mins (Rt 14, 21, Town & Mofussil)",
+        "eta": "Cauvery Bank Shuttle",
+        "title": "Trichy Chathiram → Musiri Bus Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Chathiram Bay 4",
+        "via": "Chathiram → No.1 Tollgate → Gunaseelam Temple → Musiri Stand (~36 km)",
+        "fare": "₹0 (Women) / ₹28",
+        "dur": "55m",
+        "gps": true,
+        "source": "Trichy Sub-Division Timetable"
+      }
+    ],
+    "musiri->trichy": [
+      {
+        "time": "05:00 – 22:30 · Every 10 mins (Rt 14, 21)",
+        "eta": "Cauvery Bank Shuttle",
+        "title": "Musiri Bus Stand → Trichy Chathiram",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Kumbakonam",
+        "bay": "Musiri Platform 1",
+        "via": "Musiri Stand → Gunaseelam Temple → No.1 Tollgate → Chathiram (~36 km)",
+        "fare": "₹0 (Women) / ₹28",
+        "dur": "55m",
+        "gps": true,
+        "source": "Trichy Sub-Division Timetable"
+      }
+    ],
+    "madurai->tiruchendur": [
+      {
+        "time": "00:30 · 01:00 · 01:20 · 04:00 · 04:20 (+28 more slots)",
+        "all_exact_departures": [
+          "00:30",
+          "01:00",
+          "01:20",
+          "04:00",
+          "04:20",
+          "04:40",
+          "05:30",
+          "06:15",
+          "07:30",
+          "07:45",
+          "08:00",
+          "08:45",
+          "09:00",
+          "10:00",
+          "10:45",
+          "11:00",
+          "11:15",
+          "12:45",
+          "13:00",
+          "13:10",
+          "14:20",
+          "15:00",
+          "16:15",
+          "16:45",
+          "17:15",
+          "17:40",
+          "17:50",
+          "18:45",
+          "19:15",
+          "20:00",
+          "20:15",
+          "20:30",
+          "21:00"
+        ],
+        "eta": "Pilgrim Express (33 Daily Slots)",
+        "title": "Madurai Mattuthavani → Tiruchendur Temple Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai / Tirunelveli",
+        "bay": "MIBT Bay 6",
+        "via": "Madurai MIBT → Aruppukottai Bypass → Thoothukudi Bypass → Tiruchendur (~178 km)",
+        "fare": "₹155 – ₹210",
+        "dur": "4h 00m",
+        "gps": true,
+        "source": "TNSTC Madurai Operating Schedule"
+      }
+    ],
+    "tiruchendur->madurai": [
+      {
+        "time": "04:30 – 22:00 · Every 25 mins",
+        "eta": "Pilgrim Express",
+        "title": "Tiruchendur Temple Stand → Madurai Mattuthavani",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai / Tirunelveli",
+        "bay": "Tiruchendur Platform 2",
+        "via": "Tiruchendur → Thoothukudi Bypass → Aruppukottai → Madurai MIBT (~178 km)",
+        "fare": "₹155 – ₹210",
+        "dur": "4h 00m",
+        "gps": true,
+        "source": "TNSTC Madurai Operating Schedule"
+      }
+    ],
+    "madurai->dindigul": [
+      {
+        "time": "00:00 · 01:00 · 01:20 · 01:50 · 03:30 (+50 more slots)",
+        "all_exact_departures": [
+          "00:00",
+          "01:00",
+          "01:20",
+          "01:50",
+          "03:30",
+          "05:20",
+          "06:00",
+          "06:15",
+          "06:30",
+          "06:50",
+          "07:00",
+          "07:20",
+          "07:50",
+          "07:55",
+          "08:00",
+          "08:50",
+          "09:10",
+          "09:30",
+          "10:10",
+          "10:20",
+          "10:50",
+          "10:55",
+          "11:10",
+          "11:30",
+          "11:50",
+          "12:30",
+          "12:40",
+          "12:55",
+          "13:20",
+          "14:20",
+          "15:00",
+          "15:40",
+          "16:00",
+          "16:10",
+          "16:40",
+          "16:55",
+          "17:00",
+          "17:20",
+          "17:45",
+          "17:55",
+          "18:15",
+          "18:20",
+          "18:55",
+          "19:15",
+          "19:20",
+          "20:10",
+          "20:20",
+          "20:40",
+          "21:10",
+          "21:15",
+          "21:30",
+          "21:50",
+          "22:40",
+          "23:00",
+          "23:15"
+        ],
+        "eta": "High Frequency Superfast (55 Daily Slots)",
+        "title": "Madurai Arappalayam → Dindigul Central Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai",
+        "bay": "Arappalayam Bay 2",
+        "via": "Madurai Arappalayam → Vadipatti → Kodai Road Bypass → Dindigul (~64 km)",
+        "fare": "₹55 – ₹70",
+        "dur": "1h 15m",
+        "gps": true,
+        "source": "TNSTC Madurai Master Timetable"
+      }
+    ],
+    "dindigul->madurai": [
+      {
+        "time": "24 Hours · Every 10 mins",
+        "eta": "High Frequency Superfast",
+        "title": "Dindigul Central Stand → Madurai Arappalayam",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai",
+        "bay": "Dindigul Bay 4",
+        "via": "Dindigul → Kodai Road Bypass → Vadipatti → Arappalayam (~64 km)",
+        "fare": "₹55 – ₹70",
+        "dur": "1h 15m",
+        "gps": true,
+        "source": "TNSTC Madurai Master Timetable"
+      }
+    ],
+    "madurai->tenkasi": [
+      {
+        "time": "03:30 · 06:30 · 07:20 · 08:15",
+        "all_exact_departures": [
+          "03:30",
+          "06:30",
+          "07:20",
+          "08:15"
+        ],
+        "eta": "Courtallam Corridor Express",
+        "title": "Madurai Mattuthavani / Periyar → Tenkasi Bus Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai / Tirunelveli",
+        "bay": "MIBT Bay 9",
+        "via": "Madurai MIBT → Tirumangalam → Rajapalayam → Srivilliputhur → Tenkasi (~162 km)",
+        "fare": "₹140 – ₹190",
+        "dur": "3h 45m",
+        "gps": true,
+        "source": "TNSTC Madurai Timetable"
+      }
+    ],
+    "tenkasi->madurai": [
+      {
+        "time": "05:00 – 21:30 · Every 30 mins",
+        "eta": "Courtallam Corridor Express",
+        "title": "Tenkasi Bus Stand → Madurai Mattuthavani / Periyar",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Madurai / Tirunelveli",
+        "bay": "Tenkasi Platform 1",
+        "via": "Tenkasi → Srivilliputhur → Rajapalayam → Tirumangalam → Madurai MIBT (~162 km)",
+        "fare": "₹140 – ₹190",
+        "dur": "3h 45m",
+        "gps": true,
+        "source": "TNSTC Madurai Timetable"
+      }
+    ],
+    "madurai->tirumangalam": [
+      {
+        "time": "05:00 – 23:00 · Every 5 mins (Rt 48, 48A, 77, 77B)",
+        "eta": "City Suburban Frequent",
+        "title": "Madurai Periyar / MIBT → Tirumangalam Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Madurai (City Division)",
+        "bay": "Periyar City Platform 4",
+        "via": "Periyar → Madura College → Thiruparankundram Temple → Kappalur Toll → Tirumangalam (~21 km)",
+        "fare": "₹0 (Women) / ₹16",
+        "dur": "35m",
+        "gps": true,
+        "source": "Madurai City Bus Master Roster"
+      }
+    ],
+    "tirumangalam->madurai": [
+      {
+        "time": "05:00 – 23:00 · Every 5 mins (Rt 48, 77)",
+        "eta": "City Suburban Frequent",
+        "title": "Tirumangalam Stand → Madurai Periyar / MIBT",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Madurai (City Division)",
+        "bay": "Tirumangalam Bay 1",
+        "via": "Tirumangalam → Kappalur Toll → Thiruparankundram Temple → Periyar (~21 km)",
+        "fare": "₹0 (Women) / ₹16",
+        "dur": "35m",
+        "gps": true,
+        "source": "Madurai City Bus Master Roster"
+      }
+    ],
+    "nellai->madurai": [
+      {
+        "time": "06:10 · 07:00 · 10:50 · 13:10 · 17:50 · 20:10",
+        "all_exact_departures": [
+          "06:10",
+          "07:00",
+          "10:50",
+          "13:10",
+          "17:50",
+          "20:10"
+        ],
+        "eta": "NH-44 1-to-1 Superfast & AC",
+        "title": "Tirunelveli New Stand (Venthankulam) → Madurai Mattuthavani",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli / Madurai",
+        "bay": "Venthankulam Bay 1",
+        "via": "Venthankulam → Gangaikondan → Kovilpatti Bypass → Sattur Bypass → Virudhunagar Bypass → Madurai MIBT (~158 km)",
+        "fare": "₹135 – ₹195",
+        "dur": "2h 45m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Master Timetable"
+      }
+    ],
+    "madurai->nellai": [
+      {
+        "time": "24 Hours · Every 15 mins (1-to-1 Non-Stop)",
+        "eta": "NH-44 1-to-1 Superfast & AC",
+        "title": "Madurai Mattuthavani → Tirunelveli New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli / Madurai",
+        "bay": "MIBT Bay 1",
+        "via": "Madurai MIBT → Virudhunagar Bypass → Kovilpatti Bypass → Venthankulam (~158 km)",
+        "fare": "₹135 – ₹195",
+        "dur": "2h 45m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Master Timetable"
+      }
+    ],
+    "nellai->kovai": [
+      {
+        "time": "02:30 · 06:40 · 07:30 · 09:20 · 10:30 (+5 more slots)",
+        "all_exact_departures": [
+          "02:30",
+          "06:40",
+          "07:30",
+          "09:20",
+          "10:30",
+          "11:15",
+          "13:40",
+          "16:20",
+          "19:40",
+          "20:45"
+        ],
+        "eta": "Direct Corridor Express",
+        "title": "Tirunelveli New Stand → Coimbatore Gandhipuram / Ukkadam",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli / SETC",
+        "bay": "Venthankulam Bay 5",
+        "via": "Venthankulam → Madurai Bypass → Dindigul → Dharapuram → Palladam → Coimbatore (~375 km)",
+        "fare": "₹310 – ₹420",
+        "dur": "7h 30m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Schedule"
+      }
+    ],
+    "kovai->nellai": [
+      {
+        "time": "06:00 · 08:30 · 11:15 · 14:00 · 18:30 · 20:30 · 21:45",
+        "eta": "Direct Corridor Express",
+        "title": "Coimbatore Gandhipuram / Ukkadam → Tirunelveli New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli / SETC",
+        "bay": "Ukkadam Bay 3 / Gandhipuram SETC Bay",
+        "via": "Coimbatore → Palladam → Dharapuram → Dindigul → Madurai Bypass → Venthankulam (~375 km)",
+        "fare": "₹310 – ₹420",
+        "dur": "7h 30m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Schedule"
+      }
+    ],
+    "nellai->tenkasi": [
+      {
+        "time": "04:50 · 06:40 · 08:30 · 10:20 · 12:15 (+4 more slots)",
+        "all_exact_departures": [
+          "04:50",
+          "06:40",
+          "08:30",
+          "10:20",
+          "12:15",
+          "14:10",
+          "16:00",
+          "17:50",
+          "19:45"
+        ],
+        "eta": "Western Ghats Corridor",
+        "title": "Tirunelveli New Stand → Tenkasi Bus Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli",
+        "bay": "Venthankulam Bay 4",
+        "via": "Venthankulam → Alangulam → Pavoorchatram → Tenkasi (~53 km)",
+        "fare": "₹45 – ₹65",
+        "dur": "1h 15m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Operating Timetable"
+      }
+    ],
+    "tenkasi->nellai": [
+      {
+        "time": "05:00 – 22:30 · Every 15 mins",
+        "eta": "Western Ghats Corridor",
+        "title": "Tenkasi Bus Stand → Tirunelveli New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli",
+        "bay": "Tenkasi Platform 2",
+        "via": "Tenkasi → Pavoorchatram → Alangulam → Venthankulam (~53 km)",
+        "fare": "₹45 – ₹65",
+        "dur": "1h 15m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Operating Timetable"
+      }
+    ],
+    "kovai->erode": [
+      {
+        "time": "04:30 – 23:30 · Every 10 mins (1-to-1 Non-Stop & Town)",
+        "eta": "Frequent Express",
+        "title": "Coimbatore Gandhipuram → Erode Central Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Gandhipuram Central Bay 4",
+        "via": "Gandhipuram → Avinashi → Tiruppur Bypass → Perundurai → Erode Stand (~101 km)",
+        "fare": "₹85 – ₹115",
+        "dur": "2h 15m",
+        "gps": true,
+        "source": "TNSTC Coimbatore Timetable"
+      }
+    ],
+    "erode->kovai": [
+      {
+        "time": "04:30 – 23:30 · Every 10 mins",
+        "eta": "Frequent Express",
+        "title": "Erode Central Stand → Coimbatore Gandhipuram",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Erode Platform 1",
+        "via": "Erode → Perundurai → Tiruppur Bypass → Avinashi → Gandhipuram (~101 km)",
+        "fare": "₹85 – ₹115",
+        "dur": "2h 15m",
+        "gps": true,
+        "source": "TNSTC Coimbatore Timetable"
+      }
+    ],
+    "kovai->tiruppur": [
+      {
+        "time": "05:00 – 23:00 · Every 10 mins (Rt 20A, Non-Stop)",
+        "eta": "Industrial Corridor Non-Stop",
+        "title": "Coimbatore Gandhipuram → Tiruppur Old / New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Gandhipuram Central Bay 6",
+        "via": "Gandhipuram → Hopes College → Singanallur → Palladam Road / Avinashi → Tiruppur (~52 km)",
+        "fare": "₹45 – ₹60",
+        "dur": "1h 10m",
+        "gps": true,
+        "source": "TNSTC Coimbatore Timetable"
+      }
+    ],
+    "tiruppur->kovai": [
+      {
+        "time": "05:00 – 23:00 · Every 10 mins",
+        "eta": "Industrial Corridor Non-Stop",
+        "title": "Tiruppur Old / New Stand → Coimbatore Gandhipuram",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Tiruppur New Stand Bay 2",
+        "via": "Tiruppur → Avinashi → Singanallur → Hopes College → Gandhipuram (~52 km)",
+        "fare": "₹45 – ₹60",
+        "dur": "1h 10m",
+        "gps": true,
+        "source": "TNSTC Coimbatore Timetable"
+      }
+    ],
+    "kovai->mettupalayam": [
+      {
+        "time": "04:30 – 23:00 · Every 8 mins (Rt 100, 100A, Blue Line)",
+        "eta": "Ooty Foothills Express",
+        "title": "Coimbatore Gandhipuram → Mettupalayam Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Gandhipuram Mettupalayam Bay",
+        "via": "Gandhipuram → Saibaba Colony → Thudiyalur → Karamadai → Mettupalayam (~35 km)",
+        "fare": "₹0 (Women) / ₹28",
+        "dur": "50m",
+        "gps": true,
+        "source": "TNSTC Coimbatore Operating Timetable"
+      }
+    ],
+    "mettupalayam->kovai": [
+      {
+        "time": "04:30 – 23:00 · Every 8 mins",
+        "eta": "Ooty Foothills Express",
+        "title": "Mettupalayam Stand → Coimbatore Gandhipuram",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Coimbatore",
+        "bay": "Mettupalayam Platform 1",
+        "via": "Mettupalayam → Karamadai → Thudiyalur → Saibaba Colony → Gandhipuram (~35 km)",
+        "fare": "₹0 (Women) / ₹28",
+        "dur": "50m",
+        "gps": true,
+        "source": "TNSTC Coimbatore Operating Timetable"
+      }
+    ],
+    "kovai->madurai": [
+      {
+        "time": "05:00 – 23:00 · Every 20 mins",
+        "eta": "Superfast Intercity",
+        "title": "Coimbatore Singanallur / Gandhipuram → Madurai Arappalayam",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore / Madurai",
+        "bay": "Singanallur Stand Platform 2",
+        "via": "Coimbatore Singanallur → Palladam → Dharapuram → Oddanchatram → Dindigul → Madurai Arappalayam (~215 km)",
+        "fare": "₹185 – ₹250",
+        "dur": "4h 30m",
+        "gps": true,
+        "source": "TNSTC Intercity Timetable"
+      }
+    ],
+    "madurai->kovai": [
+      {
+        "time": "05:00 – 23:00 · Every 20 mins",
+        "eta": "Superfast Intercity",
+        "title": "Madurai Arappalayam → Coimbatore Singanallur / Gandhipuram",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Coimbatore / Madurai",
+        "bay": "Arappalayam Bay 1",
+        "via": "Madurai Arappalayam → Dindigul → Oddanchatram → Dharapuram → Palladam → Singanallur (~215 km)",
+        "fare": "₹185 – ₹250",
+        "dur": "4h 30m",
+        "gps": true,
+        "source": "TNSTC Intercity Timetable"
+      }
+    ],
+    "madurai->arappalayam": [
+      {
+        "time": "04:30 – 23:30 · Every 5 mins (Rt 77, 70, 7A Shuttle)",
+        "eta": "City Inter-Stand Shuttle",
+        "title": "Madurai Mattuthavani ↔ Arappalayam Stand",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Madurai (City Division)",
+        "bay": "MIBT City Platform 1",
+        "via": "Mattuthavani → KK Nagar Arch → Anna Bus Stand → Simmakkal → Goripalayam → Arappalayam (~9 km)",
+        "fare": "₹0 (Women) / ₹12",
+        "dur": "25m",
+        "gps": true,
+        "source": "Madurai City Transit Master"
+      }
+    ],
+    "arappalayam->madurai": [
+      {
+        "time": "04:30 – 23:30 · Every 5 mins (Rt 77, 70, 7A Shuttle)",
+        "eta": "City Inter-Stand Shuttle",
+        "title": "Arappalayam Stand ↔ Madurai Mattuthavani",
+        "type": "town",
+        "vetri": true,
+        "corp": "TNSTC Madurai (City Division)",
+        "bay": "Arappalayam City Bay",
+        "via": "Arappalayam → Goripalayam → Simmakkal → Anna Stand → KK Nagar → Mattuthavani (~9 km)",
+        "fare": "₹0 (Women) / ₹12",
+        "dur": "25m",
+        "gps": true,
+        "source": "Madurai City Transit Master"
+      }
+    ],
+    "nellai->valliyur": [
+      {
+        "time": "05:00 – 22:30 · Every 15 mins (NH-44 Kanyakumari Corridor)",
+        "eta": "NH-44 Express",
+        "title": "Tirunelveli New Stand (Venthankulam) → Valliyur Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli",
+        "bay": "Venthankulam Bay 2",
+        "via": "Venthankulam → Palayamkottai Bypass → Nanguneri Toll → Moondradaippu → Valliyur (~44 km)",
+        "fare": "₹40 – ₹55",
+        "dur": "55m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Timetable"
+      }
+    ],
+    "valliyur->nellai": [
+      {
+        "time": "05:00 – 22:30 · Every 15 mins",
+        "eta": "NH-44 Express",
+        "title": "Valliyur Stand → Tirunelveli New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli",
+        "bay": "Valliyur Main Bay",
+        "via": "Valliyur → Moondradaippu → Nanguneri Toll → Venthankulam (~44 km)",
+        "fare": "₹40 – ₹55",
+        "dur": "55m",
+        "gps": true,
+        "source": "TNSTC Tirunelveli Timetable"
+      }
+    ],
+    "nellai->trichy": [
+      {
+        "time": "06:00 · 08:30 · 11:00 · 13:45 · 17:00 · 20:30 · 22:00",
+        "eta": "NH-44 Superfast",
+        "title": "Tirunelveli New Stand → Trichy Panjappur IBT",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli / SETC",
+        "bay": "Venthankulam Bay 6",
+        "via": "Venthankulam → Kovilpatti → Virudhunagar → Madurai Bypass → Melur → Trichy Panjappur (~288 km)",
+        "fare": "₹245 – ₹330",
+        "dur": "5h 30m",
+        "gps": true,
+        "source": "SETC / TNSTC Timetable"
+      }
+    ],
+    "trichy->nellai": [
+      {
+        "time": "05:30 · 08:00 · 12:15 · 15:30 · 19:00 · 21:30",
+        "eta": "NH-44 Superfast",
+        "title": "Trichy Panjappur IBT → Tirunelveli New Stand",
+        "type": "express",
+        "vetri": false,
+        "corp": "TNSTC Tirunelveli / SETC",
+        "bay": "Panjappur IBT Bay 11",
+        "via": "Trichy Panjappur → Melur → Madurai Bypass → Virudhunagar → Kovilpatti → Venthankulam (~288 km)",
+        "fare": "₹245 – ₹330",
+        "dur": "5h 30m",
+        "gps": true,
+        "source": "SETC / TNSTC Timetable"
+      }
     ]
   },
   "boards": {
@@ -2738,6 +4008,73 @@
         "meta": "Non-Stop · ₹40–₹60",
         "status": "55 min",
         "color": "#0D6B4E"
+      }
+    ],
+    "madurai": [
+      {
+        "bay": "MIBT Bay 1",
+        "dest": "Tirunelveli New Stand (1-to-1 NH-44)",
+        "meta": "TNSTC Madurai / Tirunelveli · 24 Hours",
+        "status": "Every 15m",
+        "color": "#0D6E4E"
+      },
+      {
+        "bay": "MIBT Bay 6",
+        "dest": "Tiruchendur Temple Stand (Express)",
+        "meta": "TNSTC Madurai · 33 Daily Slots",
+        "status": "Every 25m",
+        "color": "#0D6E4E"
+      },
+      {
+        "bay": "Arappalayam",
+        "dest": "Dindigul Central Stand (Superfast)",
+        "meta": "TNSTC Madurai · 55 Daily Slots",
+        "status": "Every 10m",
+        "color": "#D97706"
+      },
+      {
+        "bay": "Periyar PF4",
+        "dest": "Tirumangalam Stand (Rt 48, 77)",
+        "meta": "City Ordinary · Vetri Payanam ₹0",
+        "status": "Every 5m",
+        "color": "#DB2777"
+      }
+    ],
+    "coimbatore": [
+      {
+        "bay": "Bay 1",
+        "dest": "Ooty ATC Central (Rt 100 via Coonoor)",
+        "meta": "TNSTC Nilgiris · Ghat Service",
+        "status": "Every 15m",
+        "color": "#D97706"
+      },
+      {
+        "bay": "Bay 4",
+        "dest": "Erode Central Stand (1-to-1 Non-Stop)",
+        "meta": "TNSTC Coimbatore · Express",
+        "status": "Every 10m",
+        "color": "#0D6E4E"
+      },
+      {
+        "bay": "Bay 6",
+        "dest": "Tiruppur Old / New Stand (Rt 20A)",
+        "meta": "TNSTC Coimbatore · Non-Stop",
+        "status": "Every 10m",
+        "color": "#0D6E4E"
+      },
+      {
+        "bay": "Town Bay",
+        "dest": "Marudhamalai Temple Foot (Rt 1C, 70)",
+        "meta": "City Ordinary · Vetri Payanam ₹0",
+        "status": "Every 8m",
+        "color": "#DB2777"
+      },
+      {
+        "bay": "Bay 10",
+        "dest": "Mettupalayam Stand (Rt 100 Blue Line)",
+        "meta": "Town Bus · Vetri Payanam ₹0",
+        "status": "Every 8m",
+        "color": "#DB2777"
       }
     ]
   }

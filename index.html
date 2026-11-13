@@ -926,6 +926,8 @@
                 <option value="salem">Salem MGR Central Stand</option>
                 <option value="trichy">Trichy Panjappur IBT</option>
                 <option value="chennai">Chennai Kilambakkam (KCBT)</option>
+                <option value="madurai">Madurai Mattuthavani & Arappalayam</option>
+                <option value="coimbatore">Coimbatore Gandhipuram Central</option>
                 <option value="tirunelveli">Tirunelveli Venthankulam</option>
               </select>
             </div>
@@ -1356,7 +1358,7 @@
         // Crowding status
         const crowdLevel = userCrowding[busId] || 0; // 0: unset, 1: seats, 2: standing, 3: full
         const crowdClass = crowdLevel === 1 ? 'crowd-green' : (crowdLevel === 2 ? 'crowd-yellow' : (crowdLevel === 3 ? 'crowd-red' : 'crowd-grey'));
-        const crowdText = crowdLevel === 1 ? '🟢 Seats Available' : (crowdLevel === 2 ? '🟡 Standing Room' : (crowdLevel === 3 ? '🔴 Packed / Full' : '👥 Tap Crowd Status');
+        const crowdText = crowdLevel === 1 ? '🟢 Seats Available' : (crowdLevel === 2 ? '🟡 Standing Room' : (crowdLevel === 3 ? '🔴 Packed / Full' : '👥 Tap Crowd Status'));
 
         return `
         <article class="bus-card ${isFlaggedWrong ? 'flagged-card' : ''}" onclick="toggleTimeline(${i})">
